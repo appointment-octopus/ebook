@@ -5,13 +5,11 @@
   import App from './Markdown/App.svx'
   import { onMount } from 'svelte';
 
-  let vw, sidebar_width;
-  let width, scrollX, scrollY;
-  onMount(() => {
-    width = sidebar_width = vw/7;
-  })
+  let vw;
+  let show = true, scrollX, scrollY;
+
   function toggleSidebar() {
-    width = sidebar_width - width;
+    show = !show;
   }
   function goToElement() {
     console.log(self);
@@ -27,37 +25,31 @@
 <svelte:window bind:innerWidth={vw}/>
 
 <ThemeWrapper themes="{themes}">
-<Sidebar bind:width={width} />
+<div class="{show ? 'grid-container' : 'grid-no-sidebar' }" >
+  {#if show === true}
+    <div class="sidebar">
+      <ul>
+        {#each Array(75) as _, i}
+        <li>{i + 1}</li>
+      {/each}      </ul>
+    </div>
+  {/if}
 
-<div class="topnavbar">
-  <div id="main" style="margin-left: {width}px">
-    <ThemeToggle id="one" />
-    <button on:click={toggleSidebar}>Sidebar</button>
+  <div class="topbar">
+    <div class="icons">
+      <div class="theme">
+        <ThemeToggle id="one" />
+      </div>
+      <div class="sidebar-toggle">
+        <button on:click={toggleSidebar}>Sidebar</button>
+      </div>
+    </div>
   </div>
+
+
+    <div class="one" style="width: {show ? 85 : 100}vw;"></div>
+    <div class="two"></div>
 </div>
-  
-<main style="padding: 20px"> 
-  <div class="content-container" style="margin-left: {width-8}px; width: calc({sidebar_width - width}px + {vw * (9/7)}px);">
-    <div class="one" style="transition: margin-left .5s linear; width: calc({sidebar_width - width}px + {vw * (5.3/7)}px);">
-      {#each Array(10) as _, i}
-        <p>{i + 1}</p>
-      {/each}
-      <button on:click={goToElement}>go to word</button>
-      <App />
-
-    </div>
-    
-    <div class="two">
-      {#each Array(25) as _, i}
-        <p>{i + 1}</p>
-      {/each}
-      <button on:click={goBack} id="esse-aqui">word</button>
-      {#each Array(25) as _, i}
-        <p>{i + 1}</p>
-      {/each}
-    </div>
-  </div>
-</main>
 </ThemeWrapper>
 
 <style>
@@ -71,88 +63,76 @@
   scroll-behavior: smooth;
 }
 :global(body) {
-  /* align-items: center; */
+  align-items: center;
   display: flex;
   font-size: var(--theme-font-size);
 }
-.topnavbar {
-    height: 4em;
-      width: 100%; /* 0 width - change this with JavaScript */
-      position: fixed; /* Stay in place */
-      z-index: 1; /* Stay on top */
-      top: 0; /* Stay at the top */
-      left: 0;
-      background-color: #111; /* Black*/
-      overflow: hidden; /* Disable horizontal scroll */
-      /* padding-top: 60px; Place content 60px from the top */
-      /* transition: 0.5s; 0.5 second transition effect to slide in the topnavbar */
-  }
-.one {
-  background-color: rgba(200,0,0,0.5);
-}
 
-.two {
-  background-color: rgba(100,255,100,0.5);
-}
-
-.one, .two {
-  flex: 1 auto;
-  box-sizing: border-box;
-  padding: 20px 20em;
-  border: 3px solid yellow;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+.grid-container {
+  /* width: 100%; */
   margin: 0 auto;
-  text-align: center;
-}
-.content-container {
-  box-sizing: border-box;
-  background-color: blueviolet;
-  border: 5px solid red;
-  margin: 2.5em 0 0 auto;
-  display: flex;
-  align-items: flex-start;
-  color: white;
-  justify-content: space-around;
-  flex-flow: row wrap;
-}
-
-#main {
-    transition: margin-left .5s ease;
-    height: auto;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-main {
+  height: 100%;
   display: grid;
-  grid-auto-flow: row;
-  grid-template-rows: auto max-content;
-  grid-template-areas: 'auto';
+  grid-template-columns: repeat(8, auto);
+  grid-template-rows: 1fr 32fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "sidebar topbar topbar topbar topbar topbar topbar two"
+    "sidebar one one one one one one two";
 }
 
-h1 {
-  color: var(--theme-colors-text);
+.grid-no-sidebar {
+  /* width: 100%; */
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  grid-template-rows: 1fr 32fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "topbar topbar topbar topbar topbar topbar topbar two"
+    "one one one one one one one two";
+}
+
+.sidebar { 
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  background-color: pink;
+  grid-area: sidebar;
+  width: 15vw;
+}
+
+.topbar {
+  position: sticky;
+  left: 0;
+  top: 0;
   margin: 0;
-  text-transform: lowercase;
-  font-size: 4rem;
-  font-weight: var(--theme-font-weight-lighter);
-}
-
-section {
+  width: calc(100% - 1vw);
+  box-sizing: border-box;
   display: grid;
-  grid-auto-flow: row;
-  grid-auto-rows: min-content;
-  grid-gap: 2rem;
-  place-items: center;
-  place-content: center;
-  padding: var(--theme-padding-large);
-  text-align: center;
-  /* max-width: 240px; */
+  background-color: blue;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "icons . . . . . . .";
+  grid-area: topbar;
 }
 
-#intro {
-  grid-area: intro;
+.icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "sidebar-toggle theme";
+  grid-area: icons;
+  background-color: black;
 }
+
+.theme { background-color: red; grid-area: theme; }
+.sidebar-toggle { grid-area: sidebar-toggle; background-color: cyan;}
+
+.one { grid-area: one; left:0; background-color: rgba(200,200,200,0.5)}
+
+.two { grid-area: two; background-color: purple; width: 40vw;}
+
 </style>

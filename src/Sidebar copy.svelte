@@ -1,8 +1,8 @@
 <script>
-    export let show;
+    export let width;
 </script>
 
-<div id="mySidenav" class="sidenav" style="visibility: {show ? 'visible' : 'hidden'};"> 
+<div id="mySidenav" class="sidenav" style="width: {width}px"> 
     <a href="#">About</a>
     <a href="#">Services</a>
     <a href="#">Clients</a>
@@ -13,6 +13,7 @@
     /* The side navigation menu */
     .sidenav {
         height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
         position: fixed; /* Stay in place */
         z-index: 1; /* Stay on top */
         top: 0; /* Stay at the top */
