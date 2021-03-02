@@ -1,0 +1,12 @@
+[book]
+authors = ["Guilherme de Lyra"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Conceitos de Engenharia de Software aplicados"
+
+[output.html]
+default-theme = "rust"
+copy-fonts = true
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/appointment-octopus/tcc"
