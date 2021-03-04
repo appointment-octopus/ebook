@@ -102,7 +102,7 @@ Atualizar as urls dos repositorios clonados para utilizar o *ssh* em vez do *htt
      eval `git remote set-url origin git@github.com:${${url#*com/}%.git}.git`; } 
    ```
 
-Como curiosidade, como o comando anterior foi contruído:
+Como curiosidade, como o comando anterior foi construído:
 -------------
 
 Tendo em vista que uma url https padrão do github é:
