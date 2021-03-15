@@ -1,5 +1,4 @@
 import glob
-from urllib.parse import quote
 
 result = '# Summary\n\n'
 for f in glob.glob("src/**/*.md", recursive=True):
@@ -14,4 +13,4 @@ for f in glob.glob("src/**/*.md", recursive=True):
         result += f'{" "*indent}- [{name}](./{path})\n'
 
 with open('src/SUMMARY.md', 'w') as file:
-    file.write(result) 
+    file.write(result)
