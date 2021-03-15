@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Resumão - Conceitos de Engenharia de Software aplicados</title>
+        <title>Dual Boot - Conceitos de Engenharia de Software aplicados</title>
         
         
 
@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter_1</a></li><li class="chapter-item expanded "><a href="../Introducao/index.html"><strong aria-hidden="true">2.</strong> Introducao</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Linux/Dual Boot.html"><strong aria-hidden="true">2.1.</strong> Dual Boot</a></li><li class="chapter-item expanded "><a href="../Linux/FAQ.html"><strong aria-hidden="true">2.2.</strong> Faq</a></li><li class="chapter-item expanded "><a href="../Linux/Terminal.html"><strong aria-hidden="true">2.3.</strong> Terminal</a></li></ol></li><li class="chapter-item expanded "><a href="../Linux/index.html"><strong aria-hidden="true">3.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Linux/windows wsl.html"><strong aria-hidden="true">3.1.</strong> Windows Wsl</a></li><li class="chapter-item expanded "><a href="../Linux/Resumo.html"><strong aria-hidden="true">3.2.</strong> Resumo</a></li><li class="chapter-item expanded "><a href="../git/FAQ.html"><strong aria-hidden="true">3.3.</strong> Faq</a></li></ol></li><li class="chapter-item expanded "><a href="../git/index.html"><strong aria-hidden="true">4.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/Resumão.html" class="active"><strong aria-hidden="true">4.1.</strong> Resumão</a></li><li class="chapter-item expanded "><a href="../git/Instalação.html"><strong aria-hidden="true">4.2.</strong> Instalação</a></li><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/index.html"><strong aria-hidden="true">4.3.</strong> Nesting Exemplo 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/Nesting2.html"><strong aria-hidden="true">4.3.1.</strong> Nesting2</a></li><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/Nesting Exemplo 2/index.html"><strong aria-hidden="true">4.3.2.</strong> Nesting Exemplo 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/Nesting Exemplo 2/Nesting2.html"><strong aria-hidden="true">4.3.2.1.</strong> Nesting2</a></li></ol></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter_1</a></li><li class="chapter-item expanded "><a href="../Introducao/index.html"><strong aria-hidden="true">2.</strong> Introducao</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Linux/Dual Boot.html" class="active"><strong aria-hidden="true">2.1.</strong> Dual Boot</a></li><li class="chapter-item expanded "><a href="../Linux/FAQ.html"><strong aria-hidden="true">2.2.</strong> Faq</a></li><li class="chapter-item expanded "><a href="../Linux/Terminal.html"><strong aria-hidden="true">2.3.</strong> Terminal</a></li></ol></li><li class="chapter-item expanded "><a href="../Linux/index.html"><strong aria-hidden="true">3.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Linux/windows wsl.html"><strong aria-hidden="true">3.1.</strong> Windows Wsl</a></li><li class="chapter-item expanded "><a href="../Linux/Resumo.html"><strong aria-hidden="true">3.2.</strong> Resumo</a></li><li class="chapter-item expanded "><a href="../git/FAQ.html"><strong aria-hidden="true">3.3.</strong> Faq</a></li></ol></li><li class="chapter-item expanded "><a href="../git/index.html"><strong aria-hidden="true">4.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/Resumão.html"><strong aria-hidden="true">4.1.</strong> Resumão</a></li><li class="chapter-item expanded "><a href="../git/Instalação.html"><strong aria-hidden="true">4.2.</strong> Instalação</a></li><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/index.html"><strong aria-hidden="true">4.3.</strong> Nesting Exemplo 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/Nesting2.html"><strong aria-hidden="true">4.3.1.</strong> Nesting2</a></li><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/Nesting Exemplo 2/index.html"><strong aria-hidden="true">4.3.2.</strong> Nesting Exemplo 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/Nesting Exemplo 2/Nesting2.html"><strong aria-hidden="true">4.3.2.1.</strong> Nesting2</a></li></ol></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -152,44 +152,66 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="resumão"><a class="header" href="#resumão">Resumão</a></h1>
-<p>O flow básico de utilização no dia a dia é:</p>
+                        <p>Caso esteja iniciando e gostaria de fazer isso com um bom começo, recomendamos a utilização de um sistema operacional baseado no Linux, como o Ubuntu por exemplo que fácil instalar e usar. Linux é uma boa opção por motivos como seu software aberto (que pode ser visto e melhorado por qualquer um), e por conta da sua alta capacidade de processamento (até mesmo em hardwares mais antigos), isso auxilia por exemplo em um cenário que precisa lidar com uma grande quantidade de dados.</p>
+<p>E mesmo sabendo que é uma boa opção, ainda sim, possui outros motivos para manter outro sistema operacional na sua máquina.</p>
+<p>Para resolvermos essa questão pode-se optar por fazer um Dual Boot. No geral isso implica dizer, que podemos colocar mais do que apenas um sistema operacional em seu computador, basta termos um pen-drive bootável, e espaço no seu disco rígido suficiente para isso.</p>
+<h3 id="começando"><a class="header" href="#começando">Começando</a></h3>
 <ol>
 <li>
-<p>Após criar repositório no Github, no <code>terminal</code>:</p>
-<pre><code class="language-bash">git clone &lt;endereço do novo repositório&gt;
-cd &lt;nome do repositorio&gt;
-
-# ex:
-# git clone https://github.com/airbnb/javascript
-# cd javascript
-</code></pre>
+<p>Faça o download do <a href="https://ubuntu.com/#download">Ubuntu</a> (a 20.04 LTS é uma boa opção).</p>
 </li>
 <li>
-<p>Após fazer as mudanças nos arquivos que quiser, no <code>terminal</code>:</p>
-<pre><code class="language-bash">git status # vai listar todas as alterações feitas (o que foi adicionado/modificado/removido)
-
-git add . # adiciona todas as alterações
-
-git commit -m &quot;mensagem explicando o proposito desse commit&quot; # ex: git commit -m &quot;adicionando botão para remoção de usuários&quot;
-
-git push origin &lt;branch_desejada&gt;
-</code></pre>
+<p>Tenha certeza de que tem ao menos 50 GB de espaço sobrando no seu HD.</p>
+</li>
+<li>
+<p>Uma unidade flash USB com no mínimo 8 GB.</p>
+</li>
+<li>
+<p>E um programa para para poder criar um USB bootável, uma sugestão seria o <a href="https://rufus.ie/">Rufus</a></p>
 </li>
 </ol>
+<h3 id="1º-passo-crie-um-usb-bootável-com-o-ubuntu"><a class="header" href="#1º-passo-crie-um-usb-bootável-com-o-ubuntu">1º passo: Crie um USB bootável com o Ubuntu</a></h3>
+<p>Antes de começar esse passo certifique-se de que não há nenhum arquivo importante dentro do seu pendrive, já que esse procedimento irá ser reescrito fazendo com que perca qualquer conteúdo que havia contido antigamente.</p>
+<p>Com seu pendrive pronto para ser reescrito, insira-o em seu computador e abra o Rufus.</p>
+<p><img src="ebook/src/Imagens/Rufus_1.png" alt="interface_Rufus" /></p>
+<p>Ele irá detectar automaticamente o drive USB inserido.</p>
+<p>Em 'Boot selection' selecione a imagem ISO do Ubuntu que havia feito o download anteriormente. Depois que selecionar irá aparecer alguns avisose uma opção de escrita da ISO. Responda 'yes', escolha a opção recomendada, e confirme que está ciente que os arquivos dentro da unidade serão destruídos.</p>
+<p>Depois disso o botão de &quot;Ready&quot;, vai ser habilitado.
+Clique e espere alguns minutos enquanto o USB vai sendo reescrito.
+Isso pode demorar alguns minutos dependendo da velocidade do seu USB.</p>
+<p><img src="ebook/src/Imagens/Rufus_2.png" alt="Copying_ISO_Rufus" /></p>
+<p>Quando terminar, remova seu USB de forma segura, agora dentro dele existe uma imagem de Ubuntu pronta para ser instalada em um computador.</p>
+<blockquote>
+<p><em>Embora não seja exatamente necessário, recomenda-se desfragmentar o disco do seu computador para poder consolidar os arquivos do seu computador para o 'início' do seu disco, dessa forma liberando mais espaço antes de fazer o particionamento.</em></p>
+</blockquote>
+<h3 id="2º-passo-aloque-espaço-no-seu-disco-rígido"><a class="header" href="#2º-passo-aloque-espaço-no-seu-disco-rígido">2º passo: Aloque espaço no seu disco rígido.</a></h3>
+<p>É necessário particionar seu disco rígido para separar um espaço de atuação para o novo sistema operacional que será instalado no seu computador.</p>
+<p>Vá no menu iniciar do windows e procure por &quot;Partições&quot; ou por &quot;Gerenciamento de disco&quot;.</p>
+<p>Vai se deparar com uma tela similar a esta, nela vai listar as unidades de espaço contidas dentro do seu computador.</p>
+<p><img src="ebook/src/Imagens/gerenciamento_de_disco.jpeg" alt="Gerenciamento_de_disco" /></p>
+<p>Escolha algum dos espaços tendo em mente que você irá dividir uma dessas unidades, caso tenha mais de uma, opte pela maior provavelmente a sua unidade &quot;(C:)&quot;.</p>
+<p>Clique com o botão direito na que escolheu.
+Clique em &quot;Diminuir Volume...&quot;.</p>
+<p>O espaço de disco que o Ubuntu LTS costuma requisitar, gira em torno de 20 GB ou mais.</p>
+<blockquote>
+<p><em>Tenha em mente que por mais que ele precise apenas de pouco espaço, vai ser um outro sistema operacional onde irá precisar instalar softwares e salvar arquivos, logo é bom se reservar uma boa quantidade de espaço para não ter problemas por falta dele no futuro</em></p>
+</blockquote>
+<p>Logo o espaço que irá diminuir seria de ao menos 20000 MB.</p>
+<p><img src="ebook/src/Imagens/gerenciamento_de_disco_1.jpeg" alt="gerenciamento_de_disco_exemplo" /></p>
+<h3 id="3º-passo-instalação"><a class="header" href="#3º-passo-instalação">3º passo: Instalação.</a></h3>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../git/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../Introducao/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="../git/Instalação.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../Linux/FAQ.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -201,13 +223,13 @@ git push origin &lt;branch_desejada&gt;
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../git/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../Introducao/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="../git/Instalação.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../Linux/FAQ.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

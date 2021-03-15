@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js rust">
+<html lang="pt-br" class="sidebar-visible no-js rust">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Instalação e Configuração - Conceitos de Engenharia de Software aplicados</title>
+        <title>Instalação - Conceitos de Engenharia de Software aplicados</title>
         
         
 
@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li><li class="chapter-item expanded "><a href="../git/index.html"><strong aria-hidden="true">2.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/Resumão.html"><strong aria-hidden="true">2.1.</strong> Resumão</a></li><li class="chapter-item expanded "><a href="../git/Instalação.html" class="active"><strong aria-hidden="true">2.2.</strong> Instalação e Configuração</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter_1</a></li><li class="chapter-item expanded "><a href="../Introducao/index.html"><strong aria-hidden="true">2.</strong> Introducao</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Linux/Dual Boot.html"><strong aria-hidden="true">2.1.</strong> Dual Boot</a></li><li class="chapter-item expanded "><a href="../Linux/FAQ.html"><strong aria-hidden="true">2.2.</strong> Faq</a></li><li class="chapter-item expanded "><a href="../Linux/Terminal.html"><strong aria-hidden="true">2.3.</strong> Terminal</a></li></ol></li><li class="chapter-item expanded "><a href="../Linux/index.html"><strong aria-hidden="true">3.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Linux/windows wsl.html"><strong aria-hidden="true">3.1.</strong> Windows Wsl</a></li><li class="chapter-item expanded "><a href="../Linux/Resumo.html"><strong aria-hidden="true">3.2.</strong> Resumo</a></li><li class="chapter-item expanded "><a href="../git/FAQ.html"><strong aria-hidden="true">3.3.</strong> Faq</a></li></ol></li><li class="chapter-item expanded "><a href="../git/index.html"><strong aria-hidden="true">4.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/Resumão.html"><strong aria-hidden="true">4.1.</strong> Resumão</a></li><li class="chapter-item expanded "><a href="../git/Instalação.html" class="active"><strong aria-hidden="true">4.2.</strong> Instalação</a></li><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/index.html"><strong aria-hidden="true">4.3.</strong> Nesting Exemplo 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/Nesting2.html"><strong aria-hidden="true">4.3.1.</strong> Nesting2</a></li><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/Nesting Exemplo 2/index.html"><strong aria-hidden="true">4.3.2.</strong> Nesting Exemplo 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/Nesting Exemplo 2/Nesting2.html"><strong aria-hidden="true">4.3.2.1.</strong> Nesting2</a></li></ol></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -132,7 +132,7 @@
                         </a>
                         
                         
-                        <a href="https://github.com/appointment-octopus/tcc" title="Git repository" aria-label="Git repository">
+                        <a href="https://github.com/appointment-octopus/ebook" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                         
@@ -237,8 +237,8 @@ Atualizar as urls dos repositorios clonados para utilizar o <em>ssh</em> em vez 
 <pre><code class="language-bash"># listar os repositórios rastreados
 $ git remote -v
 
-origin	https://github.com/appointment-octopus/tcc (fetch)
-origin	https://github.com/appointment-octopus/tcc (push)
+origin	https://github.com/appointment-octopus/ebook (fetch)
+origin	https://github.com/appointment-octopus/ebook (push)
 </code></pre>
 <p>Caso realmente esteja utilizando <em>https</em> (e deseje alterar para utilizar <em>ssh</em>), basta rodar, no terminal, o seguinte comando:</p>
 <pre><code class="language-bash"><span style="user-select: none">$ </span>echo &quot;$(git ls-remote --get-url origin)&quot; |\
@@ -250,24 +250,24 @@ origin	https://github.com/appointment-octopus/tcc (push)
 <h2 id="como-curiosidade-como-o-comando-anterior-foi-construído"><a class="header" href="#como-curiosidade-como-o-comando-anterior-foi-construído">Como curiosidade, como o comando anterior foi construído:</a></h2>
 <p>Tendo em vista que uma url https padrão do github é:</p>
 <blockquote>
-<p>https://github.com/appointment-octopus/tcc</p>
+<p>https://github.com/appointment-octopus/ebook</p>
 </blockquote>
 <p>e uma url ssh padrão é:</p>
 <blockquote>
-<p>git@github.com:appointment-octopus/tcc.git</p>
+<p>git@github.com:appointment-octopus/ebook.git</p>
 </blockquote>
-<p>percebemos que necessitamos extrair o nome da organização + nome do repositório; isto é: <em><code>appointment-octopus/tcc</code></em>. Utilizando o pattern matching para strings padrão do bash, conseguimos fazer isso. O <code>#</code> é utilizado para remover prefixos, então:</p>
-<pre><code class="language-bash">URL=https://github.com/appointment-octopus/tcc
+<p>percebemos que necessitamos extrair o nome da organização + nome do repositório; isto é: <em><code>appointment-octopus/ebook</code></em>. Utilizando o pattern matching para strings padrão do bash, conseguimos fazer isso. O <code>#</code> é utilizado para remover prefixos, então:</p>
+<pre><code class="language-bash">URL=https://github.com/appointment-octopus/ebook
 # o &quot;*&quot; vai ignorar qualquer caracter até encontrar a sequencia &quot;com/&quot;, e então retornar o resto da string
 echo &quot;${URL#*com/}&quot;
 </code></pre>
 <p>Porém, algumas vezes a url <code>https</code> vem com um <code>.git</code> no final; para ignorá-lo, utilizaremos o <code>%</code>, cujo qual é utilizado para remover sufixos:</p>
-<pre><code class="language-bash">URL=appointment-octopus/tcc.git
+<pre><code class="language-bash">URL=appointment-octopus/ebook.git
 # irá retornar a string até encontrar a sequencia &quot;.git&quot;
 echo &quot;${URL%.git}
 </code></pre>
 <p>Portanto, juntando tudo, fica:</p>
-<pre><code class="language-bash">URL=https://github.com/appointment-octopus/tcc.git
+<pre><code class="language-bash">URL=https://github.com/appointment-octopus/ebook.git
 echo &quot;${${URL#*com/}%.git}&quot;
 </code></pre>
 <p>Entretanto, estamos inserindo a url na mão. Felizmente existe um comando que nos retorna a url que precisamos:</p>
@@ -296,6 +296,10 @@ eval `git remote set-url origin git@github.com:${${URL#*com/}%.git}.git`
                         
 
                         
+                            <a rel="next" href="../git/Nesting Exemplo 1/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
 
                         <div style="clear: both"></div>
                     </nav>
@@ -309,6 +313,10 @@ eval `git remote set-url origin git@github.com:${${URL#*com/}%.git}.git`
                     </a>
                 
 
+                
+                    <a rel="next" href="../git/Nesting Exemplo 1/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 
             </nav>
 
