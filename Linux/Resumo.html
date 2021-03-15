@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter_1</a></li><li class="chapter-item expanded "><a href="../Introducao/index.html"><strong aria-hidden="true">2.</strong> Introducao</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Linux/Dual Boot.html"><strong aria-hidden="true">2.1.</strong> Dual Boot</a></li><li class="chapter-item expanded "><a href="../Linux/FAQ.html"><strong aria-hidden="true">2.2.</strong> Faq</a></li><li class="chapter-item expanded "><a href="../Linux/Terminal.html"><strong aria-hidden="true">2.3.</strong> Terminal</a></li></ol></li><li class="chapter-item expanded "><a href="../Linux/index.html"><strong aria-hidden="true">3.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Linux/windows wsl.html"><strong aria-hidden="true">3.1.</strong> Windows Wsl</a></li><li class="chapter-item expanded "><a href="../Linux/Resumo.html" class="active"><strong aria-hidden="true">3.2.</strong> Resumo</a></li><li class="chapter-item expanded "><a href="../git/FAQ.html"><strong aria-hidden="true">3.3.</strong> Faq</a></li></ol></li><li class="chapter-item expanded "><a href="../git/index.html"><strong aria-hidden="true">4.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/Resumão.html"><strong aria-hidden="true">4.1.</strong> Resumão</a></li><li class="chapter-item expanded "><a href="../git/Instalação.html"><strong aria-hidden="true">4.2.</strong> Instalação</a></li><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/index.html"><strong aria-hidden="true">4.3.</strong> Nesting Exemplo 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/Nesting2.html"><strong aria-hidden="true">4.3.1.</strong> Nesting2</a></li><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/Nesting Exemplo 2/index.html"><strong aria-hidden="true">4.3.2.</strong> Nesting Exemplo 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/Nesting Exemplo 2/Nesting2.html"><strong aria-hidden="true">4.3.2.1.</strong> Nesting2</a></li></ol></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter_1</a></li><li class="chapter-item expanded "><a href="../Linux/index.html"><strong aria-hidden="true">2.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Linux/Dual Boot.html"><strong aria-hidden="true">2.1.</strong> Dual Boot</a></li><li class="chapter-item expanded "><a href="../Linux/FAQ.html"><strong aria-hidden="true">2.2.</strong> Faq</a></li><li class="chapter-item expanded "><a href="../Linux/Terminal.html"><strong aria-hidden="true">2.3.</strong> Terminal</a></li><li class="chapter-item expanded "><a href="../Linux/windows wsl.html"><strong aria-hidden="true">2.4.</strong> Windows Wsl</a></li><li class="chapter-item expanded "><a href="../Linux/Resumo.html" class="active"><strong aria-hidden="true">2.5.</strong> Resumo</a></li></ol></li><li class="chapter-item expanded "><a href="../git/index.html"><strong aria-hidden="true">3.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/FAQ.html"><strong aria-hidden="true">3.1.</strong> Faq</a></li><li class="chapter-item expanded "><a href="../git/Resumão.html"><strong aria-hidden="true">3.2.</strong> Resumão</a></li><li class="chapter-item expanded "><a href="../git/Instalação.html"><strong aria-hidden="true">3.3.</strong> Instalação</a></li><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/index.html"><strong aria-hidden="true">3.4.</strong> Nesting Exemplo 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/Nesting2.html"><strong aria-hidden="true">3.4.1.</strong> Nesting2</a></li><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/Nesting Exemplo 2/index.html"><strong aria-hidden="true">3.4.2.</strong> Nesting Exemplo 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../git/Nesting Exemplo 1/Nesting Exemplo 2/Nesting2.html"><strong aria-hidden="true">3.4.2.1.</strong> Nesting2</a></li></ol></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -121,6 +121,10 @@
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
                         
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
                     </div>
 
                     <h1 class="menu-title">Conceitos de Engenharia de Software aplicados</h1>
@@ -139,6 +143,17 @@
                     </div>
                 </div>
 
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
                 
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
@@ -165,7 +180,7 @@
                         
 
                         
-                            <a rel="next" href="../git/FAQ.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../git/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -183,7 +198,7 @@
                 
 
                 
-                    <a rel="next" href="../git/FAQ.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../git/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -205,6 +220,10 @@
 
         
 
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
         
 
         <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>

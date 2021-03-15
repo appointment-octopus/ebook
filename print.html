@@ -97,7 +97,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter_1</a></li><li class="chapter-item expanded "><a href="Introducao/index.html"><strong aria-hidden="true">2.</strong> Introducao</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Linux/Dual Boot.html"><strong aria-hidden="true">2.1.</strong> Dual Boot</a></li><li class="chapter-item expanded "><a href="Linux/FAQ.html"><strong aria-hidden="true">2.2.</strong> Faq</a></li><li class="chapter-item expanded "><a href="Linux/Terminal.html"><strong aria-hidden="true">2.3.</strong> Terminal</a></li></ol></li><li class="chapter-item expanded "><a href="Linux/index.html"><strong aria-hidden="true">3.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Linux/windows wsl.html"><strong aria-hidden="true">3.1.</strong> Windows Wsl</a></li><li class="chapter-item expanded "><a href="Linux/Resumo.html"><strong aria-hidden="true">3.2.</strong> Resumo</a></li><li class="chapter-item expanded "><a href="git/FAQ.html"><strong aria-hidden="true">3.3.</strong> Faq</a></li></ol></li><li class="chapter-item expanded "><a href="git/index.html"><strong aria-hidden="true">4.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git/Resumão.html"><strong aria-hidden="true">4.1.</strong> Resumão</a></li><li class="chapter-item expanded "><a href="git/Instalação.html"><strong aria-hidden="true">4.2.</strong> Instalação</a></li><li class="chapter-item expanded "><a href="git/Nesting Exemplo 1/index.html"><strong aria-hidden="true">4.3.</strong> Nesting Exemplo 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git/Nesting Exemplo 1/Nesting2.html"><strong aria-hidden="true">4.3.1.</strong> Nesting2</a></li><li class="chapter-item expanded "><a href="git/Nesting Exemplo 1/Nesting Exemplo 2/index.html"><strong aria-hidden="true">4.3.2.</strong> Nesting Exemplo 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git/Nesting Exemplo 1/Nesting Exemplo 2/Nesting2.html"><strong aria-hidden="true">4.3.2.1.</strong> Nesting2</a></li></ol></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter_1</a></li><li class="chapter-item expanded "><a href="Linux/index.html"><strong aria-hidden="true">2.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Linux/Dual Boot.html"><strong aria-hidden="true">2.1.</strong> Dual Boot</a></li><li class="chapter-item expanded "><a href="Linux/FAQ.html"><strong aria-hidden="true">2.2.</strong> Faq</a></li><li class="chapter-item expanded "><a href="Linux/Terminal.html"><strong aria-hidden="true">2.3.</strong> Terminal</a></li><li class="chapter-item expanded "><a href="Linux/windows wsl.html"><strong aria-hidden="true">2.4.</strong> Windows Wsl</a></li><li class="chapter-item expanded "><a href="Linux/Resumo.html"><strong aria-hidden="true">2.5.</strong> Resumo</a></li></ol></li><li class="chapter-item expanded "><a href="git/index.html"><strong aria-hidden="true">3.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git/FAQ.html"><strong aria-hidden="true">3.1.</strong> Faq</a></li><li class="chapter-item expanded "><a href="git/Resumão.html"><strong aria-hidden="true">3.2.</strong> Resumão</a></li><li class="chapter-item expanded "><a href="git/Instalação.html"><strong aria-hidden="true">3.3.</strong> Instalação</a></li><li class="chapter-item expanded "><a href="git/Nesting Exemplo 1/index.html"><strong aria-hidden="true">3.4.</strong> Nesting Exemplo 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git/Nesting Exemplo 1/Nesting2.html"><strong aria-hidden="true">3.4.1.</strong> Nesting2</a></li><li class="chapter-item expanded "><a href="git/Nesting Exemplo 1/Nesting Exemplo 2/index.html"><strong aria-hidden="true">3.4.2.</strong> Nesting Exemplo 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git/Nesting Exemplo 1/Nesting Exemplo 2/Nesting2.html"><strong aria-hidden="true">3.4.2.1.</strong> Nesting2</a></li></ol></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -123,6 +123,10 @@
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
                         
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
                     </div>
 
                     <h1 class="menu-title">Conceitos de Engenharia de Software aplicados</h1>
@@ -141,6 +145,17 @@
                     </div>
                 </div>
 
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
                 
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
@@ -190,9 +205,6 @@ editor = &quot;/path/to/editor&quot;
 <p>Note that for the editor changes to function correctly, the <code>book.js</code> inside of
 the <code>theme</code> folder will need to be overriden as it has some couplings with the
 default Ace editor.</p>
-<p>No momento em que temos contato com a universidade, passamos a ganhar uma responsabilidade maior sobre a forma que utilizamos o nosso conhecimento. Em um curso de tecnologia, é ensinado meios e ferramentas, processos, templates e outras coisas que nos norteiam e ajudam a realizarmos atividades não só dentro do contexto acadêmico mas também quando for o momento de se atuar no mercado de trabalho na área que se estiver cursando. Ainda assim, é possível dizer que tudo o que aprendemos no contexto da universidade pode ser aplicado em uma empresa ou um trabalho de contexto real por exemplo?
-Embora o foco não seja responder essa pergunta com exatidão, este trabalho possui a intenção de funcionar como um guia prático para desenvolvedores iniciantes ou não que possuem a necessidade de saber por onde começar e como agir para deixar de estar &quot;stagnado&quot; em algum ponto de um trabalho com comentários relevantes a respeito do que fazer ao se deparar com um projeto de Engenharia de Software. Aliás embora seja ensinado ao longo de um curso várias áreas para atuar, diversos conceitos e práticas de aplicação, têm se em mente que cada etapa, desde o design do produto, até a sua conclusão devemos encarar alguns passos como a configuração de ambiente.</p>
-<p>Mesmo não forncendo todas as respostas, a ideia é que através desse guia</p>
 <p>Caso esteja iniciando e gostaria de fazer isso com um bom começo, recomendamos a utilização de um sistema operacional baseado no Linux, como o Ubuntu por exemplo que fácil instalar e usar. Linux é uma boa opção por motivos como seu software aberto (que pode ser visto e melhorado por qualquer um), e por conta da sua alta capacidade de processamento (até mesmo em hardwares mais antigos), isso auxilia por exemplo em um cenário que precisa lidar com uma grande quantidade de dados.</p>
 <p>E mesmo sabendo que é uma boa opção, ainda sim, possui outros motivos para manter outro sistema operacional na sua máquina.</p>
 <p>Para resolvermos essa questão pode-se optar por fazer um Dual Boot. No geral isso implica dizer, que podemos colocar mais do que apenas um sistema operacional em seu computador, basta termos um pen-drive bootável, e espaço no seu disco rígido suficiente para isso.</p>
@@ -303,6 +315,15 @@ Clique em &quot;Diminuir Volume...&quot;.</p>
 <p>(colocar imagem com lista de comandos).</p>
 <p>Esta é uma opção para pessoas que ao invés de migrar para outro sistema operacional, prefere desenvolver e usufruir de um terminal Linux, dentro do seu Windows.</p>
 <p>Caso você tenha vindo de um outro sistema operacional possivelmente como o Windows, talvez demore um pouco para se habituar ao novo sistema oparacional por não estar tão acostumado com possíveis novas ferramentas e interfaces, mas deve-se ter em mente que com o uso habitual vai acabar achando o terminal um auxiliar mais efetivo e prático, seja para navegar entre diretórios, manipular e executar arquivos. (imagem do terminal e/ou tabela de comandos)</p>
+<h1 id="começando-com-git"><a class="header" href="#começando-com-git">Começando com Git</a></h1>
+<p>Vamos começar sua jornada com Git! Há muita coisa a se aprender, mas toda caminhada tem um ponto de início. Nesse capítulo, discutiremos sobre:</p>
+<ul>
+<li>Resumão</li>
+<li>Instalação e Configuração (inclusive para utilização de ssh)</li>
+<li>Principais comandos</li>
+<li>+ Comandos</li>
+<li>Sugestões de aliases/functions</li>
+</ul>
 <h1 id="faq-1"><a class="header" href="#faq-1">F.A.Q</a></h1>
 <p>As perguntas mais frequentes &amp; votadas no Stackoverflow :^)</p>
 <table><thead><tr><th>Top 10 questões (ingles/global)</th><th>Top 10 questões (portugues)</th></tr></thead><tbody>
@@ -317,15 +338,6 @@ Clique em &quot;Diminuir Volume...&quot;.</p>
 <tr><td><a href="https://stackoverflow.com/questions/1783405/how-do-i-check-out-a-remote-git-branch">How do I check out a remote Git branch?</a></td><td><a href="https://pt.stackoverflow.com/questions/61428/como-excluir-um-ramobranch-do-git-local-e-remoto">Como excluir um ramo(branch) do Git local e remoto?</a></td></tr>
 <tr><td><a href="https://stackoverflow.com/questions/61212/how-to-remove-local-untracked-files-from-the-current-git-working-tree">How to remove local (untracked) files from the current Git working tree</a></td><td><a href="https://pt.stackoverflow.com/questions/3030/como-desfa%c3%a7o-o-%c3%baltimo-commit-no-git">Como desfaço o último commit no Git?</a></td></tr>
 </tbody></table>
-<h1 id="começando-com-git"><a class="header" href="#começando-com-git">Começando com Git</a></h1>
-<p>Vamos começar sua jornada com Git! Há muita coisa a se aprender, mas toda caminhada tem um ponto de início. Nesse capítulo, discutiremos sobre:</p>
-<ul>
-<li>Resumão</li>
-<li>Instalação e Configuração (inclusive para utilização de ssh)</li>
-<li>Principais comandos</li>
-<li>+ Comandos</li>
-<li>Sugestões de aliases/functions</li>
-</ul>
 <h1 id="resumão"><a class="header" href="#resumão">Resumão</a></h1>
 <p>O flow básico de utilização no dia a dia é:</p>
 <ol>
@@ -519,6 +531,10 @@ eval `git remote set-url origin git@github.com:${${URL#*com/}%.git}.git`
 
         
 
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
         
 
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
