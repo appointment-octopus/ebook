@@ -1,7 +1,16 @@
 # Summary
 
-- [Chapter 1](./chapter_1.md)
+- [Chapter_1](./chapter_1.md)
+- [Introducao](./Introducao/README.md)
 - [Git](./git/README.md)
+  - [Instalação](./git/Instalação.md)
   - [Resumão](./git/Resumão.md)
-  - [Instalação e Configuração](./git/Instalação.md)
-
+  - [Nesting Exemplo 1](./git/Nesting%20Exemplo%201/README.md)
+    - [Nesting2](./git/Nesting%20Exemplo%201/Nesting2.md)
+    - [Nesting Exemplo 2](./git/Nesting%20Exemplo%201/Nesting%20Exemplo%202/README.md)
+      - [Nesting2](./git/Nesting%20Exemplo%201/Nesting%20Exemplo%202/Nesting2.md)
+  - [Terminal](./Linux/Terminal.md)
+- [Linux](./Linux/README.md)
+  - [Resumo](./Linux/Resumo.md)
+  - [Windows Wsl](./Linux/windows%20wsl.md)
+  - [Dual Boot](./Linux/Dual%20Boot.md)

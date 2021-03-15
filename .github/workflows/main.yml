@@ -27,6 +27,7 @@ jobs:
 
       - name: Build book
         run: |
+            python3 tools/generate_summary.py
             mdbook build
             python3 tools/fix_dollar_sign.py
 

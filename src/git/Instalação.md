@@ -91,8 +91,8 @@ Atualizar as urls dos repositorios clonados para utilizar o *ssh* em vez do *htt
    # listar os repositórios rastreados
    $ git remote -v
 
-   origin	https://github.com/appointment-octopus/tcc (fetch)
-   origin	https://github.com/appointment-octopus/tcc (push)
+   origin	https://github.com/appointment-octopus/ebook (fetch)
+   origin	https://github.com/appointment-octopus/ebook (push)
    ```
 
    Caso realmente esteja utilizando *https* (e deseje alterar para utilizar *ssh*), basta rodar, no terminal, o seguinte comando:
@@ -106,14 +106,14 @@ Como curiosidade, como o comando anterior foi construído:
 -------------
 
 Tendo em vista que uma url https padrão do github é:
-> https://github.com/appointment-octopus/tcc
+> https://github.com/appointment-octopus/ebook
 
 e uma url ssh padrão é:
-> git@github.com:appointment-octopus/tcc.git
+> git@github.com:appointment-octopus/ebook.git
 
-percebemos que necessitamos extrair o nome da organização + nome do repositório; isto é: *`appointment-octopus/tcc`*. Utilizando o pattern matching para strings padrão do bash, conseguimos fazer isso. O `#` é utilizado para remover prefixos, então:
+percebemos que necessitamos extrair o nome da organização + nome do repositório; isto é: *`appointment-octopus/ebook`*. Utilizando o pattern matching para strings padrão do bash, conseguimos fazer isso. O `#` é utilizado para remover prefixos, então:
 ```bash
-URL=https://github.com/appointment-octopus/tcc
+URL=https://github.com/appointment-octopus/ebook
 # o "*" vai ignorar qualquer caracter até encontrar a sequencia "com/", e então retornar o resto da string
 echo "${URL#*com/}"
 ```
@@ -121,14 +121,14 @@ echo "${URL#*com/}"
 Porém, algumas vezes a url `https` vem com um `.git` no final; para ignorá-lo, utilizaremos o `%`, cujo qual é utilizado para remover sufixos:
 
 ```bash
-URL=appointment-octopus/tcc.git
+URL=appointment-octopus/ebook.git
 # irá retornar a string até encontrar a sequencia ".git"
 echo "${URL%.git}
 ```
 
 Portanto, juntando tudo, fica:
 ```bash
-URL=https://github.com/appointment-octopus/tcc.git
+URL=https://github.com/appointment-octopus/ebook.git
 echo "${${URL#*com/}%.git}"
 ```
 

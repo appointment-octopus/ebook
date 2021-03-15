@@ -1,6 +1,6 @@
 [book]
-authors = ["Guilherme de Lyra"]
-language = "en"
+authors = ["Guilherme de Lyra", "Max Henrique"]
+language = "pt-br"
 multilingual = false
 src = "src"
 title = "Conceitos de Engenharia de Software aplicados"
@@ -9,4 +9,4 @@ title = "Conceitos de Engenharia de Software aplicados"
 default-theme = "rust"
 copy-fonts = true
 preferred-dark-theme = "navy"
-git-repository-url = "https://github.com/appointment-octopus/tcc"
+git-repository-url = "https://github.com/appointment-octopus/ebook"
