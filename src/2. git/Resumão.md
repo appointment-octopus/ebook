@@ -2,23 +2,60 @@
 
 O flow básico de utilização no dia a dia é:
 
-1. Após criar repositório no Github, no `terminal`:
-   ```bash
-   git clone <endereço do novo repositório>
-   cd <nome do repositorio>
+## 1. Após criar repositório no Github, no `terminal`
 
-   # ex:
-   # git clone https://github.com/airbnb/javascript
-   # cd javascript
-   ```
+### Clonar um repositório
 
-2. Após fazer as mudanças nos arquivos que quiser, no `terminal`:
-   ```bash
-   git status # vai listar todas as alterações feitas (o que foi adicionado/modificado/removido)
-   
-   git add . # adiciona todas as alterações
+```bash
+$ git clone <endereço do novo repositório>
+```
 
-   git commit -m "mensagem explicando o proposito desse commit" # ex: git commit -m "adicionando botão para remoção de usuários"
+### Trocar de diretório
 
-   git push origin <branch_desejada>
-   ```
+```bash
+$ cd <nome do repositorio>
+```
+
+### Exemplo completo
+
+```bash
+# ex:
+# git clone https://github.com/airbnb/javascript
+# cd javascript
+```
+
+
+## 2. Após fazer as mudanças nos arquivos que quiser, no `terminal`
+
+### Listar todas as alterações feitas (o que foi adicionado/modificado/removido)
+
+```bash
+$ git status
+```
+
+### Adicionar alterações feitas
+
+```bash
+$ git add <arquivo_1> <arquivo_2>
+```
+
+### Commitar
+
+```bash
+$ git commit -m "mensagem explicando o proposito desse commit"
+```
+
+### Subir as alterações pro Github
+
+```bash
+$ git push origin <branch_desejada>
+```
+
+### Exemplo completo
+
+```bash
+# ex:
+# git add RemoveUserButton.js styles.css
+# git commit -m "adicionando botão para remoção de usuários"
+# git push origin main
+```
