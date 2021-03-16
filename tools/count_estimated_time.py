@@ -35,8 +35,6 @@ def traverse(list_of_chapters):
             chapter['Chapter']['content'], time_text)
 
 
-with open('test.txt', 'w') as f:
-    traverse(book['sections'])
-    f.write(json.dumps(book, indent=4))
+traverse(book['sections'])
 
 json.dump(book, sys.stdout)
