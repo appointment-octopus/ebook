@@ -97,7 +97,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter_1</a></li><li class="chapter-item expanded "><a href="Linux/index.html"><strong aria-hidden="true">2.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Linux/Dual Boot.html"><strong aria-hidden="true">2.1.</strong> Dual Boot</a></li><li class="chapter-item expanded "><a href="Linux/FAQ.html"><strong aria-hidden="true">2.2.</strong> Faq</a></li><li class="chapter-item expanded "><a href="Linux/Terminal.html"><strong aria-hidden="true">2.3.</strong> Terminal</a></li><li class="chapter-item expanded "><a href="Linux/windows wsl.html"><strong aria-hidden="true">2.4.</strong> Windows Wsl</a></li><li class="chapter-item expanded "><a href="Linux/Resumo.html"><strong aria-hidden="true">2.5.</strong> Resumo</a></li></ol></li><li class="chapter-item expanded "><a href="git/index.html"><strong aria-hidden="true">3.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git/FAQ.html"><strong aria-hidden="true">3.1.</strong> Faq</a></li><li class="chapter-item expanded "><a href="git/Resumão.html"><strong aria-hidden="true">3.2.</strong> Resumão</a></li><li class="chapter-item expanded "><a href="git/Instalação.html"><strong aria-hidden="true">3.3.</strong> Instalação</a></li><li class="chapter-item expanded "><a href="git/Nesting Exemplo 1/index.html"><strong aria-hidden="true">3.4.</strong> Nesting Exemplo 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git/Nesting Exemplo 1/Nesting2.html"><strong aria-hidden="true">3.4.1.</strong> Nesting2</a></li><li class="chapter-item expanded "><a href="git/Nesting Exemplo 1/Nesting Exemplo 2/index.html"><strong aria-hidden="true">3.4.2.</strong> Nesting Exemplo 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="git/Nesting Exemplo 1/Nesting Exemplo 2/Nesting2.html"><strong aria-hidden="true">3.4.2.1.</strong> Nesting2</a></li></ol></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="1. Introducao/index.html"><strong aria-hidden="true">1.</strong> Introducao</a></li><li class="chapter-item expanded "><a href="2. git/index.html"><strong aria-hidden="true">2.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2. git/FAQ.html"><strong aria-hidden="true">2.1.</strong> Faq</a></li><li class="chapter-item expanded "><a href="2. git/Instalação.html"><strong aria-hidden="true">2.2.</strong> Instalação</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2. git/Nesting Exemplo 1/Nesting Exemplo 2/index.html"><strong aria-hidden="true">2.2.1.</strong> Nesting Exemplo 2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2. git/Nesting Exemplo 1/Nesting Exemplo 2/Nesting2.html"><strong aria-hidden="true">2.2.1.1.</strong> Nesting2</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="2. git/Nesting Exemplo 1/index.html"><strong aria-hidden="true">2.3.</strong> Nesting Exemplo 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2. git/Nesting Exemplo 1/Nesting2.html"><strong aria-hidden="true">2.3.1.</strong> Nesting2</a></li></ol></li><li class="chapter-item expanded "><a href="2. git/Resumão.html"><strong aria-hidden="true">2.4.</strong> Resumão</a></li></ol></li><li class="chapter-item expanded "><a href="3. Linux/index.html"><strong aria-hidden="true">3.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="3. Linux/Dual Boot.html"><strong aria-hidden="true">3.1.</strong> Dual Boot</a></li><li class="chapter-item expanded "><a href="3. Linux/FAQ.html"><strong aria-hidden="true">3.2.</strong> Faq</a></li><li class="chapter-item expanded "><a href="3. Linux/Resumo.html"><strong aria-hidden="true">3.3.</strong> Resumo</a></li><li class="chapter-item expanded "><a href="3. Linux/Terminal.html"><strong aria-hidden="true">3.4.</strong> Terminal</a></li><li class="chapter-item expanded "><a href="3. Linux/windows wsl.html"><strong aria-hidden="true">3.5.</strong> Windows Wsl</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">4.</strong> Chapter_1</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -154,152 +154,9 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="chapter-1"><a class="header" href="#chapter-1">Chapter 1</a></h1>
-<p>In addition to providing runnable code playgrounds, mdBook optionally allows them
-to be editable. In order to enable editable code blocks, the following needs to
-be added to the <em><strong>book.toml</strong></em>:</p>
-<pre><code class="language-toml">[output.html.playground]
-editable = true
-</code></pre>
-<p>To make a specific block available for editing, the attribute <code>editable</code> needs
-to be added to it:</p>
-<pre><code class="language-markdown">```rust,editable
-fn main() {
-    let number = 5;
-    print!("{}", number);
-}
-```</code></pre>
-<p>The above will result in this editable playground:</p>
-<pre><pre class="playground"><code class="language-rust editable">fn main() {
-    let number = 5;
-    print!(&quot;{}&quot;, number);
-}
-</code></pre></pre>
-<pre><code class="language-python editable">print(&quot;hello world&quot;)
-x = 5
-print(x)
-</code></pre>
-<p>Note the new <code>Undo Changes</code> button in the editable playgrounds.</p>
-<h2 id="customizing-the-editor"><a class="header" href="#customizing-the-editor">Customizing the Editor</a></h2>
-<p>By default, the editor is the <a href="https://ace.c9.io/">Ace</a> editor, but, if desired,
-the functionality may be overriden by providing a different folder:</p>
-<pre><code class="language-toml">[output.html.playground]
-editable = true
-editor = &quot;/path/to/editor&quot;
-</code></pre>
-<p>Note that for the editor changes to function correctly, the <code>book.js</code> inside of
-the <code>theme</code> folder will need to be overriden as it has some couplings with the
-default Ace editor.</p>
-<p>Caso esteja iniciando e gostaria de fazer isso com um bom começo, recomendamos a utilização de um sistema operacional baseado no Linux, como o Ubuntu por exemplo que fácil instalar e usar. Linux é uma boa opção por motivos como seu software aberto (que pode ser visto e melhorado por qualquer um), e por conta da sua alta capacidade de processamento (até mesmo em hardwares mais antigos), isso auxilia por exemplo em um cenário que precisa lidar com uma grande quantidade de dados.</p>
-<p>E mesmo sabendo que é uma boa opção, ainda sim, possui outros motivos para manter outro sistema operacional na sua máquina.</p>
-<p>Para resolvermos essa questão pode-se optar por fazer um Dual Boot. No geral isso implica dizer, que podemos colocar mais do que apenas um sistema operacional em seu computador, basta termos um pen-drive bootável, e espaço no seu disco rígido suficiente para isso.</p>
-<h3 id="começando"><a class="header" href="#começando">Começando</a></h3>
-<ol>
-<li>
-<p>Faça o download do <a href="https://ubuntu.com/#download">Ubuntu</a> (a 20.04 LTS é uma boa opção).</p>
-</li>
-<li>
-<p>Tenha certeza de que tem ao menos 50 GB de espaço sobrando no seu HD.</p>
-</li>
-<li>
-<p>Uma unidade flash USB com no mínimo 8 GB.</p>
-</li>
-<li>
-<p>E um programa para para poder criar um USB bootável, uma sugestão seria o <a href="https://rufus.ie/">Rufus</a></p>
-</li>
-</ol>
-<h3 id="1º-passo-crie-um-usb-bootável-com-o-ubuntu"><a class="header" href="#1º-passo-crie-um-usb-bootável-com-o-ubuntu">1º passo: Crie um USB bootável com o Ubuntu</a></h3>
-<p>Antes de começar esse passo certifique-se de que não há nenhum arquivo importante dentro do seu pendrive, já que esse procedimento irá ser reescrito fazendo com que perca qualquer conteúdo que havia contido antigamente.</p>
-<p>Com seu pendrive pronto para ser reescrito, insira-o em seu computador e abra o Rufus.</p>
-<p><img src="Linux/ebook/src/Imagens/Rufus_1.png" alt="interface_Rufus" /></p>
-<p>Ele irá detectar automaticamente o drive USB inserido.</p>
-<p>Em 'Boot selection' selecione a imagem ISO do Ubuntu que havia feito o download anteriormente. Depois que selecionar irá aparecer alguns avisose uma opção de escrita da ISO. Responda 'yes', escolha a opção recomendada, e confirme que está ciente que os arquivos dentro da unidade serão destruídos.</p>
-<p>Depois disso o botão de &quot;Ready&quot;, vai ser habilitado.
-Clique e espere alguns minutos enquanto o USB vai sendo reescrito.
-Isso pode demorar alguns minutos dependendo da velocidade do seu USB.</p>
-<p><img src="Linux/ebook/src/Imagens/Rufus_2.png" alt="Copying_ISO_Rufus" /></p>
-<p>Quando terminar, remova seu USB de forma segura, agora dentro dele existe uma imagem de Ubuntu pronta para ser instalada em um computador.</p>
-<blockquote>
-<p><em>Embora não seja exatamente necessário, recomenda-se desfragmentar o disco do seu computador para poder consolidar os arquivos do seu computador para o 'início' do seu disco, dessa forma liberando mais espaço antes de fazer o particionamento.</em></p>
-</blockquote>
-<h3 id="2º-passo-aloque-espaço-no-seu-disco-rígido"><a class="header" href="#2º-passo-aloque-espaço-no-seu-disco-rígido">2º passo: Aloque espaço no seu disco rígido.</a></h3>
-<p>É necessário particionar seu disco rígido para separar um espaço de atuação para o novo sistema operacional que será instalado no seu computador.</p>
-<p>Vá no menu iniciar do windows e procure por &quot;Partições&quot; ou por &quot;Gerenciamento de disco&quot;.</p>
-<p>Vai se deparar com uma tela similar a esta, nela vai listar as unidades de espaço contidas dentro do seu computador.</p>
-<p><img src="Linux/ebook/src/Imagens/gerenciamento_de_disco.jpeg" alt="Gerenciamento_de_disco" /></p>
-<p>Escolha algum dos espaços tendo em mente que você irá dividir uma dessas unidades, caso tenha mais de uma, opte pela maior provavelmente a sua unidade &quot;(C:)&quot;.</p>
-<p>Clique com o botão direito na que escolheu.
-Clique em &quot;Diminuir Volume...&quot;.</p>
-<p>O espaço de disco que o Ubuntu LTS costuma requisitar, gira em torno de 20 GB ou mais.</p>
-<blockquote>
-<p><em>Tenha em mente que por mais que ele precise apenas de pouco espaço, vai ser um outro sistema operacional onde irá precisar instalar softwares e salvar arquivos, logo é bom se reservar uma boa quantidade de espaço para não ter problemas por falta dele no futuro</em></p>
-</blockquote>
-<p>Logo o espaço que irá diminuir seria de ao menos 20000 MB.</p>
-<p><img src="Linux/ebook/src/Imagens/gerenciamento_de_disco_1.jpeg" alt="gerenciamento_de_disco_exemplo" /></p>
-<h3 id="3º-passo-instalação"><a class="header" href="#3º-passo-instalação">3º passo: Instalação.</a></h3>
-<h1 id="faq"><a class="header" href="#faq">F.A.Q</a></h1>
-<p>As perguntas mais frequentes &amp; votadas no Stackoverflow :^)</p>
-<ul>
-<li><a href="Linux/FAQ.html#faq">F.A.Q</a>
-<ul>
-<li><a href="Linux/FAQ.html#linux">Linux</a></li>
-<li><a href="Linux/FAQ.html#bash">Bash</a></li>
-<li><a href="Linux/FAQ.html#ubuntu">Ubuntu</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="linux"><a class="header" href="#linux">Linux</a></h2>
-<table><thead><tr><th>Top 10 questões (ingles/global)</th><th>Top 10 questões (portugues)</th></tr></thead><tbody>
-<tr><td><a href="https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux">How do I find all files containing specific text on Linux?</a></td><td><a href="https://pt.stackoverflow.com/questions/732/programar-em-c-para-arm">Programar em C para ARM</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/5905054/how-can-i-recursively-find-all-files-in-current-and-subfolders-based-on-wildcard">How can I recursively find all files in current and subfolders based on wildcard matching?</a></td><td><a href="https://pt.stackoverflow.com/questions/4018/o-que-significa-em-linguagem-c">O que significa “:-!!” em linguagem C?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux">How to change the output color of echo in Linux</a></td><td><a href="https://pt.stackoverflow.com/questions/124518/configurar-cronjob-para-executar-de-5-em-5-minutos-quando-estiver-dentre-5-a-20">Configurar Cronjob para executar de 5 em 5 minutos, quando estiver dentre 5 a 20 horas</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/1951742/how-can-i-symlink-a-file-in-linux">How can I symlink a file in Linux? [closed]</a></td><td><a href="https://pt.stackoverflow.com/questions/2818/como-agendar-uma-tarefa-recorrente-no-linux">Como agendar uma tarefa recorrente no linux?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/3740152/how-to-change-permissions-for-a-folder-and-its-subfolders-files-in-one-step">How to change permissions for a folder and its subfolders/files in one step?</a></td><td><a href="https://pt.stackoverflow.com/questions/155547/significado-de">Significado de “__”</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/375913/how-can-i-profile-c-code-running-on-linux">How can I profile C++ code running on Linux?</a></td><td><a href="https://pt.stackoverflow.com/questions/99838/quais-as-linguagens-de-programa%c3%a7%c3%a3o-que-d%c3%a3o-suporte-a-linux-e-windows">Quais as linguagens de programação que dão suporte a Linux e Windows?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/1987926/how-do-i-grep-recursively">How do I grep recursively?</a></td><td><a href="https://pt.stackoverflow.com/questions/2518/como-responder-programaticamente-a-um-comando-no-terminal-linux">Como responder programaticamente a um comando no terminal Linux?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/6237295/how-can-i-update-nodejs-and-npm-to-the-next-versions">How can I update NodeJS and NPM to the next versions?</a></td><td><a href="https://pt.stackoverflow.com/questions/3522/como-lidar-com-um-processo-cometa">Como lidar com um processo cometa?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/6877727/how-do-i-delete-an-exported-environment-variable">How do I delete an exported environment variable?</a></td><td><a href="https://pt.stackoverflow.com/questions/126422/o-que-acontece-com-um-cronjob-de-230-se-o-servidor-cair-%c3%a0s-228-e-s%c3%b3-voltar-5">O que acontece com um Cronjob de 2:30, se o servidor cair às 2:28 e só voltar 5 minutos depois?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/9229601/what-is-in-c-code">What is “:-!!” in C code?</a></td><td><a href="https://pt.stackoverflow.com/questions/15794/programar-c-em-linux-ide-vs-editor-linha-de-comando">Programar C em Linux - IDE vs. editor + linha de comando</a></td></tr>
-</tbody></table>
-<h2 id="bash"><a class="header" href="#bash">Bash</a></h2>
-<table><thead><tr><th>Top 10 questões (ingles/global)</th><th>Top 10 questões (portugues)</th></tr></thead><tbody>
-<tr><td><a href="https://stackoverflow.com/questions/59895/how-can-i-get-the-source-directory-of-a-bash-script-from-within-the-script-itsel">How can I get the source directory of a Bash script from within the script itself?</a></td><td><a href="https://pt.stackoverflow.com/questions/73641/como-inserir-uma-quebra-de-linha-dentro-do-echo-no-shell-script">Como inserir uma quebra de linha dentro do echo no shell script?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/59838/how-can-i-check-if-a-directory-exists-in-a-bash-shell-script">How can I check if a directory exists in a Bash shell script?</a></td><td><a href="https://pt.stackoverflow.com/questions/52622/o-que-significa-2-e-em-bash">O que significa '2&gt;' e '&amp;&gt;' em Bash?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/638975/how-do-i-tell-if-a-regular-file-does-not-exist-in-bash">How do I tell if a regular file does not exist in Bash?</a></td><td><a href="https://pt.stackoverflow.com/questions/143822/qual-a-diferen%c3%a7a-de-bin-bash-e-usr-bin-env-bash">Qual a diferença de /bin/bash e /usr/bin/env bash?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/4181703/how-to-concatenate-string-variables-in-bash">How to concatenate string variables in Bash</a></td><td><a href="https://pt.stackoverflow.com/questions/422494/como-passar-o-valor-de-uma-vari%c3%a1vel-para-mai%c3%bascula-ou-minuscula">Como passar o valor de uma variável para maiúscula ou minuscula?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/229551/how-to-check-if-a-string-contains-a-substring-in-bash">How to check if a string contains a substring in Bash</a></td><td><a href="https://pt.stackoverflow.com/questions/82695/no-bash-qual-%c3%a9-a-diferen%c3%a7a-entre-e">No bash, qual é a diferença entre &lt;, &lt;&lt; e &lt;&lt;&lt;?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/8467424/echo-newline-in-bash-prints-literal-n">Echo newline in Bash prints literal \n</a></td><td><a href="https://pt.stackoverflow.com/questions/55836/como-extrair-o-caminho-para-o-ficheiro">Como extrair o caminho para o ficheiro</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/818255/in-the-shell-what-does-21-mean">In the shell, what does “ 2&gt;&amp;1 ” mean?</a></td><td><a href="https://pt.stackoverflow.com/questions/55851/converter-p%c3%a1ginas-de-documento-pdf-para-jpgs">Converter páginas de documento PDF para JPGs</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script">How can I check if a program exists from a Bash script?</a></td><td><a href="https://pt.stackoverflow.com/questions/8673/como-posso-pedir-uma-confirma%c3%a7%c3%a3o-ao-usu%c3%a1rio-num-arquivo-bash">Como posso pedir uma confirmação ao usuário num arquivo bash?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash">Extract filename and extension in Bash</a></td><td><a href="https://pt.stackoverflow.com/questions/145926/cmd-powershell-bash-qual-a-diferen%c3%a7a">CMD, PowerShell, Bash - Qual a diferença?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/918886/how-do-i-split-a-string-on-a-delimiter-in-bash">How do I split a string on a delimiter in Bash?</a></td><td><a href="https://pt.stackoverflow.com/questions/55735/verificar-se-vari%c3%a1vel-%c3%a9-um-n%c3%bamero-inteiro-positivo">Verificar se variável é um número inteiro positivo</a></td></tr>
-</tbody></table>
-<h2 id="ubuntu"><a class="header" href="#ubuntu">Ubuntu</a></h2>
-<table><thead><tr><th>Top 10 questões (ingles/global)</th><th>Top 10 questões (portugues)</th></tr></thead><tbody>
-<tr><td><a href="https://stackoverflow.com/questions/9346211/how-to-kill-a-process-on-a-port-on-ubuntu">How to kill a process on a port on ubuntu</a></td><td><a href="https://pt.stackoverflow.com/questions/21814/como-inicializar-o-postgresql-com-o-ubuntu">Como inicializar o postgresql com o ubuntu?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/14788345/how-to-install-the-jdk-on-ubuntu-linux">How to install the JDK on Ubuntu Linux</a></td><td><a href="https://pt.stackoverflow.com/questions/30116/habilitar-o-htaccess-no-ubuntu">Habilitar o .htaccess no ubuntu</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/7645918/require-no-such-file-to-load-mkmf-loaderror">`require': no such file to load — mkmf (LoadError)</a></td><td><a href="https://pt.stackoverflow.com/questions/6495/como-manter-um-servidor-nodejs-em-execu%c3%a7%c3%a3o-permanente">Como manter um servidor nodejs em execução permanente?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/12578499/how-to-install-boost-on-ubuntu">How to install Boost on Ubuntu</a></td><td><a href="https://pt.stackoverflow.com/questions/41619/enviando-arquivos-no-nginx-erro-413-request-entity-too-large">Enviando arquivos no Nginx erro “413 Request Entity Too Large”</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/12202021/lost-httpd-conf-file-located-apache">Lost httpd.conf file located apache [closed]</a></td><td><a href="https://pt.stackoverflow.com/questions/65832/fluxo-de-trabalho-workflow-git-usando-github">Fluxo de trabalho (workflow) Git usando GitHub?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/7947030/nginx-no-www-to-www-and-www-to-no-www">Nginx no-www to www and www to no-www</a></td><td><a href="https://pt.stackoverflow.com/questions/152554/como-instalar-o-driver-pdo-pgsql-no-ubuntu">Como instalar o driver PDO_PGSQL no ubuntu?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/7695962/postgresql-password-authentication-failed-for-user-postgres">Postgresql: password authentication failed for user “postgres”</a></td><td><a href="https://pt.stackoverflow.com/questions/87208/como-compilar-um-arquivo-java-usando-o-terminal-do-ubuntu">Como compilar um arquivo .java usando o terminal do ubuntu</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/3466626/how-to-permanently-add-a-private-key-with-ssh-add-on-ubuntu">How to permanently add a private key with ssh-add on Ubuntu? [closed]</a></td><td><a href="https://pt.stackoverflow.com/questions/190556/como-mudar-a-vers%c3%a3o-do-php-em-que-o-composer-%c3%a9-executado-no-linux">Como mudar a versão do PHP em que o Composer é executado no Linux?</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/21168141/cannot-install-packages-using-node-package-manager-in-ubuntu">Cannot install packages using node package manager in Ubuntu</a></td><td><a href="https://pt.stackoverflow.com/questions/91795/lista-de-diret%c3%b3rios-do-projeto-em-laravel-%c3%a9-exibida-ao-inv%c3%a9s-de-executar-a-aplic">Lista de diretórios do projeto em Laravel é exibida ao invés de executar a aplicação [duplicada]</a></td></tr>
-<tr><td><a href="https://stackoverflow.com/questions/6504810/how-to-install-lxml-on-ubuntu">How to install lxml on Ubuntu</a></td><td><a href="https://pt.stackoverflow.com/questions/334553/como-ter-duas-vers%c3%b5es-do-php-no-mesmo-servidor-apache">Como ter duas versões do php no mesmo servidor Apache?</a></td></tr>
-</tbody></table>
-<h1 id="terminal"><a class="header" href="#terminal">Terminal</a></h1>
-<p>Por não possuir uma interface gráfica, a primeiro contato pode ser intimidador, mas é essencial saber ao menos o básico do terminal, para interagir de forma mais prática com seu computador.</p>
-<p>(imagem do terminal?)</p>
-<p>Experimente abrir o terminal e digitar:</p>
-<p><code>echo hello</code></p>
-<p>Ou utilizar o comando de <code>cd</code> para navegar entre os diretórios, escrevendo a frente o nome da pasta que gostaria de acessar.</p>
-<p><code>cd \Documentos\Imagens</code></p>
-<p>Existem uma variedade de comandos que podem auxiliar na criação, edição, de arquivos e pastas. Experimente acessar uma pasta (mostrar imagem como a pessoa sabe em qual pasta ela está) utilizando o seu terminal, e dentro dela abrir um editor de texto por exemplo.</p>
-<p>Caso tenha o VSCode instalado bastaria executar um: <code>code .</code>, onde <code>code</code> se refere ao atalho do editor VSCode, e o <code>.</code> se indica para o terminal que gostaria de abrir o editor naquele diretório.</p>
-<p>No geral basta escrever o nome de algum app no terminal que tenha instalado, para fazer rodar (isso sem fazer uso dos seus atalhos).</p>
-<p>(colocar imagem com lista de comandos).</p>
-<p>Esta é uma opção para pessoas que ao invés de migrar para outro sistema operacional, prefere desenvolver e usufruir de um terminal Linux, dentro do seu Windows.</p>
-<p>Caso você tenha vindo de um outro sistema operacional possivelmente como o Windows, talvez demore um pouco para se habituar ao novo sistema oparacional por não estar tão acostumado com possíveis novas ferramentas e interfaces, mas deve-se ter em mente que com o uso habitual vai acabar achando o terminal um auxiliar mais efetivo e prático, seja para navegar entre diretórios, manipular e executar arquivos. (imagem do terminal e/ou tabela de comandos)</p>
+                        <p>No momento em que temos contato com a universidade, passamos a ganhar uma responsabilidade maior sobre a forma que utilizamos o nosso conhecimento. Em um curso de tecnologia, é ensinado meios e ferramentas, processos, templates e outras coisas que nos norteiam e ajudam a realizarmos atividades não só dentro do contexto acadêmico mas também quando for o momento de se atuar no mercado de trabalho na área que se estiver cursando. Ainda assim, é possível dizer que tudo o que aprendemos no contexto da universidade pode ser aplicado em uma empresa ou um trabalho de contexto real por exemplo?
+Embora o foco não seja responder essa pergunta com exatidão, este trabalho possui a intenção de funcionar como um guia prático para desenvolvedores iniciantes ou não que possuem a necessidade de saber por onde começar e como agir para deixar de estar &quot;stagnado&quot; em algum ponto de um trabalho com comentários relevantes a respeito do que fazer ao se deparar com um projeto de Engenharia de Software. Aliás embora seja ensinado ao longo de um curso várias áreas para atuar, diversos conceitos e práticas de aplicação, têm se em mente que cada etapa, desde o design do produto, até a sua conclusão devemos encarar alguns passos como a configuração de ambiente.</p>
+<p>Mesmo não forncendo todas as respostas, a ideia é que através desse guia</p>
 <h1 id="começando-com-git"><a class="header" href="#começando-com-git">Começando com Git</a></h1>
 <p>Vamos começar sua jornada com Git! Há muita coisa a se aprender, mas toda caminhada tem um ponto de início. Nesse capítulo, discutiremos sobre:</p>
 <ul>
@@ -309,7 +166,7 @@ Clique em &quot;Diminuir Volume...&quot;.</p>
 <li>+ Comandos</li>
 <li>Sugestões de aliases/functions</li>
 </ul>
-<h1 id="faq-1"><a class="header" href="#faq-1">F.A.Q</a></h1>
+<h1 id="faq"><a class="header" href="#faq">F.A.Q</a></h1>
 <p>As perguntas mais frequentes &amp; votadas no Stackoverflow :^)</p>
 <table><thead><tr><th>Top 10 questões (ingles/global)</th><th>Top 10 questões (portugues)</th></tr></thead><tbody>
 <tr><td><a href="https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git">How do I undo the most recent local commits in Git?</a></td><td><a href="https://pt.stackoverflow.com/questions/8315/quais-as-diferen%c3%a7as-entre-git-svn-e-cvs">Quais as diferenças entre Git, SVN e CVS?</a></td></tr>
@@ -323,36 +180,11 @@ Clique em &quot;Diminuir Volume...&quot;.</p>
 <tr><td><a href="https://stackoverflow.com/questions/1783405/how-do-i-check-out-a-remote-git-branch">How do I check out a remote Git branch?</a></td><td><a href="https://pt.stackoverflow.com/questions/61428/como-excluir-um-ramobranch-do-git-local-e-remoto">Como excluir um ramo(branch) do Git local e remoto?</a></td></tr>
 <tr><td><a href="https://stackoverflow.com/questions/61212/how-to-remove-local-untracked-files-from-the-current-git-working-tree">How to remove local (untracked) files from the current Git working tree</a></td><td><a href="https://pt.stackoverflow.com/questions/3030/como-desfa%c3%a7o-o-%c3%baltimo-commit-no-git">Como desfaço o último commit no Git?</a></td></tr>
 </tbody></table>
-<h1 id="resumão"><a class="header" href="#resumão">Resumão</a></h1>
-<p>O flow básico de utilização no dia a dia é:</p>
-<ol>
-<li>
-<p>Após criar repositório no Github, no <code>terminal</code>:</p>
-<pre><code class="language-bash">git clone &lt;endereço do novo repositório&gt;
-cd &lt;nome do repositorio&gt;
-
-# ex:
-# git clone https://github.com/airbnb/javascript
-# cd javascript
-</code></pre>
-</li>
-<li>
-<p>Após fazer as mudanças nos arquivos que quiser, no <code>terminal</code>:</p>
-<pre><code class="language-bash">git status # vai listar todas as alterações feitas (o que foi adicionado/modificado/removido)
-
-git add . # adiciona todas as alterações
-
-git commit -m &quot;mensagem explicando o proposito desse commit&quot; # ex: git commit -m &quot;adicionando botão para remoção de usuários&quot;
-
-git push origin &lt;branch_desejada&gt;
-</code></pre>
-</li>
-</ol>
 <h1 id="instalação-e-configuração"><a class="header" href="#instalação-e-configuração">Instalação e Configuração</a></h1>
 <h2 id="instalando"><a class="header" href="#instalando">Instalando</a></h2>
 <h3 id="windows"><a class="header" href="#windows">Windows</a></h3>
 <p>Para Windows, não tem segredo, basta simplesmente baixar o <a href="https://git-scm.com/downloads">GitBash</a> :)</p>
-<h3 id="linux-1"><a class="header" href="#linux-1">Linux</a></h3>
+<h3 id="linux"><a class="header" href="#linux">Linux</a></h3>
 <blockquote>
 <p><em>Via de regra, voce pode replicar todos os comandos aqui no Mac; basta substituir os</em> &quot;<code>sudo apt install ...</code>&quot; <em>por</em>  &quot;<code>brew install ...</code>&quot;</p>
 </blockquote>
@@ -480,6 +312,177 @@ eval `git remote set-url origin git@github.com:${${URL#*com/}%.git}.git`
 <p>Juntando tudo em um comando só, utilizando o pipe (&quot;<code>|</code>&quot;) do bash para passar a url para a variável <code>url</code>:</p>
 <pre><code class="language-bash">echo &quot;$(git ls-remote --get-url origin)&quot; | { read url; eval `git remote set-url origin git@github.com:${${url#*com/}%.git}.git`;
 </code></pre>
+<h1 id="resumão"><a class="header" href="#resumão">Resumão</a></h1>
+<p>O flow básico de utilização no dia a dia é:</p>
+<ol>
+<li>
+<p>Após criar repositório no Github, no <code>terminal</code>:</p>
+<pre><code class="language-bash">git clone &lt;endereço do novo repositório&gt;
+cd &lt;nome do repositorio&gt;
+
+# ex:
+# git clone https://github.com/airbnb/javascript
+# cd javascript
+</code></pre>
+</li>
+<li>
+<p>Após fazer as mudanças nos arquivos que quiser, no <code>terminal</code>:</p>
+<pre><code class="language-bash">git status # vai listar todas as alterações feitas (o que foi adicionado/modificado/removido)
+
+git add . # adiciona todas as alterações
+
+git commit -m &quot;mensagem explicando o proposito desse commit&quot; # ex: git commit -m &quot;adicionando botão para remoção de usuários&quot;
+
+git push origin &lt;branch_desejada&gt;
+</code></pre>
+</li>
+</ol>
+<p>Caso esteja iniciando e gostaria de fazer isso com um bom começo, recomendamos a utilização de um sistema operacional baseado no Linux, como o Ubuntu por exemplo que fácil instalar e usar. Linux é uma boa opção por motivos como seu software aberto (que pode ser visto e melhorado por qualquer um), e por conta da sua alta capacidade de processamento (até mesmo em hardwares mais antigos), isso auxilia por exemplo em um cenário que precisa lidar com uma grande quantidade de dados.</p>
+<p>E mesmo sabendo que é uma boa opção, ainda sim, possui outros motivos para manter outro sistema operacional na sua máquina.</p>
+<p>Para resolvermos essa questão pode-se optar por fazer um Dual Boot. No geral isso implica dizer, que podemos colocar mais do que apenas um sistema operacional em seu computador, basta termos um pen-drive bootável, e espaço no seu disco rígido suficiente para isso.</p>
+<h3 id="começando"><a class="header" href="#começando">Começando</a></h3>
+<ol>
+<li>
+<p>Faça o download do <a href="https://ubuntu.com/#download">Ubuntu</a> (a 20.04 LTS é uma boa opção).</p>
+</li>
+<li>
+<p>Tenha certeza de que tem ao menos 50 GB de espaço sobrando no seu HD.</p>
+</li>
+<li>
+<p>Uma unidade flash USB com no mínimo 8 GB.</p>
+</li>
+<li>
+<p>E um programa para para poder criar um USB bootável, uma sugestão seria o <a href="https://rufus.ie/">Rufus</a></p>
+</li>
+</ol>
+<h3 id="1º-passo-crie-um-usb-bootável-com-o-ubuntu"><a class="header" href="#1º-passo-crie-um-usb-bootável-com-o-ubuntu">1º passo: Crie um USB bootável com o Ubuntu</a></h3>
+<p>Antes de começar esse passo certifique-se de que não há nenhum arquivo importante dentro do seu pendrive, já que esse procedimento irá ser reescrito fazendo com que perca qualquer conteúdo que havia contido antigamente.</p>
+<p>Com seu pendrive pronto para ser reescrito, insira-o em seu computador e abra o Rufus.</p>
+<p><img src="3.%20Linux/ebook/src/Imagens/Rufus_1.png" alt="interface_Rufus" /></p>
+<p>Ele irá detectar automaticamente o drive USB inserido.</p>
+<p>Em 'Boot selection' selecione a imagem ISO do Ubuntu que havia feito o download anteriormente. Depois que selecionar irá aparecer alguns avisose uma opção de escrita da ISO. Responda 'yes', escolha a opção recomendada, e confirme que está ciente que os arquivos dentro da unidade serão destruídos.</p>
+<p>Depois disso o botão de &quot;Ready&quot;, vai ser habilitado.
+Clique e espere alguns minutos enquanto o USB vai sendo reescrito.
+Isso pode demorar alguns minutos dependendo da velocidade do seu USB.</p>
+<p><img src="3.%20Linux/ebook/src/Imagens/Rufus_2.png" alt="Copying_ISO_Rufus" /></p>
+<p>Quando terminar, remova seu USB de forma segura, agora dentro dele existe uma imagem de Ubuntu pronta para ser instalada em um computador.</p>
+<blockquote>
+<p><em>Embora não seja exatamente necessário, recomenda-se desfragmentar o disco do seu computador para poder consolidar os arquivos do seu computador para o 'início' do seu disco, dessa forma liberando mais espaço antes de fazer o particionamento.</em></p>
+</blockquote>
+<h3 id="2º-passo-aloque-espaço-no-seu-disco-rígido"><a class="header" href="#2º-passo-aloque-espaço-no-seu-disco-rígido">2º passo: Aloque espaço no seu disco rígido.</a></h3>
+<p>É necessário particionar seu disco rígido para separar um espaço de atuação para o novo sistema operacional que será instalado no seu computador.</p>
+<p>Vá no menu iniciar do windows e procure por &quot;Partições&quot; ou por &quot;Gerenciamento de disco&quot;.</p>
+<p>Vai se deparar com uma tela similar a esta, nela vai listar as unidades de espaço contidas dentro do seu computador.</p>
+<p><img src="3.%20Linux/ebook/src/Imagens/gerenciamento_de_disco.jpeg" alt="Gerenciamento_de_disco" /></p>
+<p>Escolha algum dos espaços tendo em mente que você irá dividir uma dessas unidades, caso tenha mais de uma, opte pela maior provavelmente a sua unidade &quot;(C:)&quot;.</p>
+<p>Clique com o botão direito na que escolheu.
+Clique em &quot;Diminuir Volume...&quot;.</p>
+<p>O espaço de disco que o Ubuntu LTS costuma requisitar, gira em torno de 20 GB ou mais.</p>
+<blockquote>
+<p><em>Tenha em mente que por mais que ele precise apenas de pouco espaço, vai ser um outro sistema operacional onde irá precisar instalar softwares e salvar arquivos, logo é bom se reservar uma boa quantidade de espaço para não ter problemas por falta dele no futuro</em></p>
+</blockquote>
+<p>Logo o espaço que irá diminuir seria de ao menos 20000 MB.</p>
+<p><img src="3.%20Linux/ebook/src/Imagens/gerenciamento_de_disco_1.jpeg" alt="gerenciamento_de_disco_exemplo" /></p>
+<h3 id="3º-passo-instalação"><a class="header" href="#3º-passo-instalação">3º passo: Instalação.</a></h3>
+<h1 id="faq-1"><a class="header" href="#faq-1">F.A.Q</a></h1>
+<p>As perguntas mais frequentes &amp; votadas no Stackoverflow :^)</p>
+<ul>
+<li><a href="3.%20Linux/FAQ.html#faq">F.A.Q</a>
+<ul>
+<li><a href="3.%20Linux/FAQ.html#linux">Linux</a></li>
+<li><a href="3.%20Linux/FAQ.html#bash">Bash</a></li>
+<li><a href="3.%20Linux/FAQ.html#ubuntu">Ubuntu</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="linux-1"><a class="header" href="#linux-1">Linux</a></h2>
+<table><thead><tr><th>Top 10 questões (ingles/global)</th><th>Top 10 questões (portugues)</th></tr></thead><tbody>
+<tr><td><a href="https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux">How do I find all files containing specific text on Linux?</a></td><td><a href="https://pt.stackoverflow.com/questions/732/programar-em-c-para-arm">Programar em C para ARM</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/5905054/how-can-i-recursively-find-all-files-in-current-and-subfolders-based-on-wildcard">How can I recursively find all files in current and subfolders based on wildcard matching?</a></td><td><a href="https://pt.stackoverflow.com/questions/4018/o-que-significa-em-linguagem-c">O que significa “:-!!” em linguagem C?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux">How to change the output color of echo in Linux</a></td><td><a href="https://pt.stackoverflow.com/questions/124518/configurar-cronjob-para-executar-de-5-em-5-minutos-quando-estiver-dentre-5-a-20">Configurar Cronjob para executar de 5 em 5 minutos, quando estiver dentre 5 a 20 horas</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/1951742/how-can-i-symlink-a-file-in-linux">How can I symlink a file in Linux? [closed]</a></td><td><a href="https://pt.stackoverflow.com/questions/2818/como-agendar-uma-tarefa-recorrente-no-linux">Como agendar uma tarefa recorrente no linux?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/3740152/how-to-change-permissions-for-a-folder-and-its-subfolders-files-in-one-step">How to change permissions for a folder and its subfolders/files in one step?</a></td><td><a href="https://pt.stackoverflow.com/questions/155547/significado-de">Significado de “__”</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/375913/how-can-i-profile-c-code-running-on-linux">How can I profile C++ code running on Linux?</a></td><td><a href="https://pt.stackoverflow.com/questions/99838/quais-as-linguagens-de-programa%c3%a7%c3%a3o-que-d%c3%a3o-suporte-a-linux-e-windows">Quais as linguagens de programação que dão suporte a Linux e Windows?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/1987926/how-do-i-grep-recursively">How do I grep recursively?</a></td><td><a href="https://pt.stackoverflow.com/questions/2518/como-responder-programaticamente-a-um-comando-no-terminal-linux">Como responder programaticamente a um comando no terminal Linux?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/6237295/how-can-i-update-nodejs-and-npm-to-the-next-versions">How can I update NodeJS and NPM to the next versions?</a></td><td><a href="https://pt.stackoverflow.com/questions/3522/como-lidar-com-um-processo-cometa">Como lidar com um processo cometa?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/6877727/how-do-i-delete-an-exported-environment-variable">How do I delete an exported environment variable?</a></td><td><a href="https://pt.stackoverflow.com/questions/126422/o-que-acontece-com-um-cronjob-de-230-se-o-servidor-cair-%c3%a0s-228-e-s%c3%b3-voltar-5">O que acontece com um Cronjob de 2:30, se o servidor cair às 2:28 e só voltar 5 minutos depois?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/9229601/what-is-in-c-code">What is “:-!!” in C code?</a></td><td><a href="https://pt.stackoverflow.com/questions/15794/programar-c-em-linux-ide-vs-editor-linha-de-comando">Programar C em Linux - IDE vs. editor + linha de comando</a></td></tr>
+</tbody></table>
+<h2 id="bash"><a class="header" href="#bash">Bash</a></h2>
+<table><thead><tr><th>Top 10 questões (ingles/global)</th><th>Top 10 questões (portugues)</th></tr></thead><tbody>
+<tr><td><a href="https://stackoverflow.com/questions/59895/how-can-i-get-the-source-directory-of-a-bash-script-from-within-the-script-itsel">How can I get the source directory of a Bash script from within the script itself?</a></td><td><a href="https://pt.stackoverflow.com/questions/73641/como-inserir-uma-quebra-de-linha-dentro-do-echo-no-shell-script">Como inserir uma quebra de linha dentro do echo no shell script?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/59838/how-can-i-check-if-a-directory-exists-in-a-bash-shell-script">How can I check if a directory exists in a Bash shell script?</a></td><td><a href="https://pt.stackoverflow.com/questions/52622/o-que-significa-2-e-em-bash">O que significa '2&gt;' e '&amp;&gt;' em Bash?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/638975/how-do-i-tell-if-a-regular-file-does-not-exist-in-bash">How do I tell if a regular file does not exist in Bash?</a></td><td><a href="https://pt.stackoverflow.com/questions/143822/qual-a-diferen%c3%a7a-de-bin-bash-e-usr-bin-env-bash">Qual a diferença de /bin/bash e /usr/bin/env bash?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/4181703/how-to-concatenate-string-variables-in-bash">How to concatenate string variables in Bash</a></td><td><a href="https://pt.stackoverflow.com/questions/422494/como-passar-o-valor-de-uma-vari%c3%a1vel-para-mai%c3%bascula-ou-minuscula">Como passar o valor de uma variável para maiúscula ou minuscula?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/229551/how-to-check-if-a-string-contains-a-substring-in-bash">How to check if a string contains a substring in Bash</a></td><td><a href="https://pt.stackoverflow.com/questions/82695/no-bash-qual-%c3%a9-a-diferen%c3%a7a-entre-e">No bash, qual é a diferença entre &lt;, &lt;&lt; e &lt;&lt;&lt;?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/8467424/echo-newline-in-bash-prints-literal-n">Echo newline in Bash prints literal \n</a></td><td><a href="https://pt.stackoverflow.com/questions/55836/como-extrair-o-caminho-para-o-ficheiro">Como extrair o caminho para o ficheiro</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/818255/in-the-shell-what-does-21-mean">In the shell, what does “ 2&gt;&amp;1 ” mean?</a></td><td><a href="https://pt.stackoverflow.com/questions/55851/converter-p%c3%a1ginas-de-documento-pdf-para-jpgs">Converter páginas de documento PDF para JPGs</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script">How can I check if a program exists from a Bash script?</a></td><td><a href="https://pt.stackoverflow.com/questions/8673/como-posso-pedir-uma-confirma%c3%a7%c3%a3o-ao-usu%c3%a1rio-num-arquivo-bash">Como posso pedir uma confirmação ao usuário num arquivo bash?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash">Extract filename and extension in Bash</a></td><td><a href="https://pt.stackoverflow.com/questions/145926/cmd-powershell-bash-qual-a-diferen%c3%a7a">CMD, PowerShell, Bash - Qual a diferença?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/918886/how-do-i-split-a-string-on-a-delimiter-in-bash">How do I split a string on a delimiter in Bash?</a></td><td><a href="https://pt.stackoverflow.com/questions/55735/verificar-se-vari%c3%a1vel-%c3%a9-um-n%c3%bamero-inteiro-positivo">Verificar se variável é um número inteiro positivo</a></td></tr>
+</tbody></table>
+<h2 id="ubuntu"><a class="header" href="#ubuntu">Ubuntu</a></h2>
+<table><thead><tr><th>Top 10 questões (ingles/global)</th><th>Top 10 questões (portugues)</th></tr></thead><tbody>
+<tr><td><a href="https://stackoverflow.com/questions/9346211/how-to-kill-a-process-on-a-port-on-ubuntu">How to kill a process on a port on ubuntu</a></td><td><a href="https://pt.stackoverflow.com/questions/21814/como-inicializar-o-postgresql-com-o-ubuntu">Como inicializar o postgresql com o ubuntu?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/14788345/how-to-install-the-jdk-on-ubuntu-linux">How to install the JDK on Ubuntu Linux</a></td><td><a href="https://pt.stackoverflow.com/questions/30116/habilitar-o-htaccess-no-ubuntu">Habilitar o .htaccess no ubuntu</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/7645918/require-no-such-file-to-load-mkmf-loaderror">`require': no such file to load — mkmf (LoadError)</a></td><td><a href="https://pt.stackoverflow.com/questions/6495/como-manter-um-servidor-nodejs-em-execu%c3%a7%c3%a3o-permanente">Como manter um servidor nodejs em execução permanente?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/12578499/how-to-install-boost-on-ubuntu">How to install Boost on Ubuntu</a></td><td><a href="https://pt.stackoverflow.com/questions/41619/enviando-arquivos-no-nginx-erro-413-request-entity-too-large">Enviando arquivos no Nginx erro “413 Request Entity Too Large”</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/12202021/lost-httpd-conf-file-located-apache">Lost httpd.conf file located apache [closed]</a></td><td><a href="https://pt.stackoverflow.com/questions/65832/fluxo-de-trabalho-workflow-git-usando-github">Fluxo de trabalho (workflow) Git usando GitHub?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/7947030/nginx-no-www-to-www-and-www-to-no-www">Nginx no-www to www and www to no-www</a></td><td><a href="https://pt.stackoverflow.com/questions/152554/como-instalar-o-driver-pdo-pgsql-no-ubuntu">Como instalar o driver PDO_PGSQL no ubuntu?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/7695962/postgresql-password-authentication-failed-for-user-postgres">Postgresql: password authentication failed for user “postgres”</a></td><td><a href="https://pt.stackoverflow.com/questions/87208/como-compilar-um-arquivo-java-usando-o-terminal-do-ubuntu">Como compilar um arquivo .java usando o terminal do ubuntu</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/3466626/how-to-permanently-add-a-private-key-with-ssh-add-on-ubuntu">How to permanently add a private key with ssh-add on Ubuntu? [closed]</a></td><td><a href="https://pt.stackoverflow.com/questions/190556/como-mudar-a-vers%c3%a3o-do-php-em-que-o-composer-%c3%a9-executado-no-linux">Como mudar a versão do PHP em que o Composer é executado no Linux?</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/21168141/cannot-install-packages-using-node-package-manager-in-ubuntu">Cannot install packages using node package manager in Ubuntu</a></td><td><a href="https://pt.stackoverflow.com/questions/91795/lista-de-diret%c3%b3rios-do-projeto-em-laravel-%c3%a9-exibida-ao-inv%c3%a9s-de-executar-a-aplic">Lista de diretórios do projeto em Laravel é exibida ao invés de executar a aplicação [duplicada]</a></td></tr>
+<tr><td><a href="https://stackoverflow.com/questions/6504810/how-to-install-lxml-on-ubuntu">How to install lxml on Ubuntu</a></td><td><a href="https://pt.stackoverflow.com/questions/334553/como-ter-duas-vers%c3%b5es-do-php-no-mesmo-servidor-apache">Como ter duas versões do php no mesmo servidor Apache?</a></td></tr>
+</tbody></table>
+<p>Caso você tenha vindo de um outro sistema operacional possivelmente como o Windows, talvez demore um pouco para se habituar ao novo sistema oparacional por não estar tão acostumado com possíveis novas ferramentas e interfaces, mas deve-se ter em mente que com o uso habitual vai acabar achando o terminal um auxiliar mais efetivo e prático, seja para navegar entre diretórios, manipular e executar arquivos. (imagem do terminal e/ou tabela de comandos)</p>
+<h1 id="terminal"><a class="header" href="#terminal">Terminal</a></h1>
+<p>Por não possuir uma interface gráfica, a primeiro contato pode ser intimidador, mas é essencial saber ao menos o básico do terminal, para interagir de forma mais prática com seu computador.</p>
+<p>(imagem do terminal?)</p>
+<p>Experimente abrir o terminal e digitar:</p>
+<p><code>echo hello</code></p>
+<p>Ou utilizar o comando de <code>cd</code> para navegar entre os diretórios, escrevendo a frente o nome da pasta que gostaria de acessar.</p>
+<p><code>cd \Documentos\Imagens</code></p>
+<p>Existem uma variedade de comandos que podem auxiliar na criação, edição, de arquivos e pastas. Experimente acessar uma pasta (mostrar imagem como a pessoa sabe em qual pasta ela está) utilizando o seu terminal, e dentro dela abrir um editor de texto por exemplo.</p>
+<p>Caso tenha o VSCode instalado bastaria executar um: <code>code .</code>, onde <code>code</code> se refere ao atalho do editor VSCode, e o <code>.</code> se indica para o terminal que gostaria de abrir o editor naquele diretório.</p>
+<p>No geral basta escrever o nome de algum app no terminal que tenha instalado, para fazer rodar (isso sem fazer uso dos seus atalhos).</p>
+<p>(colocar imagem com lista de comandos).</p>
+<p>Esta é uma opção para pessoas que ao invés de migrar para outro sistema operacional, prefere desenvolver e usufruir de um terminal Linux, dentro do seu Windows.</p>
+<h1 id="chapter-1"><a class="header" href="#chapter-1">Chapter 1</a></h1>
+<p>In addition to providing runnable code playgrounds, mdBook optionally allows them
+to be editable. In order to enable editable code blocks, the following needs to
+be added to the <em><strong>book.toml</strong></em>:</p>
+<pre><code class="language-toml">[output.html.playground]
+editable = true
+</code></pre>
+<p>To make a specific block available for editing, the attribute <code>editable</code> needs
+to be added to it:</p>
+<pre><code class="language-markdown">```rust,editable
+fn main() {
+    let number = 5;
+    print!("{}", number);
+}
+```</code></pre>
+<p>The above will result in this editable playground:</p>
+<pre><pre class="playground"><code class="language-rust editable">fn main() {
+    let number = 5;
+    print!(&quot;{}&quot;, number);
+}
+</code></pre></pre>
+<pre><code class="language-python editable">print(&quot;hello world&quot;)
+x = 5
+print(x)
+</code></pre>
+<p>Note the new <code>Undo Changes</code> button in the editable playgrounds.</p>
+<h2 id="customizing-the-editor"><a class="header" href="#customizing-the-editor">Customizing the Editor</a></h2>
+<p>By default, the editor is the <a href="https://ace.c9.io/">Ace</a> editor, but, if desired,
+the functionality may be overriden by providing a different folder:</p>
+<pre><code class="language-toml">[output.html.playground]
+editable = true
+editor = &quot;/path/to/editor&quot;
+</code></pre>
+<p>Note that for the editor changes to function correctly, the <code>book.js</code> inside of
+the <code>theme</code> folder will need to be overriden as it has some couplings with the
+default Ace editor.</p>
 
                     </main>
 
