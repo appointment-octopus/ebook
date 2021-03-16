@@ -154,29 +154,37 @@
                     <main>
                         <h1 id="resumão"><a class="header" href="#resumão">Resumão</a></h1>
 <p>O flow básico de utilização no dia a dia é:</p>
-<ol>
-<li>
-<p>Após criar repositório no Github, no <code>terminal</code>:</p>
-<pre><code class="language-bash">git clone &lt;endereço do novo repositório&gt;
-cd &lt;nome do repositorio&gt;
-
-# ex:
+<h2 id="1-após-criar-repositório-no-github-no-terminal"><a class="header" href="#1-após-criar-repositório-no-github-no-terminal">1. Após criar repositório no Github, no <code>terminal</code></a></h2>
+<h3 id="clonar-um-repositório"><a class="header" href="#clonar-um-repositório">Clonar um repositório</a></h3>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git clone &lt;endereço do novo repositório&gt;
+</code></pre>
+<h3 id="trocar-de-diretório"><a class="header" href="#trocar-de-diretório">Trocar de diretório</a></h3>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cd &lt;nome do repositorio&gt;
+</code></pre>
+<h3 id="exemplo-completo"><a class="header" href="#exemplo-completo">Exemplo completo</a></h3>
+<pre><code class="language-bash"># ex:
 # git clone https://github.com/airbnb/javascript
 # cd javascript
 </code></pre>
-</li>
-<li>
-<p>Após fazer as mudanças nos arquivos que quiser, no <code>terminal</code>:</p>
-<pre><code class="language-bash">git status # vai listar todas as alterações feitas (o que foi adicionado/modificado/removido)
-
-git add . # adiciona todas as alterações
-
-git commit -m &quot;mensagem explicando o proposito desse commit&quot; # ex: git commit -m &quot;adicionando botão para remoção de usuários&quot;
-
-git push origin &lt;branch_desejada&gt;
+<h2 id="2-após-fazer-as-mudanças-nos-arquivos-que-quiser-no-terminal"><a class="header" href="#2-após-fazer-as-mudanças-nos-arquivos-que-quiser-no-terminal">2. Após fazer as mudanças nos arquivos que quiser, no <code>terminal</code></a></h2>
+<h3 id="listar-todas-as-alterações-feitas-o-que-foi-adicionadomodificadoremovido"><a class="header" href="#listar-todas-as-alterações-feitas-o-que-foi-adicionadomodificadoremovido">Listar todas as alterações feitas (o que foi adicionado/modificado/removido)</a></h3>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git status
 </code></pre>
-</li>
-</ol>
+<h3 id="adicionar-alterações-feitas"><a class="header" href="#adicionar-alterações-feitas">Adicionar alterações feitas</a></h3>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git add &lt;arquivo_1&gt; &lt;arquivo_2&gt;
+</code></pre>
+<h3 id="commitar"><a class="header" href="#commitar">Commitar</a></h3>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git commit -m &quot;mensagem explicando o proposito desse commit&quot;
+</code></pre>
+<h3 id="subir-as-alterações-pro-github"><a class="header" href="#subir-as-alterações-pro-github">Subir as alterações pro Github</a></h3>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git push origin &lt;branch_desejada&gt;
+</code></pre>
+<h3 id="exemplo-completo-1"><a class="header" href="#exemplo-completo-1">Exemplo completo</a></h3>
+<pre><code class="language-bash"># ex:
+# git add RemoveUserButton.js styles.css
+# git commit -m &quot;adicionando botão para remoção de usuários&quot;
+# git push origin main
+</code></pre>
 
                     </main>
 

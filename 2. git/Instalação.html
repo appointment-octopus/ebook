@@ -179,16 +179,19 @@
 <h2 id="configurando"><a class="header" href="#configurando">Configurando</a></h2>
 <p>Primeiro, tendo em vista que o <em>commit</em> é um registro, é importante se identificar antes de começar a utilizar o <code>git</code>:</p>
 <pre><code class="language-bash">git config --global user.name &quot;Seu Nome&quot;
-git config --global user.email seu_email@exemplo.com
-
-# ex:
+</code></pre>
+<pre><code class="language-bash">git config --global user.email seu_email@exemplo.com
+</code></pre>
+<pre><code class="language-bash"># ex:
 # git config --global user.name &quot;Joao da Silva&quot;
 # git config --global user.email joao_da_silva@gmail.com
 </code></pre>
 <p>Caso queira adotar outras identidades em outras pastas de trabalho, basta replicar o comando acima sem a <em>flag</em> <code>--global</code>:</p>
 <pre><code class="language-bash">cd pasta_de_trabalho
-git config user.name &quot;Outro Nome&quot;
-git config user.email outro_email@exemplo.com
+</code></pre>
+<pre><code class="language-bash">git config user.name &quot;Outro Nome&quot;
+</code></pre>
+<pre><code class="language-bash">git config user.email outro_email@exemplo.com
 </code></pre>
 <h3 id="ssh"><a class="header" href="#ssh">SSH</a></h3>
 <blockquote>
@@ -210,33 +213,53 @@ git config user.email outro_email@exemplo.com
 </code></pre>
 <p>temos de criá-las.</p>
 <p>No terminal:</p>
-<pre><code class="language-bash"># pressione [enter] quantas vezes for necessário
-ssh-keygen
-
-# pequena explicação:
-# a flag '-s' gera um &quot;script&quot; bash pro stdout (em texto), necessário para conectar/iniciar o agente 
-# o eval, então, &quot;roda&quot; esses comandos do script
-eval `ssh-agent -s`
-
-# adicionar a chave pro agente (caso tenha atribuido outro nome [no &quot;$ ssh-keygen&quot;] para a chave privada, mude o &quot;id_rsa&quot; para o nome correto)
-ssh-add ~/.ssh/id_rsa
+<ul>
+<li>
+<p>Pressione [enter] quantas vezes for necessário</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>ssh-keygen
 </code></pre>
+<blockquote>
+<p>Pequena explicação: A flag '-s' gera um &quot;script&quot; bash pro stdout (em texto), necessário para conectar/iniciar o agente. </p>
+</blockquote>
+</li>
+<li>
+<p>O eval, então, &quot;roda&quot; esses comandos do script</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>eval `ssh-agent -s`
+</code></pre>
+</li>
+<li>
+<p>adicionar a chave pro agente (caso tenha atribuido outro nome [no &quot;$ ssh-keygen&quot;] para a chave privada, mude o &quot;id_rsa&quot; para o nome correto)</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>ssh-add ~/.ssh/id_rsa
+</code></pre>
+</li>
+</ul>
 </li>
 <li>
 <p>Então, basta adicionar a chave pública no <em>Github</em>. Abra <a href="https://github.com/settings/keys">este link</a>, clique no botão &quot;New SSH Key&quot;, e então copie a sua chave pública em <code>~/.ssh/id_rsa.pub</code>:</p>
-<pre><code class="language-bash"># para copiar pro clipboard a chave publica
-## esses comandos são totalmente dispensáveis, já que pode abrir o arquivo e copiar manualmente
-sudo apt install xclip
-xclip -sel c &lt; ~/.ssh/id_rsa.pub
+<blockquote>
+<p>esses comandos são totalmente dispensáveis, já que pode abrir o arquivo e copiar manualmente</p>
+</blockquote>
+<ul>
+<li>
+<p>Para copiar pro clipboard a chave publica</p>
+<p>Instalar <code>xclip</code>:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>sudo apt install xclip
 </code></pre>
-<p>Agora basta colar essa chave no campo adequado para criar a chave dentro do <em>Github</em></p>
+<p>Copiar arquivo pro clipboard (o equivalente a dar Ctrl+C no conteúdo do arquivo)</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>xclip -sel c &lt; ~/.ssh/id_rsa.pub
+</code></pre>
 </li>
 <li>
-<p>Extra:
-Atualizar as urls dos repositorios clonados para utilizar o <em>ssh</em> em vez do <em>https</em>. Primeiro, checar como o repositório está rastreado.</p>
-<pre><code class="language-bash"># listar os repositórios rastreados
-$ git remote -v
-
+<p>Agora basta colar essa chave no campo adequado para criar a chave dentro do <em>Github</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Extra: Atualizar as urls dos repositorios clonados para utilizar o <em>ssh</em> em vez do <em>https</em>. Primeiro, checar como o repositório está rastreado.</p>
+<ul>
+<li>listar os repositórios rastreados</li>
+</ul>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git remote -v
 origin	https://github.com/appointment-octopus/ebook (fetch)
 origin	https://github.com/appointment-octopus/ebook (push)
 </code></pre>
@@ -247,42 +270,50 @@ origin	https://github.com/appointment-octopus/ebook (push)
 </code></pre>
 </li>
 </ol>
-<h2 id="como-curiosidade-como-o-comando-anterior-foi-construído"><a class="header" href="#como-curiosidade-como-o-comando-anterior-foi-construído">Como curiosidade, como o comando anterior foi construído:</a></h2>
+<h4 id="como-curiosidade-como-o-comando-anterior-foi-construído"><a class="header" href="#como-curiosidade-como-o-comando-anterior-foi-construído">Como curiosidade, como o comando anterior foi construído:</a></h4>
+<hr />
 <p>Tendo em vista que uma url https padrão do github é:</p>
 <blockquote>
-<p>https://github.com/appointment-octopus/ebook</p>
+<p><a href="https://github.com/appointment-octopus/ebook">https://github.com/appointment-octopus/ebook</a></p>
 </blockquote>
 <p>e uma url ssh padrão é:</p>
 <blockquote>
 <p>git@github.com:appointment-octopus/ebook.git</p>
 </blockquote>
 <p>percebemos que necessitamos extrair o nome da organização + nome do repositório; isto é: <em><code>appointment-octopus/ebook</code></em>. Utilizando o pattern matching para strings padrão do bash, conseguimos fazer isso. O <code>#</code> é utilizado para remover prefixos, então:</p>
-<pre><code class="language-bash">URL=https://github.com/appointment-octopus/ebook
-# o &quot;*&quot; vai ignorar qualquer caracter até encontrar a sequencia &quot;com/&quot;, e então retornar o resto da string
-echo &quot;${URL#*com/}&quot;
+<pre><code class="language-bash"><span style="user-select: none">$ </span>URL=https://github.com/appointment-octopus/ebook
+</code></pre>
+<p>O <code>*</code> vai ignorar qualquer caracter até encontrar a sequencia <code>com/</code>, e então retornar o resto da string</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>echo &quot;${URL#*com/}&quot;
 </code></pre>
 <p>Porém, algumas vezes a url <code>https</code> vem com um <code>.git</code> no final; para ignorá-lo, utilizaremos o <code>%</code>, cujo qual é utilizado para remover sufixos:</p>
-<pre><code class="language-bash">URL=appointment-octopus/ebook.git
-# irá retornar a string até encontrar a sequencia &quot;.git&quot;
-echo &quot;${URL%.git}
+<pre><code class="language-bash"><span style="user-select: none">$ </span>URL=appointment-octopus/ebook.git
+</code></pre>
+<p>Irá retornar a string até encontrar a sequencia &quot;.git&quot;</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>echo &quot;${URL%.git}
 </code></pre>
 <p>Portanto, juntando tudo, fica:</p>
-<pre><code class="language-bash">URL=https://github.com/appointment-octopus/ebook.git
-echo &quot;${${URL#*com/}%.git}&quot;
+<pre><code class="language-bash"><span style="user-select: none">$ </span>URL=https://github.com/appointment-octopus/ebook.git
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>echo &quot;${${URL#*com/}%.git}&quot;
 </code></pre>
 <p>Entretanto, estamos inserindo a url na mão. Felizmente existe um comando que nos retorna a url que precisamos:</p>
-<pre><code class="language-bash">URL=&quot;$(git ls-remote --get-url origin)&quot;
+<pre><code class="language-bash"><span style="user-select: none">$ </span>URL=&quot;$(git ls-remote --get-url origin)&quot;
 </code></pre>
 <p>Agora que temos o que queríamos (nome do usuário/organização+nome do repositório), basta formatar o url de output.</p>
-<pre><code class="language-bash">URL=&quot;$(git ls-remote --get-url origin)&quot;
-echo &quot;git@github.com:${${URL#*com/}%.git}.git&quot;
+<pre><code class="language-bash"><span style="user-select: none">$ </span>URL=&quot;$(git ls-remote --get-url origin)&quot;
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>echo &quot;git@github.com:${${URL#*com/}%.git}.git&quot;
 </code></pre>
 <p>Mas não basta ter a url formatada se não &quot;setarmos&quot; ela:</p>
-<pre><code class="language-bash">URL=&quot;$(git ls-remote --get-url origin)&quot;
-eval `git remote set-url origin git@github.com:${${URL#*com/}%.git}.git`
+<pre><code class="language-bash"><span style="user-select: none">$ </span>URL=&quot;$(git ls-remote --get-url origin)&quot;
+</code></pre>
+<pre><code class="language-bash">eval `git remote set-url origin git@github.com:${${URL#*com/}%.git}.git`
 </code></pre>
 <p>Juntando tudo em um comando só, utilizando o pipe (&quot;<code>|</code>&quot;) do bash para passar a url para a variável <code>url</code>:</p>
-<pre><code class="language-bash">echo &quot;$(git ls-remote --get-url origin)&quot; | { read url; eval `git remote set-url origin git@github.com:${${url#*com/}%.git}.git`;
+<pre><code class="language-bash"><span style="user-select: none">$ </span>echo &quot;$(git ls-remote --get-url origin)&quot; |\
+   { read url;\
+   eval `git remote set-url origin git@github.com:${${url#*com/}%.git}.git`; } 
 </code></pre>
 
                     </main>
