@@ -1,6 +1,17 @@
 # Instalação e Configuração
 
+O que você verá nesse capítulo:
+
+- [Instalação e Configuração](#instalação-e-configuração)
+  - [Instalando](#instalando)
+    - [Windows](#windows)
+    - [Linux](#linux)
+  - [Configurando](#configurando)
+    - [SSH](#ssh)
+      - [Como curiosidade, como o comando anterior foi construído:](#como-curiosidade-como-o-comando-anterior-foi-construído)
+
 ## Instalando
+
 ### Windows
 
 Para Windows, não tem segredo, basta simplesmente baixar o [GitBash](https://git-scm.com/downloads) :)
