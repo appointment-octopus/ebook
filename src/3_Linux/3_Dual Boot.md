@@ -62,3 +62,37 @@ Logo o espaço que irá diminuir seria de ao menos 20000 MB.
 ![gerenciamento_de_disco_exemplo](ebook/src/Imagens/gerenciamento_de_disco_1.jpeg)
 
 ### 3º passo: Instalação.
+
+Coloque o Pendrive de com o Boot do Ubuntu em uma unidade USB do seu computador e o reinicie. Enqaunto ele estiver fazendo o processo de "Ligar" novamente, **PRESSIONE VÁRIAS VEZES** a tecla F11 ou F12 (na verdade pode variar até mesmo para as teclas F10, F8, F2, já que é uma coisa diferente desde a fabricação do computador), então caso não consiga chegar até a sua tela de bios, basta reiniciar novamente e escolher outra tecla.
+
+Obtendo êxito, use as teclas do seu teclado para acessar o Boot Menu (menu de boot) e escolher o seu pendrive de boot, que nesse caso é o "3. USB HDD: SanDisk-(USB 2.0)".
+
+![Boot_Menu](src/Imagens/boot_menu-ubuntu.jpg)
+
+Sempre selecionando as opções e clicando em **Continuar**
+
+Dessa forma o processo de instalação do Ubuntu será iniciado e poderá escolher qual idioma gostaria de fazer o processo de instalação.
+
+![Install_ubuntu_1](src/Imagens/install_ubuntu_1.png)
+
+Depois poderá escolher a opção do Layout do seu teclado;
+
+Irá escolher entre a instalação normal e a instalação mínima, e dependendo se já efetuou a configuração da sua internet, opte por selecionar as opções que baixa as atualizações juntamente com a instalação do Ubuntu.
+
+![Install_ubuntu_2](src/Imagens/install_ubuntu_2.jpg)
+
+![Install_ubuntu_3](src/Imagens/install_ubuntu_3.jpg)
+
+Escolha a sua localidade;
+
+Defina as suas credenciais de nome, usuário e senha;
+
+Espere as etapas finais da instalação e ao fim clique no botão "Reiniciar agora".
+
+**Lempre-se de desconectar o seu pen-drive antes de reiniciar**
+
+Quando terminar de reiniciar irá se deparar com uma tela indicando que conseguiu chegar ao enfim dual boot :) 
+
+![Menu_de_Boot](src/Imagens/menu_de_boot.jpg)
+
+<!-- imagens e alguns elementos do texto desse tutorial, foram retirados de [Mundo Ubuntu](https://www.mundoubuntu.com.br/tutoriais/instalacao/396-instalacao-facil-do-ubuntu-20-04-lts-no-windows-10-dual-boot) -->

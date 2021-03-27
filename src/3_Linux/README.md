@@ -1,3 +1,13 @@
-# Linux
+# Começando com Linuz
 
-Caso você tenha vindo de um outro sistema operacional possivelmente como o Windows, talvez demore um pouco para se habituar ao novo sistema oparacional por não estar tão acostumado com possíveis novas ferramentas e interfaces, mas deve-se ter em mente que com o uso habitual vai acabar achando o terminal um auxiliar mais efetivo e prático, seja para navegar entre diretórios, manipular e executar arquivos. (imagem do terminal e/ou tabela de comandos)
+Vamos iniciar a sua experiência com o que possivelmente vai ser o seu sistema operacional mais utilizado. Assim como os demais capítulos desse ebook, existe muito a ser abordado. Nesse capítulo, discutiremos sobre:
+
+* [Resumo Linux](./1_Resumo%20Linux.md)
+* [O que é Linux](./2_Linux.md)
+* [Dual Boot](./3_Dual%20Boot.md)
+
+
+<!-- * [Principais comandos](./4_Principais%20comandos.md)
+* [\+ Comandos](./5_+%20Comandos.md)
+* [Sugestões de aliases/functions](./6_Sugestão%20de%20aliases.md)
+* [FAQ](./7_FAQ.md) -->
