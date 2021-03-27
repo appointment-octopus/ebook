@@ -23,7 +23,6 @@ O que você verá nesse capítulo:
 | Git | Ferramenta para "salvar" as varias versões dos seus arquivos/código-fonte |
 | Github | Lugar pra salvar teus arquivos/código-fonte |
 
-
 ## Flow básico de utilização
 
 ### 1. Após criar repositório no Github, no `terminal`
@@ -47,7 +46,6 @@ $ cd <nome do repositorio>
 # git clone https://github.com/airbnb/javascript
 # cd javascript
 ```
-
 
 ### 2. Após fazer as mudanças nos arquivos que quiser, no `terminal`
 
