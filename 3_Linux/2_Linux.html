@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Terminal - Conceitos de Engenharia de Software aplicados</title>
+        <title>2_Linux - Conceitos de Engenharia de Software aplicados</title>
         
         
 
@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../1. Introducao/index.html"><strong aria-hidden="true">1.</strong> Introducao</a></li><li class="chapter-item expanded "><a href="../2. git/index.html"><strong aria-hidden="true">2.</strong> Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../2. git/FAQ.html"><strong aria-hidden="true">2.1.</strong> Faq</a></li><li class="chapter-item expanded "><a href="../2. git/Instalação.html"><strong aria-hidden="true">2.2.</strong> Instalação</a></li><li class="chapter-item expanded "><a href="../2. git/Resumão.html"><strong aria-hidden="true">2.3.</strong> Resumão</a></li></ol></li><li class="chapter-item expanded "><a href="../3. Linux/index.html"><strong aria-hidden="true">3.</strong> Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3. Linux/Dual Boot.html"><strong aria-hidden="true">3.1.</strong> Dual Boot</a></li><li class="chapter-item expanded "><a href="../3. Linux/FAQ.html"><strong aria-hidden="true">3.2.</strong> Faq</a></li><li class="chapter-item expanded "><a href="../3. Linux/Terminal.html" class="active"><strong aria-hidden="true">3.3.</strong> Terminal</a></li><li class="chapter-item expanded "><a href="../3. Linux/windows wsl.html"><strong aria-hidden="true">3.4.</strong> Windows Wsl</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_1.html"><strong aria-hidden="true">4.</strong> Chapter_1</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../1_Introdução/index.html"><strong aria-hidden="true">1.</strong> 1_Introdução</a></li><li class="chapter-item expanded "><a href="../2_Git/index.html"><strong aria-hidden="true">2.</strong> 2_Git</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../2_Git/1_Resumão.html"><strong aria-hidden="true">2.1.</strong> 1_Resumão</a></li><li class="chapter-item expanded "><a href="../2_Git/2_Git & Github.html"><strong aria-hidden="true">2.2.</strong> 2_Git &amp; Github</a></li><li class="chapter-item expanded "><a href="../2_Git/3_Instalação e Configuração.html"><strong aria-hidden="true">2.3.</strong> 3_Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="../2_Git/4_Principais comandos.html"><strong aria-hidden="true">2.4.</strong> 4_Principais Comandos</a></li><li class="chapter-item expanded "><a href="../2_Git/5_+ Comandos.html"><strong aria-hidden="true">2.5.</strong> 5_+ Comandos</a></li><li class="chapter-item expanded "><a href="../2_Git/6_Sugestão de aliases.html"><strong aria-hidden="true">2.6.</strong> 6_Sugestão De Aliases</a></li><li class="chapter-item expanded "><a href="../2_Git/7_FAQ.html"><strong aria-hidden="true">2.7.</strong> 7_Faq</a></li></ol></li><li class="chapter-item expanded "><a href="../3_Linux/index.html"><strong aria-hidden="true">3.</strong> 3_Linux</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3_Linux/1_Resumo Linux.html"><strong aria-hidden="true">3.1.</strong> 1_Resumo Linux</a></li><li class="chapter-item expanded "><a href="../3_Linux/2_Linux.html" class="active"><strong aria-hidden="true">3.2.</strong> 2_Linux</a></li><li class="chapter-item expanded "><a href="../3_Linux/3_Dual Boot.html"><strong aria-hidden="true">3.3.</strong> 3_Dual Boot</a></li><li class="chapter-item expanded "><a href="../3_Linux/FAQ.html"><strong aria-hidden="true">3.4.</strong> Faq</a></li><li class="chapter-item expanded "><a href="../3_Linux/Terminal.html"><strong aria-hidden="true">3.5.</strong> Terminal</a></li><li class="chapter-item expanded "><a href="../3_Linux/windows wsl.html"><strong aria-hidden="true">3.6.</strong> Windows Wsl</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_1.html"><strong aria-hidden="true">4.</strong> Chapter_1</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -152,31 +152,29 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="terminal"><a class="header" href="#terminal">Terminal</a></h1>
+                        <h1 id="linux"><a class="header" href="#linux">Linux</a></h1>
 <p><i class="hljs-comment" style="background-color: rgba(0,0,0,0)">Tempo estimado de leitura: 1min</i></p><br />
-<p>Por não possuir uma interface gráfica, a primeiro contato pode ser intimidador, mas é essencial saber ao menos o básico do terminal, para interagir de forma mais prática com seu computador.</p>
-<p>(imagem do terminal?)</p>
-<p>Experimente abrir o terminal e digitar:</p>
-<p><code>echo hello</code></p>
-<p>Ou utilizar o comando de <code>cd</code> para navegar entre os diretórios, escrevendo a frente o nome da pasta que gostaria de acessar.</p>
-<p><code>cd \Documentos\Imagens</code></p>
-<p>Existem uma variedade de comandos que podem auxiliar na criação, edição, de arquivos e pastas. Experimente acessar uma pasta (mostrar imagem como a pessoa sabe em qual pasta ela está) utilizando o seu terminal, e dentro dela abrir um editor de texto por exemplo.</p>
-<p>Caso tenha o VSCode instalado bastaria executar um: <code>code .</code>, onde <code>code</code> se refere ao atalho do editor VSCode, e o <code>.</code> se indica para o terminal que gostaria de abrir o editor naquele diretório.</p>
-<p>No geral basta escrever o nome de algum app no terminal que tenha instalado, para fazer rodar (isso sem fazer uso dos seus atalhos).</p>
-<p>(colocar imagem com lista de comandos).</p>
+<p>Da mesma forma que o Windows e o Mac OS, Linux é o sistema operacional, é o programa dentro do seu computador responsável pela comunicação dos hardwares, como mouse e teclado, e outros softwares que você instala. O Kernel do Linux, ou conjunto do Kernel, são conjuntos de instruções responsáveis por como será usado funções como memória, processador, periféricos e disco. Ele é o software que atua em todo sistema operacional (SO) e através das instruções repassadas ele cuida da forma como se comporta o computador.</p>
+<p>Além do Kernel é necessário um conjunto de outros programas adicionais para podermos utilizar essa SO com mais efetividade, dentre esses interpretadores, editores de texto, e compiladores para que seja possível o desenvolvimento de outros programas. O desenvolvimento dos principais programas responsáveis pela interação com o Kernel são de autoria da <a href="https://www.gnu.org/">fundação GNU</a>. É por conta disso que muita gente se referencia ao Linux como GNU/Linux.</p>
+<h2 id="por-que-utilizar"><a class="header" href="#por-que-utilizar">Por que utilizar?</a></h2>
+<p>Caso pare um instate para pesquisar a respeito, vai encontrar algumas páginas comparando o Linux com outros sistemas operacionais, principalmente com o windows. No geral tem várias vantagens, principalmente atreladas a desempenho, e por se tratar de um software livre, centenas de desenvolvedores já trabalharam no Linux buscando por melhorias que acreditavam poder acrescer nesse sistema operacional.</p>
+<h2 id="distribuições"><a class="header" href="#distribuições">Distribuições</a></h2>
+<p>Por haver tanta gente trabalhando e desenvolvendo programas, acabou surgindo alguns <em>flavors</em> (sabores), que nada mais são que distribuições com características diferentes.</p>
+<p>É como se te fornecessem uma variação de uma mesma coisa. Acaba que isso influencia em coisas como interface, e conjunto de programas que são inseridos junto com as instalações.</p>
+<p>É um pouco difícil de dizer se existe uma melhor do que a outra, na verdade a melhor acaba sendo uma que você tenha mais familiaridade. Então leia um pouco sobre algumas para poder ver se encontra uma que acredite ser mais a sua cara.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../3. Linux/FAQ.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../3_Linux/1_Resumo Linux.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="../3. Linux/windows wsl.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../3_Linux/3_Dual Boot.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -188,13 +186,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../3. Linux/FAQ.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../3_Linux/1_Resumo Linux.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="../3. Linux/windows wsl.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../3_Linux/3_Dual Boot.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
