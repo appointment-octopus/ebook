@@ -8,8 +8,18 @@ if len(sys.argv) > 1:
 context, book = json.load(sys.stdin)
 
 
+def log(msg, write='a'):
+    with open('log.json', write) as f:
+        if msg:
+            json.dump(msg, f)
+        else:
+            f.write()
+
+
 def content_with_estimated_time(content, time_text):
     first_line, remaining_content = content.split('\n', 1)
+    if remaining_content.isspace():
+        return content
     newline_before_header = '' if remaining_content[1] == '#' else '<br />'
     return f'{first_line}\n{time_text}{newline_before_header}\n{remaining_content}'
 
@@ -35,6 +45,6 @@ def traverse(list_of_chapters):
             chapter['Chapter']['content'], time_text)
 
 
+# log(None, write='w')
 traverse(book['sections'])
-
 json.dump(book, sys.stdout)
