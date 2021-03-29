@@ -154,15 +154,59 @@
                     <main>
                         <h1 id="linux"><a class="header" href="#linux">Linux</a></h1>
 <p><i class="hljs-comment" style="background-color: rgba(0,0,0,0)">Tempo estimado de leitura: 1min</i></p><br />
-<p>Nesse capítulo você terá uma introdução a conceitos básicos e alguns comandos em um terminal Linux.</p>
+<p>Nesse capítulo você terá uma introdução a conceitos básicos e alguns comandos em um terminal Linux, além de aprender como instalar um outro sistema operacional no seu computador ou usar uma ferramenta para poder utilizar algumas ferramentas Linux.</p>
 <ul>
 <li><a href="">Linux</a>
 <ul>
-<li><a href="">explicação</a></li>
-<li><a href=""></a></li>
+<li><a href="#explica%C3%A7%C3%A3o">Explicação</a></li>
+<li><a href="#dual-boot">Dual Boot</a></li>
+<li><a href="#terminal">Terminal</a>
+-<a href="">Alguns comandos do terminal</a>
+-<a href="#listar-arquivos-e-pastas-daquele-diret%C3%B3rio">Listar arquivos e pastas daquele diretório</a>
+-<a href="#alterar-o-diret%C3%B3rio-atual">Alterar o diretório atual</a>
+-<a href="#criar-uma-pasta-naquele-diret%C3%B3rio">Criar uma pasta naquele diretório</a>
+-<a href="#executar-um-arquivo">Executar um arquivo</a>
+-<a href="#apagar-um-arquivo">Apagar um arquivo</a></li>
 </ul>
 </li>
 </ul>
+<h2 id="explicação"><a class="header" href="#explicação">Explicação</a></h2>
+<table><thead><tr><th>_</th><th>O que é</th></tr></thead><tbody>
+<tr><td>Linux</td><td>Sistema operacional de código aberto</td></tr>
+<tr><td>Terminal</td><td>É um programa que recebe os comandos do usuário a partir do teclado e repassa-os às camadas de baixo nível do sistema operacional.</td></tr>
+</tbody></table>
+<h2 id="dual-boot"><a class="header" href="#dual-boot">Dual Boot</a></h2>
+<p>Particionar o HD para receber o novo sistema operacional.
+Bootar um pendrive para colocar o instalador do sistema operacional dentro dele.
+Dentro da Bios, e com o pendrive no computador fazer ele bootar primeiro o pendrive para rodar o instalador do sistema operacional. </p>
+<h2 id="terminal"><a class="header" href="#terminal">Terminal</a></h2>
+<h3 id="alguns-comandos-do-terminal"><a class="header" href="#alguns-comandos-do-terminal">Alguns comandos do terminal</a></h3>
+<h4 id="listar-arquivos-e-pastas-daquele-diretório"><a class="header" href="#listar-arquivos-e-pastas-daquele-diretório">Listar arquivos e pastas daquele diretório</a></h4>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>ls
+</code></pre>
+<h4 id="alterar-o-diretório-atual"><a class="header" href="#alterar-o-diretório-atual">Alterar o diretório atual</a></h4>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cd /nome_do_diretório
+</code></pre>
+<blockquote>
+<p>apenas um <code>cd</code> faz você voltar para a home.</p>
+</blockquote>
+<h4 id="criar-uma-pasta-naquele-diretório"><a class="header" href="#criar-uma-pasta-naquele-diretório">Criar uma pasta naquele diretório</a></h4>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>mkdir nome_da_pasta
+</code></pre>
+<h4 id="executar-um-arquivo"><a class="header" href="#executar-um-arquivo">Executar um arquivo</a></h4>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>./nome_do_arquivo
+</code></pre>
+<h4 id="apagar-um-arquivo"><a class="header" href="#apagar-um-arquivo">Apagar um arquivo</a></h4>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>rm nome_arquivo
+</code></pre>
+<blockquote>
+<p>caso o arquivo não esteja na pasta em que está no momento, basta colocar o caminho antes do nome.</p>
+</blockquote>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>rm /caminho/nome_arquivo
+</code></pre>
+<blockquote>
+<p>cada <code>/</code> representa um caminho antes de uma pasta</p>
+</blockquote>
 
                     </main>
 

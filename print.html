@@ -1120,6 +1120,7 @@ fc48527 Adicionando arquivo Lorem Ipsum de 1 paragrafo
 <li><a href="3_Linux/./1_Resumo%20Linux.html">Resumo Linux</a></li>
 <li><a href="3_Linux/./2_Linux.html">O que é Linux</a></li>
 <li><a href="3_Linux/./3_Dual%20Boot.html">Dual Boot</a></li>
+<li><a href="3_Linux/./4_Terminal.html">Terminal</a></li>
 </ul>
 <!-- * [Principais comandos](./4_Principais%20comandos.md)
 * [\+ Comandos](./5_+%20Comandos.md)
@@ -1132,15 +1133,59 @@ fc48527 Adicionando arquivo Lorem Ipsum de 1 paragrafo
 <p>Basicamente é uma forma de se utilizar o terminal do Linux dentro de um subsistema windows.</p>
 <h1 id="linux-1"><a class="header" href="#linux-1">Linux</a></h1>
 <p><i class="hljs-comment" style="background-color: rgba(0,0,0,0)">Tempo estimado de leitura: 1min</i></p><br />
-<p>Nesse capítulo você terá uma introdução a conceitos básicos e alguns comandos em um terminal Linux.</p>
+<p>Nesse capítulo você terá uma introdução a conceitos básicos e alguns comandos em um terminal Linux, além de aprender como instalar um outro sistema operacional no seu computador ou usar uma ferramenta para poder utilizar algumas ferramentas Linux.</p>
 <ul>
 <li><a href="3_Linux/">Linux</a>
 <ul>
-<li><a href="3_Linux/">explicação</a></li>
-<li><a href="3_Linux/"></a></li>
+<li><a href="3_Linux/1_Resumo%20Linux.html#explica%C3%A7%C3%A3o">Explicação</a></li>
+<li><a href="3_Linux/1_Resumo%20Linux.html#dual-boot">Dual Boot</a></li>
+<li><a href="3_Linux/1_Resumo%20Linux.html#terminal">Terminal</a>
+-<a href="3_Linux/">Alguns comandos do terminal</a>
+-<a href="3_Linux/1_Resumo%20Linux.html#listar-arquivos-e-pastas-daquele-diret%C3%B3rio">Listar arquivos e pastas daquele diretório</a>
+-<a href="3_Linux/1_Resumo%20Linux.html#alterar-o-diret%C3%B3rio-atual">Alterar o diretório atual</a>
+-<a href="3_Linux/1_Resumo%20Linux.html#criar-uma-pasta-naquele-diret%C3%B3rio">Criar uma pasta naquele diretório</a>
+-<a href="3_Linux/1_Resumo%20Linux.html#executar-um-arquivo">Executar um arquivo</a>
+-<a href="3_Linux/1_Resumo%20Linux.html#apagar-um-arquivo">Apagar um arquivo</a></li>
 </ul>
 </li>
 </ul>
+<h2 id="explicação-1"><a class="header" href="#explicação-1">Explicação</a></h2>
+<table><thead><tr><th>_</th><th>O que é</th></tr></thead><tbody>
+<tr><td>Linux</td><td>Sistema operacional de código aberto</td></tr>
+<tr><td>Terminal</td><td>É um programa que recebe os comandos do usuário a partir do teclado e repassa-os às camadas de baixo nível do sistema operacional.</td></tr>
+</tbody></table>
+<h2 id="dual-boot"><a class="header" href="#dual-boot">Dual Boot</a></h2>
+<p>Particionar o HD para receber o novo sistema operacional.
+Bootar um pendrive para colocar o instalador do sistema operacional dentro dele.
+Dentro da Bios, e com o pendrive no computador fazer ele bootar primeiro o pendrive para rodar o instalador do sistema operacional. </p>
+<h2 id="terminal"><a class="header" href="#terminal">Terminal</a></h2>
+<h3 id="alguns-comandos-do-terminal"><a class="header" href="#alguns-comandos-do-terminal">Alguns comandos do terminal</a></h3>
+<h4 id="listar-arquivos-e-pastas-daquele-diretório"><a class="header" href="#listar-arquivos-e-pastas-daquele-diretório">Listar arquivos e pastas daquele diretório</a></h4>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>ls
+</code></pre>
+<h4 id="alterar-o-diretório-atual"><a class="header" href="#alterar-o-diretório-atual">Alterar o diretório atual</a></h4>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cd /nome_do_diretório
+</code></pre>
+<blockquote>
+<p>apenas um <code>cd</code> faz você voltar para a home.</p>
+</blockquote>
+<h4 id="criar-uma-pasta-naquele-diretório"><a class="header" href="#criar-uma-pasta-naquele-diretório">Criar uma pasta naquele diretório</a></h4>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>mkdir nome_da_pasta
+</code></pre>
+<h4 id="executar-um-arquivo"><a class="header" href="#executar-um-arquivo">Executar um arquivo</a></h4>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>./nome_do_arquivo
+</code></pre>
+<h4 id="apagar-um-arquivo"><a class="header" href="#apagar-um-arquivo">Apagar um arquivo</a></h4>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>rm nome_arquivo
+</code></pre>
+<blockquote>
+<p>caso o arquivo não esteja na pasta em que está no momento, basta colocar o caminho antes do nome.</p>
+</blockquote>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>rm /caminho/nome_arquivo
+</code></pre>
+<blockquote>
+<p>cada <code>/</code> representa um caminho antes de uma pasta</p>
+</blockquote>
 <h1 id="linux-2"><a class="header" href="#linux-2">Linux</a></h1>
 <p><i class="hljs-comment" style="background-color: rgba(0,0,0,0)">Tempo estimado de leitura: 1min</i></p><br />
 <p>Da mesma forma que o Windows e o Mac OS, Linux é o sistema operacional, é o programa dentro do seu computador responsável pela comunicação dos hardwares, como mouse e teclado, e outros softwares que você instala. O Kernel do Linux, ou conjunto do Kernel, são conjuntos de instruções responsáveis por como será usado funções como memória, processador, periféricos e disco. Ele é o software que atua em todo sistema operacional (SO) e através das instruções repassadas ele cuida da forma como se comporta o computador.</p>
@@ -1151,7 +1196,7 @@ fc48527 Adicionando arquivo Lorem Ipsum de 1 paragrafo
 <p>Por haver tanta gente trabalhando e desenvolvendo programas, acabou surgindo alguns <em>flavors</em> (sabores), que nada mais são que distribuições com características diferentes.</p>
 <p>É como se te fornecessem uma variação de uma mesma coisa. Acaba que isso influencia em coisas como interface, e conjunto de programas que são inseridos junto com as instalações.</p>
 <p>É um pouco difícil de dizer se existe uma melhor do que a outra, na verdade a melhor acaba sendo uma que você tenha mais familiaridade. Então leia um pouco sobre algumas para poder ver se encontra uma que acredite ser mais a sua cara.</p>
-<h1 id="dual-boot"><a class="header" href="#dual-boot">Dual Boot</a></h1>
+<h1 id="dual-boot-1"><a class="header" href="#dual-boot-1">Dual Boot</a></h1>
 <p><i class="hljs-comment" style="background-color: rgba(0,0,0,0)">Tempo estimado de leitura: 4min</i></p><br />
 <p>Esse passo tem a inteção de explicar como vai ser a instalação de outro sistema operacional dentro do seu computador, para não ter que abrir mão de uma interface que já é uma amiga de longa data, mas quer também exeperimentar a possibilidade de ter uma nova opção para desenvolver.</p>
 <h3 id="começando"><a class="header" href="#começando">Começando</a></h3>
@@ -1216,7 +1261,7 @@ Clique em &quot;Diminuir Volume...&quot;.</p>
 <p><strong>Lempre-se de desconectar o seu pen-drive antes de reiniciar</strong></p>
 <p>Quando terminar de reiniciar irá se deparar com uma tela indicando que conseguiu chegar ao enfim dual boot :) </p>
 <p><img src="3_Linux/../Imagens/menu_de_boot.png" alt="Menu_de_Boot" /></p>
-<!-- imagens e alguns elementos do texto desse tutorial, foram retirados de [Mundo Ubuntu](https://www.mundoubuntu.com.br/tutoriais/instalacao/396-instalacao-facil-do-ubuntu-20-04-lts-no-windows-10-dual-boot) --><h1 id="terminal"><a class="header" href="#terminal">Terminal</a></h1>
+<!-- imagens e alguns elementos do texto desse tutorial, foram retirados de [Mundo Ubuntu](https://www.mundoubuntu.com.br/tutoriais/instalacao/396-instalacao-facil-do-ubuntu-20-04-lts-no-windows-10-dual-boot) --><h1 id="terminal-1"><a class="header" href="#terminal-1">Terminal</a></h1>
 <p><i class="hljs-comment" style="background-color: rgba(0,0,0,0)">Tempo estimado de leitura: 2min</i></p><br />
 <p>Por não possuir uma interface gráfica, a primeiro contato pode ser intimidador, mas é essencial saber ao menos o básico do terminal, para interagir de forma mais prática com seu computador.</p>
 <!-- (imagem ou logo do terminal?) -->
