@@ -1,12 +1,12 @@
 # Dual Boot
 
-Caso esteja iniciando e gostaria de fazer isso com um bom começo, recomendamos a utilização de um sistema operacional baseado no Linux, como o Ubuntu por exemplo que fácil instalar e usar. Linux é uma boa opção por motivos como seu software aberto (que pode ser visto e melhorado por qualquer um), e por conta da sua alta capacidade de processamento (até mesmo em hardwares mais antigos), isso auxilia por exemplo em um cenário que precisa lidar com uma grande quantidade de dados.
-
-E mesmo sabendo que é uma boa opção, ainda sim, possui outros motivos para manter outro sistema operacional na sua máquina.
-
-Para resolvermos essa questão pode-se optar por fazer um Dual Boot. No geral isso implica dizer, que podemos colocar mais do que apenas um sistema operacional em seu computador, basta termos um pen-drive bootável, e espaço no seu disco rígido suficiente para isso.
+Esse passo tem a inteção de explicar como vai ser a instalação de outro sistema operacional dentro do seu computador, para não ter que abrir mão de uma interface que já é uma amiga de longa data, mas quer também exeperimentar a possibilidade de ter uma nova opção para desenvolver.
 
 ### Começando
+
+**Warning:** Antes de mais nada, faça esse passo a passo num dia calmo e que esteja tranquilo e disposto a possivelmente encontrar alguns problemas.
+
+Esse tutorial segue um fluxo simples e contínuo para instalação do Ubuntu, caso se interesse por outra distribuição do Linux, aconselho a pesquisar um pouco, mas caso seja essa mesmo que gostaria, vamos para o tutorial! :)
 
 1. Faça o download do [Ubuntu](https://ubuntu.com/#download) (a 20.04 LTS é uma boa opção).
 
