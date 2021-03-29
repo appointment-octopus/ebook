@@ -5,6 +5,7 @@ Vamos iniciar a sua experiência com o que possivelmente vai ser o seu sistema o
 * [Resumo Linux](./1_Resumo%20Linux.md)
 * [O que é Linux](./2_Linux.md)
 * [Dual Boot](./3_Dual%20Boot.md)
+* [Terminal](./4_Terminal.md)
 
 
 <!-- * [Principais comandos](./4_Principais%20comandos.md)
