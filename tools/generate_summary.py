@@ -4,14 +4,17 @@ result = '# Summary\n\n'
 folders = set()
 for f in sorted(glob.glob("src/**/*.md", recursive=True)):
     tokens = f.split('/')
+    print(tokens)
     filename = tokens[-1]
-    name = filename.strip('.md').title()
+    print(filename)
+    name = filename.replace('.md', '').replace('_', '. ').title()
+    print('------------------------')
     path = f.split('src/')[-1]
     directory = '/'.join(path.split('/')[:-1])
     indent = (len(tokens)-2)*2
 
     if directory and directory not in folders:
-        dir_name = directory.split('/')[-1].title()
+        dir_name = directory.split('/')[-1].title().replace('_', '. ')
         result += f'{" "*(indent-2)}- [{dir_name}](./{directory.replace(" ", "%20")}/README.md)\n'            
         folders.add(directory)
 
