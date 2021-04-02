@@ -97,7 +97,7 @@ $ npm install --global yarn
 
 Felizmente, é bem simples de se abstrair o funcionamento de qualquer projeto JS: caso o `README.md` não providencie todas as informações necessárias, basta começar a ler pelo `package.json` :D
 
-*A partir da pasta "conduit":*
+*A partir da pasta [`conduit`](#clonar-repositórios):*
 
 ```bash
 $ tree -L 2
@@ -217,6 +217,9 @@ Bom, fora o trivial (como `name`, `version`, `description` etc), o que salta aos
 
 - `Scripts`: são definidos pelo próprio desenvolvedor, sendo que podem ser até mesmo comandos que não utilizam alguma biblioteca `JS`. Por exemplo, poderiamos adicionar a chave `"list": "ls"` dentro de `"scripts"`, e rodar o comando com `npm run list` ou `yarn run list`, que teria como output a listagem do diretório do repositório atual.
 
+> Obs: na maioria das vezes não é necessário incluir `run` no uso do yarn (ex: `yarn build` em vez de `yarn run build`); neste caso há de se incluir o `run` pois `list` é um comando padrão do `yarn` utilizado para listar todos os pacotes instalados neste projeto (incluindo dependencias das dependencias etc)
+
+
 - `Dependencies`: como o próprio nome da a entender, são as dependencias utilizadas naquele projeto. É sempre interessante/importante que você tenha ao menos uma noção do que as libs incluídas fazem... Basta acessar [https://www.npmjs.com/package/](https://www.npmjs.com/package/) e incluir no final da url o pacote que está "inspecionando"; por exemplo: [https://www.npmjs.com/package/marked](https://www.npmjs.com/package/marked)
 
 Você pode encontrar mais informações sobre o `package.json` [aqui](https://docs.npmjs.com/cli/v7/configuring-npm/package-json).
@@ -224,19 +227,107 @@ Você pode encontrar mais informações sobre o `package.json` [aqui](https://do
 ## Instalando dependencias dos projetos
 
 Antes de executarmos cada um dos projetos, precisamos instalar as dependencias previamente citadas:
+Abra dois terminais distintos (ou dê "split" caso seu terminal tenha essa opção), que serão referenciados aqui no tutorial como **T1** e **T2**.
 
-*A partir da pasta "conduit":*
+Segue, então, o passo-a-passo a ser realizado em cada um dos terminais:
+
+*Ambos a partir da pasta [`conduit`](#clonar-repositórios)*
+
+<table style="width: 100%">
+<tr>
+<td>
+
+Comandos no **T1**
+
+</td>
+<td>
+
+Comandos no **T2**
+
+</td>
+</tr>
+<tr>
+<td>
+
 ```bash
-$ echo "$(cd backend && yarn)" & echo "$(cd frontend && yarn)"
+$ cd frontend
 ```
 
-> Você pode substituir o comando `yarn` por `npm install`
+</td>
+<td>
 
+```bash
+$ cd backend
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+```bash
+$ yarn
+```
+
+</td>
+<td>
+
+```bash
+$ yarn
+```
+
+</td>
+</tr>
+<tr>
+
+<td>
+
+```bash
+$ yarn start
+```
+
+</td>
+<td>
 
 ```bash
 $ yarn dev
 ```
 
-```bash
-$ yarn start
-```
+</td>
+</tr>
+
+<tr>
+
+<td>
+
+Url: [localhost:3000](http://localhost:3000/)
+
+</td>
+<td>
+
+Url: [localhost:4100](http://localhost:4100/)
+
+</td>
+</tr>
+</table>
+
+> `yarn` é o mesmo `npm install`
+> `yarn start` é o mesmo que `npm run start`
+> `yarn dev` é o mesmo que `npm run dev`
+
+> *Caso apareça um erro de conexão ao subir o serviço do backend como o mostrado abaixo, provavelmente acontecera por conta do serviço `mongod` não ter sido inicializado; para tanto, basta executar:* 
+> ```bash
+> $ sudo systemctl start mongod
+> ```
+> *\* obs: pode executar o mesmo comando acima substituindo `start` por `enable` para inicializar o serviço junto com o sistema operacional.*
+> <details>
+>  <summary>Mongod error</summary>
+>  
+>  ![mongod_error](../Imagens/mongod_error.png)
+> </details>
+> <br>
+
+Agora, com ambos os serviços funcionando, você pode interagir com seu site localmente :D
+
+Por ora é isso :)
+Veja os próximos capítulos para compreender melhor o funcionamento do Backend & Funcionamento.
