@@ -158,8 +158,51 @@
 <p>Ambas as ferramentas são utilizadas para fazer requisições http; dessa forma, para testar alguma rota especifica do backend, não será necessário, por exemplo, navegar nas telas do frontend até chegar no botão X que faz uma requisição especifica em alguma rota do backend.
 Não é necessário, também, ir ao mais &quot;baixo nível&quot; que seria utilizando o comando <code>curl</code> e afins.</p>
 <p>Exemplificando:</p>
-<p><img src="../../Imagens/postman_new_request.png" alt="postman_new_request" /></p>
+<ol>
+<li>
+<p>Crie um novo <strong>request</strong> no Postman
+<img src="../../Imagens/postman_new_request.png" alt="postman_new_request" /></p>
+</li>
+<li>
+<p>Preencha as informações:</p>
+</li>
+</ol>
+<pre><code>url = https://localhost:3000/api/users/
+tipo = POST
+body = raw, json
+</code></pre>
+<pre><code class="language-json">{
+    &quot;user&quot;: {
+        &quot;email&quot;: &quot;john@jacob.com&quot;,
+        &quot;password&quot;: &quot;johnnyjacob&quot;,
+        &quot;username&quot;: &quot;johnjacob&quot;
+    }
+}
+</code></pre>
 <p><img src="../../Imagens/postman_post_users.png" alt="postman_post_users" /></p>
+<p>Para entender melhor esse request, vamos verificar como está especificada a criação de usuários no backend.</p>
+<p>Abra <code>backend/routes/api/users.js(L63-73)</code>:
+<img src="../../Imagens/backend_users.png" alt="backend_users" /></p>
+<p>Perceba que <code>user</code> é uma instância da model <code>User</code>:
+Em <code>backend/routes/api/users.js(L4)</code>
+<img src="../../Imagens/backend_user_model_users_route.png" alt="backend_user_model_users_route" /></p>
+<p>Para entendermos o que é essa model,</p>
+<p>Abra <code>backend/models/Users.js</code>:</p>
+<p>Não precisamos nos aprofundar muito, mas, de acordo com o código visto acima, há 3 trechos relevantes:</p>
+<p>Schema:
+<img src="../../Imagens/user_schema.png" alt="user_schema" /></p>
+<p>Set Password:
+<img src="../../Imagens/user_schema_set_password.png" alt="user_schema_set_password" /></p>
+<blockquote>
+<p>é recomendada a pesquisa sobre <code>pbkdf2</code>, <code>bcrypt</code>, <code>sha512</code>, <code>salt</code>, <code>pepper</code> no contexto de criptografia :)
+mas, basicamente trata-se de uma segurança a mais para armazenar as senhas dos usuários
+dificultando que <em>hackers</em> consigam &quot;adivinhar&quot; a senha dos usuários (seja através de <em>bruteforce</em> ou de <em>&quot;ataques rainbow table&quot;</em>)</p>
+</blockquote>
+<p>To Auth Json:
+<img src="../../Imagens/user_schema_to_auth_json.png" alt="user_schema_to_auth_json" /></p>
+<p>Com isso tudo, podemos inferir bastante sobre o funcionamento do request que fizemos:
+A api recebe nosso request (incluindo o corpo de texto [em formato json] com informações de cadastro do usuário), valida se o <code>username</code>, <code>email</code> e <code>password</code> atendem as especificações do <code>Schema</code> (por ex: não podemos cadastrar &quot;abc&quot; como email), a senha é criptografada e, então, o usuário é salvo no banco de dados Mongo;
+Caso tudo tenha ocorrido corretamente, o servidor responde o request do usuário mostrando informações básicas de como o usuário foi cadastrado no banco de dados.</p>
 
                     </main>
 
