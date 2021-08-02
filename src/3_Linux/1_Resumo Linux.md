@@ -15,10 +15,37 @@ Nesse capítulo você terá uma introdução a conceitos básicos e alguns coman
 
 ## Explicação
 
-| _ | O que é |
-| ---------- | ------- |
-| Linux | Sistema operacional de código aberto |
-| Terminal | É um programa que recebe os comandos do usuário a partir do teclado e repassa-os às camadas de baixo nível do sistema operacional. |
+Criado em 1991 por Linus Torvalds.
+
+Baseado em Unix
+
+O Linux é o Kernel ou Núcleo do Sistema Operacional (faz a comunicação entre o hardware e o sistema operacional)
+
+É desenvolvido por diversas pessoas e empresas ao redor do mundo (vários sistemas operacionais e Kernels baseados no Linux)
+
+Multitarefa / Multiusuário
+
+### Distribuições
+
+O que é uma "distro"? Uma distro é uma distribuição baseada no Kernel Linux.
+
+O Linux pode ser "distribuído" por empresas, organizações ou mesmo pessoas, quem podem colocar características próprias no sistema operacional, como configurações, aplicações, sistemas de instalação entre outras peculiaridades, assim damos o nome de distribuição, sua escolha é pessoal e depende da aplicação.
+
+Distribuições mais conhecidas:
+
+ - Ubuntu
+ - Debian
+ - SuSE
+ - fedora
+ - popOS!
+
+## Requisitos para Instalação
+
+Processador dual core de 2GHz ou superior.
+
+2 GB de memória RAM.
+
+40 GB de espaço livre no disco rígido.
 
 ## Dual Boot
 
@@ -28,41 +55,37 @@ Dentro da Bios, e com o pendrive no computador fazer ele bootar primeiro o pendr
 
 ## Terminal
 
-### Alguns comandos do terminal
+O Terminal, Shell ou Konsole é uma linha de comando onde podemos executar programas específicos do Linux.
 
-#### Listar arquivos e pastas daquele diretório
+A maioria dos comandos são iguais em diversas distribuições.
+
+Uso para automação de processos através dos comandos, facilita o trabalho no Sistema para Profissionais da Área.
+
+O Terminal pode ser aberto de diversas formas, mas a sequência de teclas **CTRL + ALT + T** facilita seu acesso.
+
+Dentro do terminal a sequência de teclas **CTRL + SHIFT + T** abre uma nova aba.
+
+O comando `pwd` mostra o caminho do diretório.
+
+```bash
+$ pwd
+```
+
+O comando `ls` lista os diretórios e arquivos da pasta. O comando dir pode ser usado também, mas o comando anterior funciona melhor.
 
 ```bash
 $ ls
 ```
 
-#### Alterar o diretório atual
+O comando `cd` (change directory) muda o diretório atual, ou seja, muda o caminho, podemos entrar e sair de pastas.
 
 ```bash
-$ cd /nome_do_diretório
+$ cd
 ```
-> apenas um `cd` faz você voltar para a home.
-
-#### Criar uma pasta naquele diretório
+O comando `mkdir `(make directory) cria um diretório de arquivos, uma pasta.
 
 ```bash
-$ mkdir nome_da_pasta
+$ mkdir teste
 ```
 
-#### Executar um arquivo
-
-```bash
-$ ./nome_do_arquivo
-```
-#### Apagar um arquivo
-
-```bash
-$ rm nome_arquivo
-```
-> caso o arquivo não esteja na pasta em que está no momento, basta colocar o caminho antes do nome.
-
-```bash
-$ rm /caminho/nome_arquivo
-```
-
-> cada `/` representa um caminho antes de uma pasta
+Para sair da pasta atual e retornar para a anterior é só digitar o comando `cd ..`.
