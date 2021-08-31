@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>3. O Que É E Como Utilizar Docker - Guia para Devs Deslocados</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../../favicon.svg">
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../../1_Introdução/index.html"><strong aria-hidden="true">1.</strong> Introdução</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../1_Introdução/1_Sofisticação Técnica - Como se virar/index.html"><strong aria-hidden="true">1.1.</strong> Sofisticação Técnica - Como Se Virar</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../1_Introdução/1_Sofisticação Técnica - Como se virar/1_Resumão.html"><strong aria-hidden="true">1.1.1.</strong> Resumão</a></li><li class="chapter-item "><a href="../../../1_Introdução/1_Sofisticação Técnica - Como se virar/2_Como Googlar.html"><strong aria-hidden="true">1.1.2.</strong> Como Googlar</a></li></ol></li><li class="chapter-item "><a href="../../../1_Introdução/2_Linux/index.html"><strong aria-hidden="true">1.2.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../1_Introdução/2_Linux/1_Resumo Linux.html"><strong aria-hidden="true">1.2.1.</strong> Resumo Linux</a></li><li class="chapter-item "><a href="../../../1_Introdução/2_Linux/2_Linux.html"><strong aria-hidden="true">1.2.2.</strong> Linux</a></li><li class="chapter-item "><a href="../../../1_Introdução/2_Linux/3_5_windows wsl.html"><strong aria-hidden="true">1.2.3.</strong> Windows Wsl</a></li><li class="chapter-item "><a href="../../../1_Introdução/2_Linux/3_Dual Boot.html"><strong aria-hidden="true">1.2.4.</strong> Dual Boot</a></li><li class="chapter-item "><a href="../../../1_Introdução/2_Linux/4_Terminal.html"><strong aria-hidden="true">1.2.5.</strong> Terminal</a></li><li class="chapter-item "><a href="../../../1_Introdução/2_Linux/FAQ.html"><strong aria-hidden="true">1.2.6.</strong> Faq</a></li></ol></li><li class="chapter-item "><a href="../../../1_Introdução/3_Git/index.html"><strong aria-hidden="true">1.3.</strong> Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../1_Introdução/3_Git/1_Resumão.html"><strong aria-hidden="true">1.3.1.</strong> Resumão</a></li><li class="chapter-item "><a href="../../../1_Introdução/3_Git/2_Git & Github.html"><strong aria-hidden="true">1.3.2.</strong> Git &amp; Github</a></li><li class="chapter-item "><a href="../../../1_Introdução/3_Git/3_Instalação e Configuração.html"><strong aria-hidden="true">1.3.3.</strong> Instalação E Configuração</a></li><li class="chapter-item "><a href="../../../1_Introdução/3_Git/4_Principais comandos.html"><strong aria-hidden="true">1.3.4.</strong> Principais Comandos</a></li><li class="chapter-item "><a href="../../../1_Introdução/3_Git/5_+ Comandos.html"><strong aria-hidden="true">1.3.5.</strong> Comandos</a></li><li class="chapter-item "><a href="../../../1_Introdução/3_Git/6_Sugestão de aliases.html"><strong aria-hidden="true">1.3.6.</strong> Sugestão De Aliases</a></li><li class="chapter-item "><a href="../../../1_Introdução/3_Git/7_FAQ.html"><strong aria-hidden="true">1.3.7.</strong> Faq</a></li></ol></li><li class="chapter-item expanded "><a href="../../../1_Introdução/4_Ambientação/index.html"><strong aria-hidden="true">1.4.</strong> Ambientação</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/1_Arquitetura Cliente-Servidor.html"><strong aria-hidden="true">1.4.1.</strong> Arquitetura Cliente-Servidor</a></li><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/index.html"><strong aria-hidden="true">1.4.2.</strong> Projeto Completo Em Javascript</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/1_Backend.html"><strong aria-hidden="true">1.4.2.1.</strong> Backend</a></li><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/2_Frontend.html"><strong aria-hidden="true">1.4.2.2.</strong> Frontend</a></li></ol></li><li class="chapter-item expanded "><a href="../../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/index.html" class="active"><strong aria-hidden="true">1.4.3.</strong> O Que É E Como Utilizar Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/1_Diferenças entre VMs e Containers.html"><strong aria-hidden="true">1.4.3.1.</strong> Diferenças Entre Vms E Containers</a></li><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/2_Construindo um container mínimo.html"><strong aria-hidden="true">1.4.3.2.</strong> Construindo Um Container Mínimo</a></li><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/3_Instalação do Docker.html"><strong aria-hidden="true">1.4.3.3.</strong> Instalação Do Docker</a></li><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/4_Conceitos de Docker.html"><strong aria-hidden="true">1.4.3.4.</strong> Conceitos De Docker</a></li><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/5_Conceitos de Docker-Compose.html"><strong aria-hidden="true">1.4.3.5.</strong> Conceitos De Docker-Compose</a></li></ol></li><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/4_Contribuindo com um repositório Open Source.html"><strong aria-hidden="true">1.4.4.</strong> Contribuindo Com Um Repositório Open Source</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                    </div>
+
+                    <h1 class="menu-title">Guia para Devs Deslocados</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/appointment-octopus/ebook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="o-que-é-conteinerização"><a class="header" href="#o-que-é-conteinerização">O que é conteinerização?</a></h1>
+<p><i class="hljs-comment" style="background-color: rgba(0,0,0,0)">Tempo estimado de leitura: 4min</i></p><br />
+<blockquote>
+<p>Disclaimer: esse capítulo (de introdução) é 100% baseado nesse vídeo -&gt; <br/> <p align="center" width="100%" >
+<a href="https://www.youtube.com/watch?v=Gjnup-PuquQ">
+<img src="https://img.youtube.com/vi/Gjnup-PuquQ/0.jpg" alt="Docker in 100 seconds">
+</a></p>
+</blockquote>
+</p>
+<h2 id="problema"><a class="header" href="#problema">Problema</a></h2>
+<p>Suponha que voce está desenvolvendo um app em Cobol, que roda numa plataforma Linux aleatória (ex: archlinux), e você deseja compartilhar esse app com seu amigo; entretanto, ele utiliza um sistema totalmente diferente (ex: debian, windows 7, etc)...</p>
+<p>Então, surge a questão:</p>
+<p><strong>Como replicar esse ambiente que meu app precisa em qualquer computador?</strong></p>
+<h3 id="máquinas-virtuais"><a class="header" href="#máquinas-virtuais">Máquinas Virtuais</a></h3>
+<p>Uma das soluções possíveis é utilizar uma <strong>V</strong>irtual <strong>M</strong>achine (e existem varias opções para isso, como: VirtualBox, Vmware, GnomeBoxes, Qemu, dentre outros)</p>
+<p>O que são máquinas virtuais? São computadores completos: possuem CPU, memória RAM, disco rigido, sistema operacional, arquivos, aplicativos... tudo. Mas, tudo isso é virtual/simulado, utilizando recursos do computador físico/servidor &quot;real&quot; -- também conhecido como Host.</p>
+<p>Então, a idéia seria: um simulador de computador que será configurado de forma igual (idealmente) pelos devs do projeto, utilizando um mesmo sistema operacional e instalando as dependencias necessárias pro projeto.</p>
+<blockquote>
+<p>exemplo: todos instalam uma VM usando Manjaro, instalam os pacotes g++, libncurses etc (qualquer app/dependencia necessária pra rodar aquele projeto)</p>
+</blockquote>
+<p>Mas... isso não é muito escalável quando se considera uma organização com múltiplos apps sendo desenvolvidos simultaneamente, por exemplo. Como as VMs tendem a ser pesadas (tanto em consumo de recursos computacionais do computador [real], como na performance individual), essa opção se torna meio inviável</p>
+<h3 id="docker-ao-resgate"><a class="header" href="#docker-ao-resgate">Docker ao resgate</a></h3>
+<blockquote>
+<p>obs: existem outras opções surgindo atualmente, como o <a href="https://podman.io/">Podman (da Redhat)</a>; mas, no geral, container = Docker</p>
+</blockquote>
+<p>Um Container de Docker é conceitualmente muito similar a uma VM, com uma distinção chave: em vez de virtualizar o Hardware (um computador inteiro), os Containers virtualizam apenas o S.O.; ou seja, todos os apps (ou, Containers) são executados por um único Kernel</p>
+<p>É isso que torna a utilização de Docker tão mais rápida, flúida e eficiente.</p>
+<h2 id="estrutura-básica-do-docker"><a class="header" href="#estrutura-básica-do-docker">Estrutura básica do Docker</a></h2>
+<p>Existem 3 pilares que constituem o universo de Docker:</p>
+<p><img src="https://imgur.com/MTgPfYj.png" alt="3 pilares" /></p>
+<h3 id="dockerfile"><a class="header" href="#dockerfile">Dockerfile</a></h3>
+<p>Este arquivo é como o DNA: um código que especifica ao Docker como ele deve <em>buildar</em> uma <code>imagem</code>.</p>
+<h3 id="imagem"><a class="header" href="#imagem">Imagem</a></h3>
+<p>A imagem é um snapshot da sua aplicação: contém desde as dependencias do seu projeto (ex: pacotes npm etc) até o &quot;sistema operacional&quot;. Vale ressaltar que essa imagem é imutavel, e pode ser utilizada para construir múltiplos <code>containers</code>.</p>
+<h3 id="container"><a class="header" href="#container">Container</a></h3>
+<p>É a instancia em execução, criada a partir da imagem.</p>
+<blockquote>
+<p>fazendo um paralelo com OO: img = classe; container = objeto [instancia da classe]</p>
+</blockquote>
+<h2 id="exemplo-mínimo"><a class="header" href="#exemplo-mínimo">Exemplo Mínimo</a></h2>
+<blockquote>
+<p>Não é necessário reproduzir esses comandos, já que praticaremos isso junto no <a href="./2_installing_docker.html">segundo sub-capítulo</a>.</p>
+</blockquote>
+<p>A partir desse <code>Dockerfile</code> de exemplo:</p>
+<p><img src="https://i.imgur.com/eQ24k97.png" alt="Dockerfile" /></p>
+<pre><code class="language-dockerfile">FROM ubuntu:20.04
+</code></pre>
+<blockquote>
+<p>Como um &quot;import&quot;; é uma imagem pré-definida que será utilizada como base nesse arquivo. Essa imagem é &quot;puxada&quot; do <a href="https://hub.docker.com/_/ubuntu">docker hub</a>; essa imagem em específico se refere a <a href="https://github.com/tianon/docker-brew-ubuntu-core/blob/a967c2b8734c77f7f89449d0b87c2e1eebf8b26e/focal/Dockerfile">este Dockerfile</a>.</p>
+</blockquote>
+<blockquote>
+<p>Existem N imagens pré-definidas, que podem ser utilizadas de acordo com a necessidade do seu projeto. Por exemplo: <a href="https://hub.docker.com/_/python">Python</a>, <a href="https://hub.docker.com/_/ruby">Ruby</a>, <a href="https://hub.docker.com/_/node">Node</a>, dentre outras infinitas possibilidades.</p>
+</blockquote>
+<blockquote>
+<p>Normalmente, quando há de se partir de uma imagem de um S.O. mais básico (como esse caso do exemplo), há uma certa preferência para a distribuição <a href="https://hub.docker.com/_/alpine">Alpine</a> em vez de Ubuntu, por exemplo, por se tratar de uma distribuição mais minimalista.</p>
+</blockquote>
+<pre><code class="language-dockerfile">RUN apt-get update -y &amp;&amp; apt-get install -y tree
+</code></pre>
+<blockquote>
+<p>Com o comando <code>RUN</code> você pode utilizar basicamente qualquer comando bash; nesse caso, estamos instalando o pacote <code>tree</code> (basicamente um <code>ls</code> que verifica as subpastas).</p>
+</blockquote>
+<pre><code class="language-dockerfile">RUN mkdir -p test/nested &amp;&amp; \
+    cd test &amp;&amp; \
+    touch nested/a.txt b.txt
+</code></pre>
+<blockquote>
+<p>Para verificar o comando <code>tree</code> em ação, dentro dessa imagem, a partir do endereço base <code>/</code>, criamos uma pasta aleatoria e outra subpasta; entramos* na pasta criada, e criamos dois arquivos.</p>
+</blockquote>
+<pre><code class="language-dockerfile">RUN echo &quot;current path: `pwd`&quot;
+
+RUN ls --format=across
+
+RUN tree test/
+</code></pre>
+<blockquote>
+<p>Mesmo utilizando o comando <code>cd</code> na linha passada, ao utilizarmos os comandos <code>pwd</code> e <code>ls</code> verificamos que retornamos ao endereço base; isso porque cada comando <code>RUN</code> é executado a partir do <code>WORKDIR</code> atual.</p>
+</blockquote>
+<pre><code class="language-dockerfile">CMD [&quot;echo&quot;, &quot;Hello World!&quot;]
+</code></pre>
+<blockquote>
+<p>O comando <code>CMD</code> distingue-se do <code>RUN</code> por se tratar de um comando que sera rodado ao executarmos um container; ou seja, no processo de build da imagem, este comando não é executado.</p>
+</blockquote>
+<p>Então, ao executarmos o comando de build:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>docker build -t exemplo_minimo .
+</code></pre>
+<blockquote>
+<p>A flag <code>-t</code> serve pra especificar o nome da imagem que será construída</p>
+</blockquote>
+<p><img src="https://imgur.com/3jl9D4G.png" alt="Output 1/2" /></p>
+<p><img src="https://imgur.com/chewTnl.png" alt="Output 2/2" /></p>
+<p>Após isso, podemos finalmente executar essa imagem (iniciando um container):</p>
+<p><img src="https://imgur.com/MPIYRvy.png" alt="Container" /></p>
+<hr />
+<blockquote>
+<p>Observação:</p>
+</blockquote>
+<blockquote>
+<p>A linha de criação de pastas etc poderia ser reescrita da seguinte forma:</p>
+</blockquote>
+<pre><code class="language-dockerfile">WORKDIR test
+RUN mkdir nested
+RUN touch nested/a.txt b.txt
+</code></pre>
+<blockquote>
+<p>O comando <code>WORKDIR</code> funciona como um <code>mkdir</code> (se necessário) + <code>cd</code> (modificando o contexto ao longo de toda a imagem)
+<br />Entao, o comando <code>tree</code> poderia ser utilizado no contexto atual <code>.</code>, já que o <code>WORKDIR</code> dessa imagem não é mais o caminho base <code>/</code>, e, sim, o caminho <code>/test/</code></p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/2_Frontend.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/1_Diferenças entre VMs e Containers.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/2_Frontend.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/1_Diferenças entre VMs e Containers.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

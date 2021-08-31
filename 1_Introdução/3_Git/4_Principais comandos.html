@@ -1,0 +1,799 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>4. Principais Comandos - Guia para Devs Deslocados</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../1_Introdução/index.html"><strong aria-hidden="true">1.</strong> Introdução</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/1_Sofisticação Técnica - Como se virar/index.html"><strong aria-hidden="true">1.1.</strong> Sofisticação Técnica - Como Se Virar</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/1_Sofisticação Técnica - Como se virar/1_Resumão.html"><strong aria-hidden="true">1.1.1.</strong> Resumão</a></li><li class="chapter-item "><a href="../../1_Introdução/1_Sofisticação Técnica - Como se virar/2_Como Googlar.html"><strong aria-hidden="true">1.1.2.</strong> Como Googlar</a></li></ol></li><li class="chapter-item "><a href="../../1_Introdução/2_Linux/index.html"><strong aria-hidden="true">1.2.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/2_Linux/1_Resumo Linux.html"><strong aria-hidden="true">1.2.1.</strong> Resumo Linux</a></li><li class="chapter-item "><a href="../../1_Introdução/2_Linux/2_Linux.html"><strong aria-hidden="true">1.2.2.</strong> Linux</a></li><li class="chapter-item "><a href="../../1_Introdução/2_Linux/3_5_windows wsl.html"><strong aria-hidden="true">1.2.3.</strong> Windows Wsl</a></li><li class="chapter-item "><a href="../../1_Introdução/2_Linux/3_Dual Boot.html"><strong aria-hidden="true">1.2.4.</strong> Dual Boot</a></li><li class="chapter-item "><a href="../../1_Introdução/2_Linux/4_Terminal.html"><strong aria-hidden="true">1.2.5.</strong> Terminal</a></li><li class="chapter-item "><a href="../../1_Introdução/2_Linux/FAQ.html"><strong aria-hidden="true">1.2.6.</strong> Faq</a></li></ol></li><li class="chapter-item expanded "><a href="../../1_Introdução/3_Git/index.html"><strong aria-hidden="true">1.3.</strong> Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/3_Git/1_Resumão.html"><strong aria-hidden="true">1.3.1.</strong> Resumão</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/2_Git & Github.html"><strong aria-hidden="true">1.3.2.</strong> Git &amp; Github</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/3_Instalação e Configuração.html"><strong aria-hidden="true">1.3.3.</strong> Instalação E Configuração</a></li><li class="chapter-item expanded "><a href="../../1_Introdução/3_Git/4_Principais comandos.html" class="active"><strong aria-hidden="true">1.3.4.</strong> Principais Comandos</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/5_+ Comandos.html"><strong aria-hidden="true">1.3.5.</strong> Comandos</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/6_Sugestão de aliases.html"><strong aria-hidden="true">1.3.6.</strong> Sugestão De Aliases</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/7_FAQ.html"><strong aria-hidden="true">1.3.7.</strong> Faq</a></li></ol></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/index.html"><strong aria-hidden="true">1.4.</strong> Ambientação</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/1_Arquitetura Cliente-Servidor.html"><strong aria-hidden="true">1.4.1.</strong> Arquitetura Cliente-Servidor</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/index.html"><strong aria-hidden="true">1.4.2.</strong> Projeto Completo Em Javascript</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/1_Backend.html"><strong aria-hidden="true">1.4.2.1.</strong> Backend</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/2_Frontend.html"><strong aria-hidden="true">1.4.2.2.</strong> Frontend</a></li></ol></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/index.html"><strong aria-hidden="true">1.4.3.</strong> O Que É E Como Utilizar Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/1_Diferenças entre VMs e Containers.html"><strong aria-hidden="true">1.4.3.1.</strong> Diferenças Entre Vms E Containers</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/2_Construindo um container mínimo.html"><strong aria-hidden="true">1.4.3.2.</strong> Construindo Um Container Mínimo</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/3_Instalação do Docker.html"><strong aria-hidden="true">1.4.3.3.</strong> Instalação Do Docker</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/4_Conceitos de Docker.html"><strong aria-hidden="true">1.4.3.4.</strong> Conceitos De Docker</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/5_Conceitos de Docker-Compose.html"><strong aria-hidden="true">1.4.3.5.</strong> Conceitos De Docker-Compose</a></li></ol></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/4_Contribuindo com um repositório Open Source.html"><strong aria-hidden="true">1.4.4.</strong> Contribuindo Com Um Repositório Open Source</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                    </div>
+
+                    <h1 class="menu-title">Guia para Devs Deslocados</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/appointment-octopus/ebook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="principais-comandos"><a class="header" href="#principais-comandos">Principais comandos</a></h1>
+<p><i class="hljs-comment" style="background-color: rgba(0,0,0,0)">Tempo estimado de leitura: 18min</i></p><br />
+<p>Bom, enfim vamos trabalhar com um exemplo do zero.</p>
+<p>O que você verá nesse capítulo:</p>
+<ul>
+<li><a href="#principais-comandos">Principais comandos</a>
+<ul>
+<li><a href="#git-init">Git init</a>
+<ul>
+<li><a href="#extra">Extra</a></li>
+</ul>
+</li>
+<li><a href="#git-status">Git status</a></li>
+<li><a href="#git-add">Git add</a></li>
+<li><a href="#git-commit">Git commit</a></li>
+<li><a href="#git-logreflog">Git log/reflog</a></li>
+<li><a href="#git-commit---amend">Git commit --amend</a>
+<ul>
+<li><a href="#message">message</a></li>
+<li><a href="#no-edit">no-edit</a></li>
+<li><a href="#boas-praticas">Boas praticas</a></li>
+</ul>
+</li>
+<li><a href="#git-resetrestore">Git reset/restore</a></li>
+<li><a href="#git-remote">Git remote</a></li>
+<li><a href="#git-branch">Git branch</a></li>
+<li><a href="#git-push">Git push</a></li>
+<li><a href="#readmemd">README.md</a></li>
+<li><a href="#criando-mais-um-arquivo">Criando mais um arquivo</a></li>
+<li><a href="#git-pull">Git pull</a></li>
+<li><a href="#git-merge">Git merge</a></li>
+<li><a href="#modificando-arquivo-remotamente-e-localmente-simultaneamente">Modificando arquivo remotamente e localmente, simultaneamente</a>
+<ul>
+<li><a href="#no-repositorio-local">No repositorio local</a></li>
+<li><a href="#no-reposit%C3%B3rio-remoto">No repositório remoto</a></li>
+<li><a href="#resolvendo-conflitos">Resolvendo conflitos</a>
+<ul>
+<li><a href="#merge">Merge:</a></li>
+<li><a href="#rebase">Rebase:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="git-init"><a class="header" href="#git-init">Git init</a></h3>
+<p>Para este tutorial, crie uma pasta para que possa acompanhar esse tutorial de forma mais interativa:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>mkdir aprendendo_git
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cd aprendendo_git
+</code></pre>
+<p>Para versionar uma pasta/diretório, é preciso iniciar um repositório. A partir da pasta raíz do seu projeto, execute:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git init
+Initialized empty Git repository in &lt;caminho_até_diretório&gt;/aprendendo_git/.git/
+</code></pre>
+<p>Após isso, liste os arquivos neste diretório:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>ls -a
+. .. .git
+</code></pre>
+<blockquote>
+<p>a flag <code>-a</code> significa: &quot;do not ignore entries starting with <code>.</code>&quot;</p>
+</blockquote>
+<p>O <strong>Git</strong> criou uma pasta chamada <code>.git</code>. Essa pasta contém os metadados que o git necessita para operar naquele repositório.</p>
+<h4 id="extra"><a class="header" href="#extra">Extra</a></h4>
+<p>Sinta-se, obviamente, a vontade para explorar essa pasta :)</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>sudo apt install tree
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>tree .git
+.git
+├── branches
+├── config
+├── description
+├── HEAD
+├── hooks
+│   ├── applypatch-msg.sample
+│   ├── commit-msg.sample
+│   ├── fsmonitor-watchman.sample
+│   ├── post-update.sample
+│   ├── pre-applypatch.sample
+│   ├── pre-commit.sample
+│   ├── pre-merge-commit.sample
+│   ├── prepare-commit-msg.sample
+│   ├── pre-push.sample
+│   ├── pre-rebase.sample
+│   ├── pre-receive.sample
+│   └── update.sample
+├── info
+│   └── exclude
+├── objects
+│   ├── info
+│   └── pack
+└── refs
+    ├── heads
+    └── tags
+
+9 directories, 16 files
+</code></pre>
+<h3 id="git-status"><a class="header" href="#git-status">Git status</a></h3>
+<p>Sempre que você estiver nesse repositório, terá acesso a versão mais atual do projeto. Utilizando o comando <code>git status</code>, pode aferir quais foram as ultimas mudanças em relação ao ultimo commit (traduzindo: a ultima versão &quot;salva&quot; do projeto)</p>
+<p>Como não adicionamos nenhum arquivo, caso rode este comando terá o seguinte output:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use &quot;git add&quot; to track)
+</code></pre>
+<blockquote>
+<p>hoje em dia há um movimento para que a branch padrão se chame <code>main</code> em vez de <code>master</code>, então não se surpreenda caso o seu output tenha sido diferente</p>
+</blockquote>
+<p>Ou seja, não há nada para adicionar (e depois commitar), assim como não há uma versão anterior para se comparar com a versão atual da pasta</p>
+<h3 id="git-add"><a class="header" href="#git-add">Git add</a></h3>
+<p>Crie um arquivo <code>lorem_ipsum.txt</code>:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>echo &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris malesuada augue vel quam dignissim, nec egestas nisl pretium. Integer porttitor eleifend turpis non ullamcorper. Maecenas maximus sit amet ipsum et facilisis. Aenean tincidunt urna a ex consequat venenatis. Curabitur eget ante scelerisque tellus efficitur pulvinar ac quis lorem. Donec imperdiet ligula id tortor viverra, imperdiet consequat est suscipit. Donec congue pellentesque velit eget rhoncus. Vestibulum bibendum erat sem, sed maximus ipsum condimentum et. Vivamus lectus justo, hendrerit ac ornare eget, ultrices ut massa. Sed euismod, magna vitae ultrices aliquam, est quam volutpat mauris, id fringilla mauris sem ut diam. Mauris laoreet efficitur urna at tempor. Nulla scelerisque iaculis ligula et consequat. Nulla in viverra nunc. Nunc nibh neque, ornare ut magna sed, tempor egestas ligula. Quisque iaculis justo ut diam mattis, vitae iaculis eros luctus.&quot; &gt; lorem_ipsum.txt
+</code></pre>
+<p>Verifique que o mesmo foi criado:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>ls
+lorem_ipsum.txt
+</code></pre>
+<p>Entretanto, o mesmo ainda não está sendo rastreado pelo Git:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+	lorem_ipsum.txt
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</code></pre>
+<p>Perceba que o próprio git nos dá dicas. Adicione o arquivo a zona de &quot;staging&quot;: uma pre-seleção do que deverá, de fato, ser versionado/commitado.</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git add lorem_ipsum.txt
+</code></pre>
+<blockquote>
+<p>O arquivo não foi adicionado, ainda, ao repositório do git. A zona de staging é um intermediário entre o Local e o Repositório.</p>
+</blockquote>
+<p>O status mudou:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+	new file:   lorem_ipsum.txt
+</code></pre>
+<h3 id="git-commit"><a class="header" href="#git-commit">Git commit</a></h3>
+<p>Vamos, então, commitar o arquivo: ou seja, adicionar ao repositório do git para que o mesmo comece a ser versionado.</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git commit -m &quot;Adiçionando arquivo Lorem Ipsum de 1 paragrafo&quot;
+</code></pre>
+<p>O status, novamente, mudou:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git status
+On branch master
+nothing to commit, working tree clean
+</code></pre>
+<h3 id="git-logreflog"><a class="header" href="#git-logreflog">Git log/reflog</a></h3>
+<p>Para verificar quais commits já fizera, basta rodar o comando <code>log</code>:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git log
+commit 0e1027f301d18c72e37a755775e8c189a79823e3 (HEAD -&gt; master)
+Author: Seu Nome &lt;seu@email.com&gt;
+Date:   Thu Mar 18 02:03:29 2021 -0300
+
+    Adiçionando arquivo Lorem Ipsum de 1 paragrafo
+</code></pre>
+<p>Perceba que é informado qual o &quot;id&quot;/hash desse commit (<code>0e1027f301d18c72e37a755775e8c189a79823e3</code>), o autor do commit, data e a mensagem inserida -- todas as informações necessárias para rastrear esse versionamento do repositório.</p>
+<p>Se utilizar <code>reflog</code>, terá um log mais enxuto (com hashs encurtecidas também):</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git reflog
+0e1027f (HEAD -&gt; master) HEAD@{0}: commit (initial): Adicionando arquivo Lorem Ipsum de 1 paragrafo
+</code></pre>
+<blockquote>
+<p>Note que o início de ambas as hashs são iguais</p>
+</blockquote>
+<p>O log têm inumeras utilidades que serão abordadas no próximo capítulo :)</p>
+<h3 id="git-commit---amend"><a class="header" href="#git-commit---amend">Git commit --amend</a></h3>
+<p>Como pôde perceber, há um erro ortográfico na mensagem do commit: escrevemos &quot;Adi<strong>ç</strong>ionando&quot; em vez de &quot;Adi<strong>c</strong>ionando&quot;. Podemos alterá-la utilizando o comando <code>--amend</code>:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git commit --amend
+</code></pre>
+<p><img src="../../Imagens/amend.png" alt="amend" /></p>
+<p>Este editor pode parecer estranho a primeira vista. Se chama <a href="https://www.nano-editor.org"><code>nano</code></a>, e vem como editor de texto padrão no terminal do Linux.</p>
+<p>Após fazer a alteração necessária, basta apertar <code>Ctrl+O</code> e <code>[Enter]</code> para salvar a alteração no commit, e <code>Ctrl+X</code> para retornar ao terminal.</p>
+<p>Vale ressaltar que esse comando vale não somente para a mensagem do commit como, também, para os arquivos. Bastaria modificar o que fosse conveniente, utilizar <code>git add</code> e então <code>git commit --amend</code>.</p>
+<h4 id="message"><a class="header" href="#message">message</a></h4>
+<p>Além disso, caso queira evitar utilizar o <a href="https://www.nano-editor.org"><code>nano</code></a>, basta incluir a flag <code>-m</code>:</p>
+<p>A titulo de exemplo, vamos criar o arquivo <code>backup-lorem_ipsum.txt</code>:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cp lorem_ipsum.txt backup-lorem_ipsum.txt
+</code></pre>
+<p>Status:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git status
+On branch master
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+        backup-lorem_ipsum.txt
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</code></pre>
+<p>Adicionando-o:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git add backup-lorem_ipsum.txt
+</code></pre>
+<p>Commitando:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git commit --amend -m &quot;Adicionando arquivo Lorem Ipsum de 1 paragrafo e, também, arquivo de backup&quot;
+[master 6e3bfef] Adicionando arquivo Lorem Ipsum de 1 paragrafo e, também, arquivo de backup
+ Date: Thu Mar 18 02:03:29 2021 -0300
+ 2 files changed, 2 insertions(+)
+ create mode 100644 backup-lorem_ipsum.txt
+ create mode 100644 lorem_ipsum.txt
+</code></pre>
+<p>Log:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git log
+commit 6e3bfef34d498057d67454c88188885dd82bec7f (HEAD -&gt; master)
+Author: Seu Nome &lt;seu@email.com&gt;
+Date:   Thu Mar 18 02:03:29 2021 -0300
+
+    Adicionando arquivo Lorem Ipsum de 1 paragrafo e, também, arquivo de backup
+</code></pre>
+<h4 id="no-edit"><a class="header" href="#no-edit">no-edit</a></h4>
+<p>Acaso queira modificar só os arquivos (e, não, a mensagem do commit), basta incluir a flag <code>--no-edit</code>.</p>
+<h4 id="boas-praticas"><a class="header" href="#boas-praticas">Boas praticas</a></h4>
+<p>É interessante que só se faça isso em commits locais, haja vista que o commit &quot;amendado&quot; é outro commit, distinto do que fora utilizado como base. Isso significa que, caso este seja um commit publico, ao &quot;adulterá-lo&quot;, tende a gerar uma inconveniência para outros desenvolvedores que estavam codando a partir daquele commit.</p>
+<p>Além disso, para &quot;subir&quot; este commit (ver <a href="#git-push">git push</a>), você terá de usar a flag <code>-f</code> (force), que é extremamente <em>perigosa</em> de se utilizar em um repositório que multiplas pessoas estão trabalhando, já que força a sobreescrever qualquer commit que esteja la; isso significa que há grandes chances de você apagar o trabalho de outros colegas, além de dificultar a recuperação dos commits perdidos.</p>
+<h3 id="git-resetrestore"><a class="header" href="#git-resetrestore">Git reset/restore</a></h3>
+<p>Seguindo a partir do <a href="#message">exemplo anterior</a>, não iremos utilizar o arquivo <code>backup-lorem_ipsum.txt</code>; vamos ver como está o nosso <code>reflog</code>:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git reflog
+7bc9a79 (HEAD -&gt; master) HEAD@{0}: commit (amend): Adicionando arquivo Lorem Ipsum de 1 paragrafo e, também, arquivo de backup
+23d7a38 HEAD@{1}: commit (amend): Adicionando arquivo Lorem Ipsum de 1 paragrafo
+4a6b384 HEAD@{2}: commit (initial): Adiçionando arquivo Lorem Ipsum de 1 paragrafo
+</code></pre>
+<p>já o <code>log</code>:</p>
+<pre><code class="language-bash">commit 7bc9a79b8c88160de6fc64f4a9f465fb52f7fcee (HEAD -&gt; master)
+Author: Seu Nome &lt;seu@email.com&gt;
+Date:   Thu Mar 25 16:56:37 2021 -0300
+
+    Adicionando arquivo Lorem Ipsum de 1 paragrafo e, também, arquivo de backup
+</code></pre>
+<p>Para retornamos ao estado anterior, iremos utilizar o comando <code>git reset</code>:</p>
+<ul>
+<li>
+<p>utilizando a flag <code>--soft</code>:</p>
+<p><strong>O que ela faz?</strong> Retorna ao commit anterior, sem tocar nos arquivos</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git reset --soft HEAD@{1}
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>ls
+backup-lorem_ipsum.txt  lorem_ipsum.txt
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git status
+On branch master
+Changes to be committed:
+(use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+
+      new file:   backup-lorem_ipsum.txt
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git log
+commit 23d7a38445227f7ca71667945b66cd04d9c86c23 (HEAD -&gt; master)
+Author: Guilherme de Lyra &lt;guilyra12@gmail.com&gt;
+Date:   Thu Mar 25 16:56:37 2021 -0300
+
+    Adicionando arquivo Lorem Ipsum de 1 paragrafo
+</code></pre>
+</li>
+<li>
+<p>utilizando a flag <code>--hard</code>:</p>
+<p><strong>O que ela faz?</strong> Retorna ao estado identico do commit anterior, modificando/removendo arquivos se necessário.</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git reset --hard HEAD@{1}
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>ls
+lorem_ipsum.txt
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git status
+On branch master
+nothing to commit, working tree clean
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git log
+commit 23d7a38445227f7ca71667945b66cd04d9c86c23 (HEAD -&gt; master)
+Author: Guilherme de Lyra &lt;guilyra12@gmail.com&gt;
+Date:   Thu Mar 25 16:56:37 2021 -0300
+
+    Adicionando arquivo Lorem Ipsum de 1 paragrafo
+</code></pre>
+</li>
+</ul>
+<h3 id="git-remote"><a class="header" href="#git-remote">Git remote</a></h3>
+<p>Bom, o primeiro passo é <a href="https://github.com/join">criar sua conta</a> no Github. Após isso, crie um <a href="https://github.com/new">novo repositório</a>:</p>
+<p><img src="../../Imagens/new_repo.png" alt="new_repo" /></p>
+<p>Agora, basta adicionar esse endereço ao nosso repositório git local:</p>
+<p>* <em>repare que você têm de substituir seu nome na URL abaixo</em></p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git remote add origin https://github.com/&lt;seu nome de usuário&gt;/aprendendo-git
+</code></pre>
+<blockquote>
+<p>o termo &quot;origin&quot; é o mais adotado para nomear os endereços dos repositórios rastreados, mas fica a seu critério escolher outro nome.</p>
+</blockquote>
+<p>A titulo de exemplo, vamos adicionar o mesmo endereço mas em formato <code>ssh</code> em vez de <code>https</code>:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git remote add origin-ssh git@github.com:&lt;seu nome de usuário&gt;/aprendendo-git.git
+</code></pre>
+<p>Feito isso, você pode listar todos os endereços mapeados utilizando a flag <code>-v</code>:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git remote -v
+origin    https://github.com/&lt;seu nome de usuário&gt;/aprendendo-git (fetch)
+origin    https://github.com/&lt;seu nome de usuário&gt;/aprendendo-git (push)
+origin-ssh  git@github.com:&lt;seu nome de usuário&gt;/aprendendo-git.git (fetch)
+origin-ssh  git@github.com:&lt;seu nome de usuário&gt;/aprendendo-git.git (push)
+</code></pre>
+<h3 id="git-branch"><a class="header" href="#git-branch">Git branch</a></h3>
+<p>Para nos atermos aos padrões atuais de nome para a branch padrão (<code>main</code> em vez de <code>master</code>), utilizaremos o comando:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git branch -M main
+</code></pre>
+<blockquote>
+<p>a flag <code>-M</code> significa <code>--force</code> <code>--move</code>: é um renomeamento forçado da branch atual. Pode-se, também, especificar qual é a branch que será renomeada: <code>$ git branch -M master main</code></p>
+</blockquote>
+<h3 id="git-push"><a class="header" href="#git-push">Git push</a></h3>
+<p>Agora que criamos o repositório e mapeamos-o, podemos &quot;subir&quot; o nosso repositório local pra &quot;nuvem&quot; Github:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git push -u origin main
+Username for 'https://github.com': &lt;seu nome de usuário&gt;
+Password for 'https://&lt;seu nome de usuário&gt;@github.com':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 741 bytes | 10.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/&lt;seu nome de usuário&gt;/aprendendo-git.git
+ * [new branch]      main -&gt; main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+</code></pre>
+<blockquote>
+<p>a flag <code>-u</code> serve para indicar que este remoto (origin) será o padrão a ser utilizado nessa branch local; então quando for utilizar o <a href="#git-pull"><code>git pull</code></a>, não precisará explicitar qual remoto &amp; branch (ex: <code>git pull origin main</code>)</p>
+</blockquote>
+<p>Agora, basta acessar a URL do seu repositório e verificar que o arquivo <code>lorem_ipsum.txt</code> está lá:</p>
+<p><img src="../../Imagens/lorem_ipsum_repo.png" alt="lorem_ipsum_repo" /></p>
+<h3 id="readmemd"><a class="header" href="#readmemd">README.md</a></h3>
+<p><code>README.md</code> se trata de um arquivo Markdown, uma linguagem de marcação de texto para criar textos formatados; este arquivo, neste contexto, é utilizado para descrever o propósito desse repositório. Vamos adiciona-lo pelo proprio Github. No site do seu repositório, clique no botão:</p>
+<p><img src="../../Imagens/readme.png" alt="readme" /></p>
+<p>Descreva como preferir e insira uma mensagem de commit:
+<img src="../../Imagens/commit_readme.png" alt="commit_readme" /></p>
+<p>Resultado:
+<img src="../../Imagens/result_readme.png" alt="result_readme" /></p>
+<h3 id="criando-mais-um-arquivo"><a class="header" href="#criando-mais-um-arquivo">Criando mais um arquivo</a></h3>
+<p>Para enriquecer nosso exemplo, vamos commitar mais um arquivo. Vamos chamá-lo de <a href="https://lerolero.com"><code>lero_lero.txt</code></a>:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>echo &quot;Podemos já vislumbrar o modo pelo qual a adoção de políticas descentralizadoras talvez venha a ressaltar a relatividade de alternativas às soluções ortodoxas.&quot; &gt; lero_lero.txt
+</code></pre>
+<p>Adicionando para a área de <em>staging</em>:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git add lero_lero.txt
+</code></pre>
+<p>Commitando:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git commit -m &quot;adicionando arquivo lero lero para enriquecer tutorial&quot;
+</code></pre>
+<p>Subindo novamente para o Github :D</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git push origin main
+Username for 'https://github.com': &lt;seu nome de usuário&gt;
+Password for 'https://&lt;seu nome de usuário&gt;@github.com':
+To https://github.com/&lt;seu nome de usuário&gt;/aprendendo-git.git
+ ! [rejected]        main -&gt; main (fetch first)
+error: failed to push some refs to 'https://github.com/&lt;seu nome de usuário&gt;/aprendendo-git.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</code></pre>
+<p>Opa, deu erro! O erro nos diz que há alterações que estão na branch remota que não se encontram na sua branch local. Isso significa que, antes de subir nosso trabalho, precisamos atualizar nosso repositorio para que nenhum trabalho seja perdido (nesse caso, o <code>README.md</code> que está no repositório remoto).</p>
+<h3 id="git-pull"><a class="header" href="#git-pull">Git pull</a></h3>
+<p>O <code>git pull</code> na verdade se trata de dois comandos em um só: <code>git fetch</code> e <code>git merge</code>.</p>
+<p>O <code>fetch</code> serve para detectar as alterações que se encontram no repositório remoto cujo as quais ainda não foram mapeadas no repositório local:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git fetch origin main
+Username for 'https://github.com': &lt;seu nome de usuário&gt;
+Password for 'https://&lt;seu nome de usuário&gt;@github.com':
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/&lt;seu nome de usuário&gt;/aprendendo-git
+ * branch            main       -&gt; FETCH_HEAD
+   fc48527..fc0e748  main       -&gt; origin/main
+</code></pre>
+<p>Vejamos o <code>status</code>:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use &quot;git pull&quot; to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+</code></pre>
+<h3 id="git-merge"><a class="header" href="#git-merge">Git merge</a></h3>
+<p>Como vimos, as branchs remota e local não estão integradas, para sincronizarmos-as, iremos utilizar o comando <code>merge</code>:</p>
+<p>*: <em>o editor de texto <code>nano</code> aparecerá novamente, relembre dele <a href="#git-commit---amend">aqui</a></em></p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git merge origin/main
+Merge made by the 'recursive' strategy.
+ README.md | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 README.md
+</code></pre>
+<p>Listando o diretório:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>ls
+README.md  lero_lero.txt  lorem_ipsum.txt
+</code></pre>
+<p>Log:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git log
+commit 8e756f1edbac45f7626749340a1f7c4650433c99 (HEAD -&gt; main)
+Merge: 17cb2da fc0e748
+Author: Guilherme de Lyra &lt;guilyra12@gmail.com&gt;
+Date:   Thu Mar 25 23:17:32 2021 -0300
+
+    Merge remote-tracking branch 'origin/main' into main
+
+commit 17cb2da0dda74e14859546d9706b16cdbfcdb400
+Author: Guilherme de Lyra &lt;guilyra12@gmail.com&gt;
+Date:   Thu Mar 25 23:07:10 2021 -0300
+
+    adicionando arquivo lero lero para enriquecer tutorial
+
+commit fc0e7489c1886c98a55b6e7a4c71cb7f70f47d9a (origin/main)
+Author: Guilherme de Lyra &lt;guilyra12@gmail.com&gt;
+Date:   Thu Mar 25 22:52:52 2021 -0300
+
+    Adicionando arquivo README
+
+    para melhor descrever o propósito deste repositório
+
+commit fc4852752385dd2c0031fb493e2b9b6c851da514
+Author: Guilherme de Lyra &lt;guilyra12@gmail.com&gt;
+Date:   Thu Mar 25 17:07:30 2021 -0300
+
+    Adicionando arquivo Lorem Ipsum de 1 paragrafo
+</code></pre>
+<blockquote>
+<p>Perceba que um commit &quot;lixo&quot; foi adicionado para indicar o merge entre as branchs.</p>
+</blockquote>
+<p>Status:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use &quot;git push&quot; to publish your local commits)
+
+nothing to commit, working tree clean
+</code></pre>
+<p>Finalmente, agora, podemos então <code>pushar</code>/empurrar/subir o commit pro repositório remoto:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git push origin main
+Username for 'https://github.com': &lt;seu nome de usuário&gt;
+Password for 'https://&lt;seu nome de usuário&gt;@github.com':
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 778 bytes | 778.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/&lt;seu nome de usuário&gt;/aprendendo-git.git
+   fc0e748..8e756f1  main -&gt; main
+</code></pre>
+<h3 id="modificando-arquivo-remotamente-e-localmente-simultaneamente"><a class="header" href="#modificando-arquivo-remotamente-e-localmente-simultaneamente">Modificando arquivo remotamente e localmente, simultaneamente</a></h3>
+<p>Vamos abrir o arquivo <code>lero_lero.txt</code> e modificar seu conteúdo:</p>
+<h4 id="no-repositorio-local"><a class="header" href="#no-repositorio-local">No repositorio local</a></h4>
+<p>*: <em>lembrando que, se preferir, pode abrir o arquivo para alterá-lo manualmente.</em></p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>sed -i 's/Podemos já vislumbrar/Abacate/g' lero_lero.txt
+</code></pre>
+<blockquote>
+<p>sed é um comando bem poderoso, vale a pena ~estudá-lo a parte; mas, basicamente, o comando recebe um &quot;padrão&quot; para encontrar (nesse caso &quot;Podemos já vislumbrar&quot;) e qual padrão haverá de se utilizar para substituí-lo (nesse caso, &quot;Abacate&quot;).</p>
+</blockquote>
+<p>Conferindo que a alteração realmente foi feita:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cat lero_lero.txt
+Abacate o modo pelo qual a adoção de políticas descentralizadoras talvez venha a ressaltar a relatividade de alternativas às soluções ortodoxas.
+</code></pre>
+<p>Adicionando etc...</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git add lero_lero.txt
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git commit -m &quot;Modificando as três palavras iniciais para serem \&quot;Abacate\&quot;&quot;
+[main f3fadb4] Modificando as três palavras iniciais para serem &quot;Abacate&quot;
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+</code></pre>
+<blockquote>
+<p>para se utilizar aspas dentro da mensagem de commit há de se <em>escapar</em> estas com uma barra invertida (<code>\</code>)</p>
+</blockquote>
+<h4 id="no-repositório-remoto"><a class="header" href="#no-repositório-remoto">No repositório remoto</a></h4>
+<p><img src="../../Imagens/selecione_arquivo.png" alt="selecione_arquivo" /></p>
+<p><img src="../../Imagens/alterando_arquivo.png" alt="alterando_arquivo" /></p>
+<p><img src="../../Imagens/resultado_arquivo.png" alt="resultado_arquivo" /></p>
+<h4 id="resolvendo-conflitos"><a class="header" href="#resolvendo-conflitos">Resolvendo conflitos</a></h4>
+<h5 id="merge"><a class="header" href="#merge">Merge:</a></h5>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/guilhermedelyra/aprendendo-git
+   8e756f1..9f31cb2  main       -&gt; origin/main
+Auto-merging lero_lero.txt
+CONFLICT (content): Merge conflict in lero_lero.txt
+Automatic merge failed; fix conflicts and then commit the result.
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cat lero_lero.txt
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Abacate o modo pelo qual a adoção de políticas descentralizadoras talvez venha a ressaltar a relatividade de alternativas às soluções ortodoxas.
+=======
+Feijão o modo pelo qual a adoção de políticas descentralizadoras talvez venha a ressaltar a relatividade de alternativas às soluções ortodoxas.
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 9f31cb2472888021c5c6e398cdd6f9ffe358e99f
+</code></pre>
+<p><img src="../../Imagens/vscode_conflito.png" alt="vscode_conflito" /></p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use &quot;git pull&quot; to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run &quot;git commit&quot;)
+  (use &quot;git merge --abort&quot; to abort the merge)
+
+Unmerged paths:
+  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
+
+        both modified:   lero_lero.txt
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git checkout --ours lero_lero.txt
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cat lero_lero.txt
+Abacate o modo pelo qual a adoção de políticas descentralizadoras talvez venha a ressaltar a relatividade de alternativas às soluções ortodoxas.
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git add lero_lero.txt
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use &quot;git pull&quot; to merge the remote branch into yours)
+
+All conflicts fixed but you are still merging.
+  (use &quot;git commit&quot; to conclude merge)
+
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git commit --no-edit
+[main dc59eb9] Merge branch 'main' of https://github.com/guilhermedelyra/aprendendo-git into main
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git log --online
+dc59eb9 (HEAD -&gt; main) Merge branch 'main' of https://github.com/guilhermedelyra/aprendendo-git into main
+9f31cb2 (origin/main) Modificando as três palavras iniciais
+f3fadb4 Modificando as três palavras iniciais para serem &quot;Abacate&quot;
+8e756f1 Merge remote-tracking branch 'origin/main' into main
+17cb2da adicionando arquivo lero lero para enriquecer tutorial
+fc0e748 Adicionando arquivo README
+fc48527 Adicionando arquivo Lorem Ipsum de 1 paragrafo
+</code></pre>
+<h5 id="rebase"><a class="header" href="#rebase">Rebase:</a></h5>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git pull --rebase
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/guilhermedelyra/aprendendo-git
+   8e756f1..9f31cb2  main       -&gt; origin/main
+First, rewinding head to replay your work on top of it...
+Applying: Modificando as três palavras iniciais para serem &quot;Abacate&quot;
+Using index info to reconstruct a base tree...
+M       lero_lero.txt
+Falling back to patching base and 3-way merge...
+Auto-merging lero_lero.txt
+CONFLICT (content): Merge conflict in lero_lero.txt
+error: Failed to merge in the changes.
+Patch failed at 0001 Modificando as três palavras iniciais para serem &quot;Abacate&quot;
+Use 'git am --show-current-patch' to see the failed patch
+
+Resolve all conflicts manually, mark them as resolved with
+&quot;git add/rm &lt;conflicted_files&gt;&quot;, then run &quot;git rebase --continue&quot;.
+You can instead skip this commit: run &quot;git rebase --skip&quot;.
+To abort and get back to the state before &quot;git rebase&quot;, run &quot;git rebase --abort&quot;.
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cat lero_lero.txt
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Feijão o modo pelo qual a adoção de políticas descentralizadoras talvez venha a ressaltar a relatividade de alternativas às soluções ortodoxas.
+=======
+Abacate o modo pelo qual a adoção de políticas descentralizadoras talvez venha a ressaltar a relatividade de alternativas às soluções ortodoxas.
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; Modificando as três palavras iniciais para serem &quot;Abacate&quot;
+</code></pre>
+<p><img src="../../Imagens/vscode_rebase_conflito.png" alt="vscode_rebase_conflito" /></p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git status
+rebase in progress; onto 9f31cb2
+You are currently rebasing branch 'main' on '9f31cb2'.
+  (fix conflicts and then run &quot;git rebase --continue&quot;)
+  (use &quot;git rebase --skip&quot; to skip this patch)
+  (use &quot;git rebase --abort&quot; to check out the original branch)
+
+Unmerged paths:
+  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
+
+        both modified:   lero_lero.txt
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git checkout --ours lero_lero.txt
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cat lero_lero.txt
+Feijão o modo pelo qual a adoção de políticas descentralizadoras talvez venha a ressaltar a relatividade de alternativas às soluções ortodoxas.
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git add lero_lero.txt
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git status
+rebase in progress; onto 9f31cb2
+You are currently rebasing branch 'main' on '9f31cb2'.
+  (all conflicts fixed: run &quot;git rebase --continue&quot;)
+
+nothing to commit, working tree clean
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git rebase --continue
+Applying: Modificando as três palavras iniciais para serem &quot;Abacate&quot;
+No changes - did you forget to use 'git add'?
+If there is nothing left to stage, chances are that something else
+already introduced the same changes; you might want to skip this patch.
+
+Resolve all conflicts manually, mark them as resolved with
+&quot;git add/rm &lt;conflicted_files&gt;&quot;, then run &quot;git rebase --continue&quot;.
+You can instead skip this commit: run &quot;git rebase --skip&quot;.
+To abort and get back to the state before &quot;git rebase&quot;, run &quot;git rebase --abort&quot;.
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git rebase --skip
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git log --online
+9f31cb2 (HEAD -&gt; main, origin/main) Modificando as três palavras iniciais
+8e756f1 Merge remote-tracking branch 'origin/main' into main
+17cb2da adicionando arquivo lero lero para enriquecer tutorial
+fc0e748 Adicionando arquivo README
+fc48527 Adicionando arquivo Lorem Ipsum de 1 paragrafo
+</code></pre>
+<!-- ### Git branch
+
+### Git rebase
+
+### Git commit amend + co-author -->
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../1_Introdução/3_Git/3_Instalação e Configuração.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../1_Introdução/3_Git/5_+ Comandos.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../1_Introdução/3_Git/3_Instalação e Configuração.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../1_Introdução/3_Git/5_+ Comandos.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

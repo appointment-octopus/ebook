@@ -1,0 +1,410 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>2. Projeto Completo Em Javascript - Guia para Devs Deslocados</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../../favicon.svg">
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../../1_Introdução/index.html"><strong aria-hidden="true">1.</strong> Introdução</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../1_Introdução/1_Sofisticação Técnica - Como se virar/index.html"><strong aria-hidden="true">1.1.</strong> Sofisticação Técnica - Como Se Virar</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../1_Introdução/1_Sofisticação Técnica - Como se virar/1_Resumão.html"><strong aria-hidden="true">1.1.1.</strong> Resumão</a></li><li class="chapter-item "><a href="../../../1_Introdução/1_Sofisticação Técnica - Como se virar/2_Como Googlar.html"><strong aria-hidden="true">1.1.2.</strong> Como Googlar</a></li></ol></li><li class="chapter-item "><a href="../../../1_Introdução/2_Linux/index.html"><strong aria-hidden="true">1.2.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../1_Introdução/2_Linux/1_Resumo Linux.html"><strong aria-hidden="true">1.2.1.</strong> Resumo Linux</a></li><li class="chapter-item "><a href="../../../1_Introdução/2_Linux/2_Linux.html"><strong aria-hidden="true">1.2.2.</strong> Linux</a></li><li class="chapter-item "><a href="../../../1_Introdução/2_Linux/3_5_windows wsl.html"><strong aria-hidden="true">1.2.3.</strong> Windows Wsl</a></li><li class="chapter-item "><a href="../../../1_Introdução/2_Linux/3_Dual Boot.html"><strong aria-hidden="true">1.2.4.</strong> Dual Boot</a></li><li class="chapter-item "><a href="../../../1_Introdução/2_Linux/4_Terminal.html"><strong aria-hidden="true">1.2.5.</strong> Terminal</a></li><li class="chapter-item "><a href="../../../1_Introdução/2_Linux/FAQ.html"><strong aria-hidden="true">1.2.6.</strong> Faq</a></li></ol></li><li class="chapter-item "><a href="../../../1_Introdução/3_Git/index.html"><strong aria-hidden="true">1.3.</strong> Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../1_Introdução/3_Git/1_Resumão.html"><strong aria-hidden="true">1.3.1.</strong> Resumão</a></li><li class="chapter-item "><a href="../../../1_Introdução/3_Git/2_Git & Github.html"><strong aria-hidden="true">1.3.2.</strong> Git &amp; Github</a></li><li class="chapter-item "><a href="../../../1_Introdução/3_Git/3_Instalação e Configuração.html"><strong aria-hidden="true">1.3.3.</strong> Instalação E Configuração</a></li><li class="chapter-item "><a href="../../../1_Introdução/3_Git/4_Principais comandos.html"><strong aria-hidden="true">1.3.4.</strong> Principais Comandos</a></li><li class="chapter-item "><a href="../../../1_Introdução/3_Git/5_+ Comandos.html"><strong aria-hidden="true">1.3.5.</strong> Comandos</a></li><li class="chapter-item "><a href="../../../1_Introdução/3_Git/6_Sugestão de aliases.html"><strong aria-hidden="true">1.3.6.</strong> Sugestão De Aliases</a></li><li class="chapter-item "><a href="../../../1_Introdução/3_Git/7_FAQ.html"><strong aria-hidden="true">1.3.7.</strong> Faq</a></li></ol></li><li class="chapter-item expanded "><a href="../../../1_Introdução/4_Ambientação/index.html"><strong aria-hidden="true">1.4.</strong> Ambientação</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/1_Arquitetura Cliente-Servidor.html"><strong aria-hidden="true">1.4.1.</strong> Arquitetura Cliente-Servidor</a></li><li class="chapter-item expanded "><a href="../../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/index.html" class="active"><strong aria-hidden="true">1.4.2.</strong> Projeto Completo Em Javascript</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/1_Backend.html"><strong aria-hidden="true">1.4.2.1.</strong> Backend</a></li><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/2_Frontend.html"><strong aria-hidden="true">1.4.2.2.</strong> Frontend</a></li></ol></li><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/index.html"><strong aria-hidden="true">1.4.3.</strong> O Que É E Como Utilizar Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/1_Diferenças entre VMs e Containers.html"><strong aria-hidden="true">1.4.3.1.</strong> Diferenças Entre Vms E Containers</a></li><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/2_Construindo um container mínimo.html"><strong aria-hidden="true">1.4.3.2.</strong> Construindo Um Container Mínimo</a></li><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/3_Instalação do Docker.html"><strong aria-hidden="true">1.4.3.3.</strong> Instalação Do Docker</a></li><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/4_Conceitos de Docker.html"><strong aria-hidden="true">1.4.3.4.</strong> Conceitos De Docker</a></li><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/5_Conceitos de Docker-Compose.html"><strong aria-hidden="true">1.4.3.5.</strong> Conceitos De Docker-Compose</a></li></ol></li><li class="chapter-item "><a href="../../../1_Introdução/4_Ambientação/4_Contribuindo com um repositório Open Source.html"><strong aria-hidden="true">1.4.4.</strong> Contribuindo Com Um Repositório Open Source</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                    </div>
+
+                    <h1 class="menu-title">Guia para Devs Deslocados</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/appointment-octopus/ebook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="projeto-completo-em-javascript"><a class="header" href="#projeto-completo-em-javascript">Projeto completo em Javascript</a></h1>
+<p><i class="hljs-comment" style="background-color: rgba(0,0,0,0)">Tempo estimado de leitura: 5min</i></p><br />
+<p>Este tutorial têm como objetivo:</p>
+<ul>
+<li>Elucidar melhor como funciona a arquitetura Cliente-Servidor</li>
+<li>Demonstrar como preparar o ambiente da sua máquina</li>
+<li>Demonstrar como funciona a estrutura de um projeto Javascript</li>
+<li>Conseguir fazer uma interação completa entre o front, back e banco</li>
+</ul>
+<p>Se trata de uma aplicação de mundo real, baseada no <a href="http://medium.com/">Medium</a>: <a href="https://demo.realworld.io/#/">https://demo.realworld.io/#/</a>
+Pode encontrar mais informações sobre esse projeto <a href="https://github.com/gothinkster/realworld">aqui</a>.</p>
+<table><thead><tr><th>Projeto</th><th>Stack</th><th>Url do projeto</th></tr></thead><tbody>
+<tr><td><a href="#backend">Backend</a></td><td>Node.js, Express, MongoDB</td><td><a href="https://github.com/gothinkster/node-express-realworld-example-app">https://github.com/gothinkster/node-express-realworld-example-app</a></td></tr>
+<tr><td><a href="#frontend">Frontend</a></td><td>React, Redux</td><td><a href="https://github.com/gothinkster/react-redux-realworld-example-app">https://github.com/gothinkster/react-redux-realworld-example-app</a></td></tr>
+</tbody></table>
+<h2 id="instalação"><a class="header" href="#instalação">Instalação</a></h2>
+<h3 id="clonar-repositórios"><a class="header" href="#clonar-repositórios">Clonar repositórios</a></h3>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>mkdir conduit
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cd conduit
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git clone https://github.com/gothinkster/node-express-realworld-example-app backend
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>git clone https://github.com/gothinkster/react-redux-realworld-example-app frontend
+</code></pre>
+<h3 id="instalar-mongodb"><a class="header" href="#instalar-mongodb">Instalar MongoDB</a></h3>
+<p>MongoDB é um SGBD (Sistema Gerenciador de Banco de Dados) orientado a Documentos, sendo categorizado como <code>NoSql</code>. </p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>echo &quot;deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse&quot; | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>sudo apt update
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>sudo apt-get install -y mongodb-org
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>sudo systemctl start mongod
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>sudo systemctl status mongod
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>sudo mkdir -p /data/db
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>sudo chown -R `id -u` /data/db
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>mongod
+</code></pre>
+<h3 id="istalar-npm-e-yarn"><a class="header" href="#istalar-npm-e-yarn">Istalar NPM e Yarn</a></h3>
+<p>São gerenciadores de pacotes Javascript, portanto, utilizados para instalar bibliotecas externas. </p>
+<ul>
+<li><code>npm</code> = gerenciador padrão</li>
+<li><code>yarn</code> = surgiu com algumas otimizações em relação ao <code>npm</code>, sendo normalmente mais rápido</li>
+</ul>
+<blockquote>
+<p><em>hoje em dia há quem argumente que ambos estão em pé de igualdade</em> </p>
+</blockquote>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>sudo apt install nodejs npm
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>npm install --global yarn
+</code></pre>
+<h2 id="entendendo-estrutura-dos-projetos"><a class="header" href="#entendendo-estrutura-dos-projetos">Entendendo estrutura dos projetos</a></h2>
+<p>Felizmente, é bem simples de se abstrair o funcionamento de qualquer projeto JS: caso o <code>README.md</code> não providencie todas as informações necessárias, basta começar a ler pelo <code>package.json</code> :D</p>
+<p><em>A partir da pasta <a href="#clonar-reposit%C3%B3rios"><code>conduit</code></a>:</em></p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>tree -L 2
+.
+├── backend
+│   ├── app.js
+│   ├── config
+│   ├── models
+│   ├── package.json
+│   ├── project-logo.png
+│   ├── public
+│   ├── README.md
+│   ├── routes
+│   ├── tests
+│   └── yarn.lock
+└── frontend
+    ├── package.json
+    ├── project-logo.png
+    ├── public
+    ├── README.md
+    ├── src
+    └── yarn.lock
+
+9 directories, 9 files
+</code></pre>
+<h3 id="packagejson"><a class="header" href="#packagejson">Package.json</a></h3>
+<p>Antes de começarmos a ler de fato ambos os <code>package.json</code>, vamos ver a similaridade destes:</p>
+<p><code>backend/package.json</code>:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;conduit-node&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;conduit on node&quot;,
+  &quot;main&quot;: &quot;app.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;mongo:start&quot;: &quot;docker run --name realworld-mongo -p 27017:27017 mongo &amp; sleep 5&quot;,
+    &quot;start&quot;: &quot;node ./app.js&quot;,
+    &quot;dev&quot;: &quot;nodemon ./app.js&quot;,
+    &quot;test&quot;: &quot;newman run ./tests/api-tests.postman.json -e ./tests/env-api-tests.postman.json&quot;,
+    &quot;stop&quot;: &quot;lsof -ti :3000 | xargs kill&quot;,
+    &quot;mongo:stop&quot;: &quot;docker stop realworld-mongo &amp;&amp; docker rm realworld-mongo&quot;
+  },
+  &quot;repository&quot;: {
+    &quot;type&quot;: &quot;git&quot;,
+    &quot;url&quot;: &quot;git+https://github.com/gothinkster/productionready-node-api.git&quot;
+  },
+  &quot;license&quot;: &quot;ISC&quot;,
+  &quot;dependencies&quot;: {
+    &quot;body-parser&quot;: &quot;1.15.0&quot;,
+    &quot;cors&quot;: &quot;2.7.1&quot;,
+    &quot;ejs&quot;: &quot;2.4.1&quot;,
+    &quot;errorhandler&quot;: &quot;1.4.3&quot;,
+    &quot;express&quot;: &quot;4.13.4&quot;,
+    &quot;express-jwt&quot;: &quot;3.3.0&quot;,
+    &quot;express-session&quot;: &quot;1.13.0&quot;,
+    &quot;jsonwebtoken&quot;: &quot;7.1.9&quot;,
+    &quot;method-override&quot;: &quot;2.3.5&quot;,
+    &quot;methods&quot;: &quot;1.1.2&quot;,
+    &quot;mongoose&quot;: &quot;4.4.10&quot;,
+    &quot;mongoose-unique-validator&quot;: &quot;1.0.2&quot;,
+    &quot;morgan&quot;: &quot;1.7.0&quot;,
+    &quot;passport&quot;: &quot;0.3.2&quot;,
+    &quot;passport-local&quot;: &quot;1.0.0&quot;,
+    &quot;request&quot;: &quot;2.69.0&quot;,
+    &quot;slug&quot;: &quot;0.9.1&quot;,
+    &quot;underscore&quot;: &quot;1.8.3&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;newman&quot;: &quot;^3.8.2&quot;,
+    &quot;nodemon&quot;: &quot;^1.11.0&quot;
+  }
+}
+</code></pre>
+<p><code>frontend/package.json</code>:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;react-redux-realworld-example-app&quot;,
+  &quot;version&quot;: &quot;0.1.0&quot;,
+  &quot;private&quot;: true,
+  &quot;devDependencies&quot;: {
+    &quot;cross-env&quot;: &quot;^5.1.4&quot;,
+    &quot;react-scripts&quot;: &quot;1.1.1&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;history&quot;: &quot;^4.6.3&quot;,
+    &quot;marked&quot;: &quot;^0.3.6&quot;,
+    &quot;prop-types&quot;: &quot;^15.5.10&quot;,
+    &quot;react&quot;: &quot;^16.3.0&quot;,
+    &quot;react-dom&quot;: &quot;^16.3.0&quot;,
+    &quot;react-redux&quot;: &quot;^5.0.7&quot;,
+    &quot;react-router&quot;: &quot;^4.1.2&quot;,
+    &quot;react-router-dom&quot;: &quot;^4.1.2&quot;,
+    &quot;react-router-redux&quot;: &quot;^5.0.0-alpha.6&quot;,
+    &quot;redux&quot;: &quot;^3.6.0&quot;,
+    &quot;redux-devtools-extension&quot;: &quot;^2.13.2&quot;,
+    &quot;redux-logger&quot;: &quot;^3.0.1&quot;,
+    &quot;superagent&quot;: &quot;^3.8.2&quot;,
+    &quot;superagent-promise&quot;: &quot;^1.1.0&quot;
+  },
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;cross-env PORT=4100 react-scripts start&quot;,
+    &quot;build&quot;: &quot;react-scripts build&quot;,
+    &quot;test&quot;: &quot;cross-env PORT=4100 react-scripts test --env=jsdom&quot;,
+    &quot;eject&quot;: &quot;react-scripts eject&quot;
+  }
+}
+</code></pre>
+<p>Bom, fora o trivial (como <code>name</code>, <code>version</code>, <code>description</code> etc), o que salta aos olhos são: <code>dependencies</code> e <code>scripts</code>.</p>
+<ul>
+<li><code>Scripts</code>: são definidos pelo próprio desenvolvedor, sendo que podem ser até mesmo comandos que não utilizam alguma biblioteca <code>JS</code>. Por exemplo, poderiamos adicionar a chave <code>&quot;list&quot;: &quot;ls&quot;</code> dentro de <code>&quot;scripts&quot;</code>, e rodar o comando com <code>npm run list</code> ou <code>yarn run list</code>, que teria como output a listagem do diretório do repositório atual.</li>
+</ul>
+<blockquote>
+<p>Obs: na maioria das vezes não é necessário incluir <code>run</code> no uso do yarn (ex: <code>yarn build</code> em vez de <code>yarn run build</code>); neste caso há de se incluir o <code>run</code> pois <code>list</code> é um comando padrão do <code>yarn</code> utilizado para listar todos os pacotes instalados neste projeto (incluindo dependencias das dependencias etc)</p>
+</blockquote>
+<ul>
+<li><code>Dependencies</code>: como o próprio nome da a entender, são as dependencias utilizadas naquele projeto. É sempre interessante/importante que você tenha ao menos uma noção do que as libs incluídas fazem... Basta acessar <a href="https://www.npmjs.com/package/">https://www.npmjs.com/package/</a> e incluir no final da url o pacote que está &quot;inspecionando&quot;; por exemplo: <a href="https://www.npmjs.com/package/marked">https://www.npmjs.com/package/marked</a></li>
+</ul>
+<p>Você pode encontrar mais informações sobre o <code>package.json</code> <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json">aqui</a>.</p>
+<h2 id="instalando-dependencias-dos-projetos"><a class="header" href="#instalando-dependencias-dos-projetos">Instalando dependencias dos projetos</a></h2>
+<p>Antes de executarmos cada um dos projetos, precisamos instalar as dependencias previamente citadas:
+Abra dois terminais distintos (ou dê &quot;split&quot; caso seu terminal tenha essa opção), que serão referenciados aqui no tutorial como <strong>T1</strong> e <strong>T2</strong>.</p>
+<p>Segue, então, o passo-a-passo a ser realizado em cada um dos terminais:</p>
+<p><em>Ambos a partir da pasta <a href="#clonar-reposit%C3%B3rios"><code>conduit</code></a></em></p>
+<table style="width: 100%">
+<tr>
+<td>
+<p>Comandos no <strong>T1</strong></p>
+</td>
+<td>
+<p>Comandos no <strong>T2</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cd frontend
+</code></pre>
+</td>
+<td>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cd backend
+</code></pre>
+</td>
+</tr>
+<tr>
+<td>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>yarn
+</code></pre>
+</td>
+<td>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>yarn
+</code></pre>
+</td>
+</tr>
+<tr>
+<td>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>yarn start
+</code></pre>
+</td>
+<td>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>yarn dev
+</code></pre>
+</td>
+</tr>
+<tr>
+<td>
+<p>Url: <a href="http://localhost:3000/">localhost:3000</a></p>
+</td>
+<td>
+<p>Url: <a href="http://localhost:4100/">localhost:4100</a></p>
+</td>
+</tr>
+</table>
+<blockquote>
+<p><code>yarn</code> é o mesmo <code>npm install</code>
+<code>yarn start</code> é o mesmo que <code>npm run start</code>
+<code>yarn dev</code> é o mesmo que <code>npm run dev</code></p>
+</blockquote>
+<blockquote>
+<p><em>Caso apareça um erro de conexão ao subir o serviço do backend como o mostrado abaixo, provavelmente acontecera por conta do serviço <code>mongod</code> não ter sido inicializado; para tanto, basta executar:</em> </p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>sudo systemctl start mongod
+</code></pre>
+<p><em>* obs: pode executar o mesmo comando acima substituindo <code>start</code> por <code>enable</code> para inicializar o serviço junto com o sistema operacional.</em></p>
+<details>
+ <summary>Mongod error</summary>
+<p><img src="../../Imagens/mongod_error.png" alt="mongod_error" /></p>
+</details>
+<br>
+</blockquote>
+<p>Agora, com ambos os serviços funcionando, você pode interagir com seu site localmente :D</p>
+<p>Por ora é isso :)
+Veja os próximos capítulos para compreender melhor o funcionamento do Backend &amp; Funcionamento.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../1_Introdução/4_Ambientação/1_Arquitetura Cliente-Servidor.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/1_Backend.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../1_Introdução/4_Ambientação/1_Arquitetura Cliente-Servidor.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/1_Backend.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>4. Terminal - Guia para Devs Deslocados</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../1_Introdução/index.html"><strong aria-hidden="true">1.</strong> Introdução</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/1_Sofisticação Técnica - Como se virar/index.html"><strong aria-hidden="true">1.1.</strong> Sofisticação Técnica - Como Se Virar</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/1_Sofisticação Técnica - Como se virar/1_Resumão.html"><strong aria-hidden="true">1.1.1.</strong> Resumão</a></li><li class="chapter-item "><a href="../../1_Introdução/1_Sofisticação Técnica - Como se virar/2_Como Googlar.html"><strong aria-hidden="true">1.1.2.</strong> Como Googlar</a></li></ol></li><li class="chapter-item expanded "><a href="../../1_Introdução/2_Linux/index.html"><strong aria-hidden="true">1.2.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/2_Linux/1_Resumo Linux.html"><strong aria-hidden="true">1.2.1.</strong> Resumo Linux</a></li><li class="chapter-item "><a href="../../1_Introdução/2_Linux/2_Linux.html"><strong aria-hidden="true">1.2.2.</strong> Linux</a></li><li class="chapter-item "><a href="../../1_Introdução/2_Linux/3_5_windows wsl.html"><strong aria-hidden="true">1.2.3.</strong> Windows Wsl</a></li><li class="chapter-item "><a href="../../1_Introdução/2_Linux/3_Dual Boot.html"><strong aria-hidden="true">1.2.4.</strong> Dual Boot</a></li><li class="chapter-item expanded "><a href="../../1_Introdução/2_Linux/4_Terminal.html" class="active"><strong aria-hidden="true">1.2.5.</strong> Terminal</a></li><li class="chapter-item "><a href="../../1_Introdução/2_Linux/FAQ.html"><strong aria-hidden="true">1.2.6.</strong> Faq</a></li></ol></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/index.html"><strong aria-hidden="true">1.3.</strong> Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/3_Git/1_Resumão.html"><strong aria-hidden="true">1.3.1.</strong> Resumão</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/2_Git & Github.html"><strong aria-hidden="true">1.3.2.</strong> Git &amp; Github</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/3_Instalação e Configuração.html"><strong aria-hidden="true">1.3.3.</strong> Instalação E Configuração</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/4_Principais comandos.html"><strong aria-hidden="true">1.3.4.</strong> Principais Comandos</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/5_+ Comandos.html"><strong aria-hidden="true">1.3.5.</strong> Comandos</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/6_Sugestão de aliases.html"><strong aria-hidden="true">1.3.6.</strong> Sugestão De Aliases</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/7_FAQ.html"><strong aria-hidden="true">1.3.7.</strong> Faq</a></li></ol></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/index.html"><strong aria-hidden="true">1.4.</strong> Ambientação</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/1_Arquitetura Cliente-Servidor.html"><strong aria-hidden="true">1.4.1.</strong> Arquitetura Cliente-Servidor</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/index.html"><strong aria-hidden="true">1.4.2.</strong> Projeto Completo Em Javascript</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/1_Backend.html"><strong aria-hidden="true">1.4.2.1.</strong> Backend</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/2_Frontend.html"><strong aria-hidden="true">1.4.2.2.</strong> Frontend</a></li></ol></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/index.html"><strong aria-hidden="true">1.4.3.</strong> O Que É E Como Utilizar Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/1_Diferenças entre VMs e Containers.html"><strong aria-hidden="true">1.4.3.1.</strong> Diferenças Entre Vms E Containers</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/2_Construindo um container mínimo.html"><strong aria-hidden="true">1.4.3.2.</strong> Construindo Um Container Mínimo</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/3_Instalação do Docker.html"><strong aria-hidden="true">1.4.3.3.</strong> Instalação Do Docker</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/4_Conceitos de Docker.html"><strong aria-hidden="true">1.4.3.4.</strong> Conceitos De Docker</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/5_Conceitos de Docker-Compose.html"><strong aria-hidden="true">1.4.3.5.</strong> Conceitos De Docker-Compose</a></li></ol></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/4_Contribuindo com um repositório Open Source.html"><strong aria-hidden="true">1.4.4.</strong> Contribuindo Com Um Repositório Open Source</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                    </div>
+
+                    <h1 class="menu-title">Guia para Devs Deslocados</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/appointment-octopus/ebook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="terminal"><a class="header" href="#terminal">Terminal</a></h1>
+<p><i class="hljs-comment" style="background-color: rgba(0,0,0,0)">Tempo estimado de leitura: 11min</i></p><br />
+<p>Por não possuir uma interface gráfica, a primeiro contato pode ser intimidador, mas é essencial saber ao menos o básico do terminal para interagir de forma mais prática com seu computador. Neste tópico vamos ensinar e explicar alguns comandos simples, que, no primeiro momento, vão ser de grande ajuda para iniciantes no assunto.</p>
+<!-- (imagem ou logo do terminal?) -->
+<p>Experimente abrir o terminal e vamos fazer algumas experimentações;</p>
+<p>No windows você tinha um gerenciador de tarefas, uma interface que te mostrava como funcionava a estrutura da organização dos seus arquivos, assim podendo entrar e sair de pastas, e acessar esses arquivos, executar, abrir, editar...</p>
+<blockquote>
+<p>A primeira vista vai reparar no símbolo <code>~</code> no começo da primeira linha, basicamente é uma abreviação para a sua pasta home no terminal.</p>
+</blockquote>
+<h3 id="diretórios"><a class="header" href="#diretórios">Diretórios</a></h3>
+<p>Com o terminal aberto, utilize o comando <code>cd</code> (change directory) para alterar o diretório atual, com o acréssimo de <code>/</code> você pode acessar os arquivos de sistema do seu computador, então no seu terminal, experimente: </p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cd /
+</code></pre>
+<blockquote>
+<p>Bem nesse ponto haverá um símbolo <code>~$</code> no começo do seu terminal, indicando uma nova linha de comando, a frente do sinal de <code>$</code> será o local onde há de ser inserido novos comandos, ao entrar em novas pastas/diretórios <code>/</code> a frente do sinal de <code>~</code> indicando qual a pasta em que você se encontra no momento.</p>
+</blockquote>
+<p>Agora escreva <code>ls</code> (list contents) para poder listar pastas e arquivos dentro daquele diretório. Então dentro da pasta <code>/</code> experimente usar <code>ls</code>:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>ls
+</code></pre>
+<p><img src="../../Imagens/terminal_ls.png" alt="terminal_ls" /></p>
+<p>Nesse ponto você pode por exemplo tentar entrar em uma pasta dentro dessa pasta utilizando <code>cd</code> ali acima, junto com o nome de uma pasta presente dentro daquele diretório (que você acabou de ver usando o <code>ls</code>).</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cd bin
+</code></pre>
+<p>Experimente mais uma vez listar os arquivos dentro desse outro diretório.</p>
+<blockquote>
+<p>O diretório /bin contém os comandos binários essenciais (programas) que devem estar presentes quando o sistema é montado no modo para usuário único. Os aplicativos (como o Chrome, ) são armazenados em /usr/bin, enquanto os programas importantes do sistema e utilitários, como o shell bash, ficam localizados em /bin.
+O diretório /urs pode ser armazenado em outra partição. Por isso, colocar esses arquivos no diretório /bin garante que o sistema terá os programas mais importantes, mesmo se não houver outros sistemas de arquivos montados. O diretório /sbin é semelhante, pois ele contém os arquivos binários para a administração do sistema.</p>
+</blockquote>
+<!-- Não sei se deveria colocar um capítulo separado para diretórios, e falar mais de outros comandos no terminal -->
+<p>Bem, sabendo que, independente do seu sistema operacional as pastas do seu computador se comportam como uma árvore, e possuem uma certa hierarquia quanto a sua importância. Isso acontece para que haja uma certa segurança quando formos manipular alguns arquivos. Já que os programas mais importantes para o funcionamento estão no <strong>root</strong> do computador, e uma de suas ramificações é responsável pelas aplicações instaladas pelo usuário, sendo a nossa <strong>usr/bin</strong>.</p>
+<p>Além da pasta <strong>bin</strong> que guarda arquivos binários para execução na <strong>root</strong>, vamos citar alguns outros que provavelmente vai se deparar com eles e se perguntar, sua função ou necessidade, até porque eles também estão consumindo uma parte da &quot;memória&quot; do seu computador.</p>
+<p><strong>/sbin:</strong> Da mesma forma que a bin, a sbin são conjuntos de executáveis do sistema que cuidam de configurações como a segurança do computador por exemplo. É responsável por pedir credenciais ou permissão de um adm quando for instalar algum programa por exemplo.</p>
+<p><strong>/boot:</strong> Se chegou a fazer o processo de dual boot, já tem uma ideia do que é guardado aqui dentro. Bem basicamente é tudo que o seu computador precisa para poder iniciar o seu Linux corretamente.</p>
+<p><strong>/dev:</strong> Como uma abreviação para <em>developers</em>, nessa pasta estão guardadas os arquivos responsáveis pelas configurações de desenvolvedores, no geral a conversa que ocorre entre hardwares como o seu teclado, mouse, câmera, com outras partes do seu computador.</p>
+<p><strong>/etc:</strong> Guarda também um conjunto de instruções que podem ser configuradas por texto, são tão importantes quanto os arquivos contidos em dev, entretanto podem ser simplesmente serem editados em um editor de texto do seu computador.</p>
+<!-- talvez falar melhor ou um pouco mais -->
+<p><strong>/home:</strong> Por default, praticamente sempre que abre o seu terminal começa nessa pasta, então funciona quase como o desktop do seu windows.</p>
+<p><strong>/lib(32 e 64):</strong> É onde as aplicações guardam arquivos ao se instalarem. Serão armazedos arquivos binários como em bin e sbin.</p>
+<p><strong>/media e /mnt:</strong> São diretórios em que você pode montar um dispositivo físico, como CD-ROM, partição do seu HD, um pendrive etc.</p>
+<h3 id="executáveis"><a class="header" href="#executáveis">Executáveis</a></h3>
+<p>São os arquivos binários que execumatos ao utilizar um <code>.</code> antes do arquivo, algo como <code>./nomedoarquivo</code>.</p>
+<p>Já que temos várias pastas para guardar arquivos, e nem sempre sabemos onde foi parar aquele executável... Bem, dá para adotar algumas estratégias de como podemos agir a partir daqui. 
+Uma forma interessante de fazer com que o Linux mapeie arquivos executáveis a partir de uma pasta é utilizar o comando <code>echo $PATH</code>.</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>echo $PATH
+</code></pre>
+<p>Isso fará com que seja listado os PATH (que é aquele 'caminho' da 'URL') de onde possuem pastas com executáveis.</p>
+<p>Caso queira saber onde contém um binário específico:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>which curl
+</code></pre>
+<p>Onde <code>which</code> é a abreviação de Which binary is this, e <code>curl</code> o executável que estamos procurando. O retorno vai ser o PATH desse executável.</p>
+<h4 id="instalando-um-software"><a class="header" href="#instalando-um-software">Instalando um software</a></h4>
+<p>Você também pode usar o terminal para instalar programas facilmente. Isso é especialmente útil se o software não está iniciando a instalação sozinho ou se você só quer agilizar o processo.</p>
+<p>Para fazer isso, digite o comando <code>sudo apt-get install nome</code> e substitua o “nome” que colocamos no exemplo pelo nome do programa que você quer instalar. Em seguida, é só apertar o “Enter”.</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>sudo apt-get install nome
+</code></pre>
+<h3 id="-comandos"><a class="header" href="#-comandos">+ Comandos</a></h3>
+<h5 id="sudo-permissões"><a class="header" href="#sudo-permissões">sudo: permissões</a></h5>
+<p>Por razões de segurança, o Linux trabalha com permissões de usuários. Por isso, determinados comandos ou arquivos são acessíveis apenas pelo próprio dono ou pelo usuário administrador (root). Para que você não tenha que trocar de usuário a todo instante, existe o comando <code>sudo</code>, que garante credenciais de usuário root temporariamente, mediante a informação de uma senha (sua senha de usuário do seu Ubuntu).</p>
+<p>Para fazer o teste, tente executar o comando:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>ls /root
+</code></pre>
+<p>Você reberá um aviso de permissão negada. Em seguida, execute:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>sudo ls /root
+</code></pre>
+<p>Depois de informar a senha do seu próprio usuário (no caso do Ubuntu), o comando será executado normalmente e os arquivos a pasta root serão listados no terminal.</p>
+<blockquote>
+<p>É equivalente ao executar um programa como administrador no Windows.</p>
+</blockquote>
+<h5 id="man-manual-dos-comandos"><a class="header" href="#man-manual-dos-comandos">man: manual dos comandos</a></h5>
+<p>O comando <code>man</code> é a abreviação de manual, basicamente, se precisar saber todas as coisas referentes aquele comando, experimente utilizar o comando <strong>man</strong> na frente dele adicionar o comando que quer saber sobre.</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>man ls
+</code></pre>
+<h4 id="criar-uma-pasta-naquele-diretório"><a class="header" href="#criar-uma-pasta-naquele-diretório">Criar uma pasta naquele diretório</a></h4>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>mkdir nome_da_pasta
+</code></pre>
+<h4 id="executar-um-arquivo"><a class="header" href="#executar-um-arquivo">Executar um arquivo</a></h4>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>./nome_do_arquivo
+</code></pre>
+<h4 id="apagar-um-arquivo"><a class="header" href="#apagar-um-arquivo">Apagar um arquivo</a></h4>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>rm nome_arquivo
+</code></pre>
+<blockquote>
+<p>caso o arquivo não esteja na pasta em que está no momento, basta colocar o caminho antes do nome.</p>
+</blockquote>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>rm /caminho/nome_arquivo
+</code></pre>
+<blockquote>
+<p>cada <code>/</code> representa um caminho antes de uma pasta</p>
+</blockquote>
+<h5 id="cp-copiar"><a class="header" href="#cp-copiar">cp: copiar</a></h5>
+<p>Copiar um arquivo utilizando o terminal é bem simples. Use o comando <code>cp</code> seguindo do arquivo de origem e o destino para ele, que pode ser tanto uma nova pasta quanto também um novo arquivo, com nome diferente. Exemplo:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cp arquivo1.txt arquivo2.txt
+</code></pre>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cp arquivo1.txt pastanova/
+</code></pre>
+<blockquote>
+<p>Caso a intenção seja de copiar um diretório inteiro, basta inserir o parâmetro <code>-r</code>. Se quiser clonar uma pasta, use:</p>
+</blockquote>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cp -r pasta1 pasta2
+</code></pre>
+<h5 id="cal-calendário"><a class="header" href="#cal-calendário">cal: calendário</a></h5>
+<p>Um simples comando que pode ser usado para abrir o calendário automaticamente é o <code>cal</code>.</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cal
+</code></pre>
+<h5 id="cmp-comparar-arquivos"><a class="header" href="#cmp-comparar-arquivos">cmp: comparar arquivos</a></h5>
+<p>Se usar o comando <code>cmp</code> e listar dois arquivos em seguida, o terminal se encarregará de compará-los automaticamente.</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>cmp arquivo1.txt arquivo2.txt
+</code></pre>
+<h5 id="mv-mover"><a class="header" href="#mv-mover">mv: mover</a></h5>
+<p>Para mover arquivos existe o comando <code>mv</code> e ele pode ser usado tanto para remanejar arquivos como para renomeá-los. Se quiser enviar o arquivo de uma pasta para outra, basta seguir o exemplo: </p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>mv pasta1/arquivo1 pasta2/
+</code></pre>
+<p>Se preferir apenas renomeá-lo:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>mv arquivo1 arquivo2
+</code></pre>
+<h5 id="more-ler"><a class="header" href="#more-ler">more: ler</a></h5>
+<p>Caso você precise ler o conteúdo de um arquivo de texto, use o comando <code>more</code> seguido do caminho e nome do arquivo:</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>more /home/user/arquivo.txt
+</code></pre>
+<p>Todo conteúdo do arquivo será exibido no terminal, preenchendo a tela com texto. Para prosseguir com a leitura, pressione a barra de espaço e, caso precise voltar uma ou mais páginas, use a tecla &quot;b&quot;. Se quiser sair antes do fim do arquivo, pressione &quot;q&quot;.
+Leitura de texto no Linux com o comando more.</p>
+<h5 id="df-conferir-o-espaço-em-disco"><a class="header" href="#df-conferir-o-espaço-em-disco">df: conferir o espaço em disco</a></h5>
+<p>Quer saber qual é o espaço total e quantos GB disponíveis existem em cada partição do sistema? Use o comando <code>df -h</code> .</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>df -h
+</code></pre>
+<blockquote>
+<p>A opção -h, aliás, quer dizer human-readable, ou seja, legível para humanos. Se você executar o comando sem ela, as informações serão exibidas em kilobytes e será necessário convertê-las mentalmente para outras unidades.</p>
+</blockquote>
+<h5 id="free-ver-uso-de-memória"><a class="header" href="#free-ver-uso-de-memória">free: ver uso de memória</a></h5>
+<p>Se quiser dar uma rápida olhada no uso de memória do seu computador, basta abrir o terminal e inserir o comando <code>free</code> e apertar a tecla <code>Enter</code>. Dessa forma, poderá encontrar aplicações que estão consumindo mais memória, ideal para identificar fontes de problemas.</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>free
+</code></pre>
+<h5 id="history-histórico-de-comandos"><a class="header" href="#history-histórico-de-comandos">history: histórico de comandos</a></h5>
+<p>Para ter uma visualização dos comandos que você usou no terminal previamente, simplesmente insira o comando <code>history</code>.</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>history
+</code></pre>
+<h5 id="locate-encontrar-arquivos"><a class="header" href="#locate-encontrar-arquivos">locate: encontrar arquivos</a></h5>
+<p>Para encontrar arquivos no Linux com facilidade, basta inserir o comando <code>locate</code> seguido pelo nome dos arquivos que você achar.</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>locate arquivo1.txt
+</code></pre>
+<h5 id="grep-buscas-em-textos"><a class="header" href="#grep-buscas-em-textos">grep: buscas em textos</a></h5>
+<p>Imagine a seguinte situação: você tem um arquivo .txt com vários nomes de alunos de certa escola, mas não tem certeza se um nome em específico está listado. O grep ajuda você a procurar por esse aluno e a fazer muito mais com a ajuda de expressões regulares.</p>
+<p>Bastaria executar o comando: </p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>grep &quot;Nome do Aluno&quot; arquivo.txt
+</code></pre>
+<p>Fará com que o terminal busque pelo nome indicado dentro da relação. </p>
+<blockquote>
+<p>Caso você não tenha certeza se o nome do aluno foi escrito respeitando as letras maiúsculas, adicione o parâmetro -i para que grep passe a ignorar essa distinção durante a busca.</p>
+</blockquote>
+<h5 id="clear-limpar-buffer"><a class="header" href="#clear-limpar-buffer">clear: limpar buffer</a></h5>
+<p>Por último, um comando que ajuda a organizar um pouco a confusão de letras que ficam no terminal depois de horas de uso. Para limpar toda a ela, execute o comando <code>clear</code>. Depois, é só voltar a usar o terminal normalmente, como se nada tivesse acontecido.</p>
+<pre><code class="language-bash"><span style="user-select: none">$ </span>clear
+</code></pre>
+<blockquote>
+<p>Ou então, pode utilizar o comando <code>Ctrl + L</code> para a mesma coisa.</p>
+</blockquote>
+<h3 id="atalhos"><a class="header" href="#atalhos">Atalhos</a></h3>
+<p>Alguns atalhos que podem facilitar o manuseio dentro do terminal:</p>
+<p><strong>tab</strong> : Ele irá automaticamente completar o que você estava digitando ou mostrará todos os resultados possíveis.</p>
+<p><strong>Ctrl+L</strong> : Para limpar o terminal.</p>
+<p><strong>Ctrl+A</strong> : Este atalho moverá o cursor para o início da linha. Suponha que você digitou um longo comando ou caminho no terminal e deseja ir para o início dele. Se usar a tecla de seta para mover o cursor levará bastante tempo.</p>
+<p><strong>Ctrl+E</strong> : Esse atalho é oposto ao <code>Ctrl + A</code>.  O <code>Ctrl + A</code> envia o cursor para o início da linha, enquanto <code>Ctrl + E</code> move o cursor para o final da linha.</p>
+<p><strong>Ctrl+C</strong> : Cancela o comando atual em funcionamento.</p>
+<p><strong>Ctrl+Z</strong> : Pausa o comando atual, em primeiro plano ou segundo plano.</p>
+<p><strong>Ctrl+D</strong> : Faz o logout da sessão atual (fecha o terminal).</p>
+<p><strong>Ctrl+W</strong> : Apaga uma palavra na linha atual.</p>
+<p><strong>Ctrl+U</strong> : Apaga a linha inteira.</p>
+<p><strong>Ctrl+K</strong> : Este é semelhante ao atalho <code>Ctrl + U</code>. A única diferença é que, em vez do início da linha, ela apaga tudo, da posição atual do cursor até o final da linha.</p>
+<p><strong>Ctrl+Y</strong> : Isto irá colar o texto apagado ao usar os atalhos <code>Ctrl + W</code>, <code>Ctrl + U</code> e <code>Ctrl + K</code>. Útil no caso de você ter apagado o texto errado ou se você precisar usar o texto apagado em outro lugar.</p>
+<p><strong>Ctrl+P</strong> : Você pode usar este atalho para visualizar o comando anterior. Você pode pressioná-lo repetidamente para continuar retornando ao histórico de comandos. Em muitos terminais, o mesmo pode ser alcançado com a tecla PgUp.</p>
+<p><strong>Ctrl+N</strong> : Você pode usar este atalho junto com o <code>Ctrl + P</code>. <code>Ctrl + N</code> exibe o próximo comando. Portanto, se você estiver visualizando comandos anteriores com <code>Ctrl + P</code>, poderá usar <code>Ctrl + N</code> para navegar para frente e para trás. Muitos terminais têm esse atalho mapeado para a chave PgDn.</p>
+<p><strong>Ctrl+R</strong> : Busca um comando recente.</p>
+<p><strong>!!</strong> : Repete o último comando.</p>
+<p><strong>exit</strong> : Faz o logout da sessão atual (fecha o terminal).</p>
+<!-- Revisão dos comandos e atalhos
+
+ls: Lista diretórios e arquivos
+
+ls -l: Opção lista longa "com detalhes"
+
+ls dir: Lista outro diretório que não o corrente
+
+history: Histórico de comandos
+
+mkdir: Cria Diretórios
+
+rm -r: Remove diretórios com a opção -r
+
+cd dir: Muda o diretório atual para outro
+
+cd /: Muda para o diretório raiz /
+
+cd ~: Muda para o diretório pessoal (home)
+
+cd ..: Retoma ao Diretório Anterior
+
+--help: Exibe o arquivo de ajuda de um comando
+
+man comando: Exibe o manual do comando
+
+mv antigo novo: Renomeia um diretório ou arquivo
+
+mv dir/ ~: Move um diretório para o diretório pessoal
+
+touch nomearquivo: Cria arquivos vazios no Linux
+
+cp arquivo diretório: Faz uma cópia de um arquivo para outro diretório
+
+rmdir: Específico para remover diretórios
+
+rm nomearquivo: Remove um arquivo
+
+clear: Limpa o terminal
+
+exit: Finaliza sessão do terminal -->
+<!-- https://www.youtube.com/watch?v=42iQKuQodW4 -->
+<!-- https://www.apptuts.net/tutorial/web/comandos-uteis-terminal-linux/ -->
+<!-- https://canaltech.com.br/linux/10-comandos-essenciais-do-linux/ -->
+<!-- https://digitalinnovation.one/artigos/fundamentos-comandos-e-atalhos-linux -->
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../1_Introdução/2_Linux/3_Dual Boot.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../1_Introdução/2_Linux/FAQ.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../1_Introdução/2_Linux/3_Dual Boot.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../1_Introdução/2_Linux/FAQ.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

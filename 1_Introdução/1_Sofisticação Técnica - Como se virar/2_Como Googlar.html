@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>2. Como Googlar - Guia para Devs Deslocados</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../1_Introdução/index.html"><strong aria-hidden="true">1.</strong> Introdução</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../1_Introdução/1_Sofisticação Técnica - Como se virar/index.html"><strong aria-hidden="true">1.1.</strong> Sofisticação Técnica - Como Se Virar</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/1_Sofisticação Técnica - Como se virar/1_Resumão.html"><strong aria-hidden="true">1.1.1.</strong> Resumão</a></li><li class="chapter-item expanded "><a href="../../1_Introdução/1_Sofisticação Técnica - Como se virar/2_Como Googlar.html" class="active"><strong aria-hidden="true">1.1.2.</strong> Como Googlar</a></li></ol></li><li class="chapter-item "><a href="../../1_Introdução/2_Linux/index.html"><strong aria-hidden="true">1.2.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/2_Linux/1_Resumo Linux.html"><strong aria-hidden="true">1.2.1.</strong> Resumo Linux</a></li><li class="chapter-item "><a href="../../1_Introdução/2_Linux/2_Linux.html"><strong aria-hidden="true">1.2.2.</strong> Linux</a></li><li class="chapter-item "><a href="../../1_Introdução/2_Linux/3_5_windows wsl.html"><strong aria-hidden="true">1.2.3.</strong> Windows Wsl</a></li><li class="chapter-item "><a href="../../1_Introdução/2_Linux/3_Dual Boot.html"><strong aria-hidden="true">1.2.4.</strong> Dual Boot</a></li><li class="chapter-item "><a href="../../1_Introdução/2_Linux/4_Terminal.html"><strong aria-hidden="true">1.2.5.</strong> Terminal</a></li><li class="chapter-item "><a href="../../1_Introdução/2_Linux/FAQ.html"><strong aria-hidden="true">1.2.6.</strong> Faq</a></li></ol></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/index.html"><strong aria-hidden="true">1.3.</strong> Git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/3_Git/1_Resumão.html"><strong aria-hidden="true">1.3.1.</strong> Resumão</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/2_Git & Github.html"><strong aria-hidden="true">1.3.2.</strong> Git &amp; Github</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/3_Instalação e Configuração.html"><strong aria-hidden="true">1.3.3.</strong> Instalação E Configuração</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/4_Principais comandos.html"><strong aria-hidden="true">1.3.4.</strong> Principais Comandos</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/5_+ Comandos.html"><strong aria-hidden="true">1.3.5.</strong> Comandos</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/6_Sugestão de aliases.html"><strong aria-hidden="true">1.3.6.</strong> Sugestão De Aliases</a></li><li class="chapter-item "><a href="../../1_Introdução/3_Git/7_FAQ.html"><strong aria-hidden="true">1.3.7.</strong> Faq</a></li></ol></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/index.html"><strong aria-hidden="true">1.4.</strong> Ambientação</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/1_Arquitetura Cliente-Servidor.html"><strong aria-hidden="true">1.4.1.</strong> Arquitetura Cliente-Servidor</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/index.html"><strong aria-hidden="true">1.4.2.</strong> Projeto Completo Em Javascript</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/1_Backend.html"><strong aria-hidden="true">1.4.2.1.</strong> Backend</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/2_Projeto Completo em Javascript/2_Frontend.html"><strong aria-hidden="true">1.4.2.2.</strong> Frontend</a></li></ol></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/index.html"><strong aria-hidden="true">1.4.3.</strong> O Que É E Como Utilizar Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/1_Diferenças entre VMs e Containers.html"><strong aria-hidden="true">1.4.3.1.</strong> Diferenças Entre Vms E Containers</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/2_Construindo um container mínimo.html"><strong aria-hidden="true">1.4.3.2.</strong> Construindo Um Container Mínimo</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/3_Instalação do Docker.html"><strong aria-hidden="true">1.4.3.3.</strong> Instalação Do Docker</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/4_Conceitos de Docker.html"><strong aria-hidden="true">1.4.3.4.</strong> Conceitos De Docker</a></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/3_O que é e como utilizar Docker/5_Conceitos de Docker-Compose.html"><strong aria-hidden="true">1.4.3.5.</strong> Conceitos De Docker-Compose</a></li></ol></li><li class="chapter-item "><a href="../../1_Introdução/4_Ambientação/4_Contribuindo com um repositório Open Source.html"><strong aria-hidden="true">1.4.4.</strong> Contribuindo Com Um Repositório Open Source</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                    </div>
+
+                    <h1 class="menu-title">Guia para Devs Deslocados</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/appointment-octopus/ebook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="como-googlar"><a class="header" href="#como-googlar">Como Googlar</a></h1>
+<p><i class="hljs-comment" style="background-color: rgba(0,0,0,0)">Tempo estimado de leitura: 4min</i></p>
+<h2 id="contexto"><a class="header" href="#contexto">Contexto</a></h2>
+<p>Bem nos encontramos no mundo da informação e sabemos que basicamente qualquer resposta está ao alcance dos nossos dedos, basta apenas termos acesso a internet e fazermos uma rápida pesquisa em uma ferramenta voltada para busca em acervos web.</p>
+<blockquote>
+<p>Nesse ponto temos uma certa variedades de ferramentas que nos auxiliam a encontrar o que precisamos, o Bing, Yahoo!, DuckDuck Go, e alguns outros que de vez em quando esbarramos em algum computador. Embora tenhamos uma variedade ampla de buscadores, não dá para não associar a supremacia da Google nesse aspecto, por dominar cerca de 94% de todo tráfego orgânico da surface (parte 'superficial' que possui indexadores para serem localixados) internet.</p>
+</blockquote>
+<p>E você precisa encontrar a solução de um problema ou uma definição precisa a cerca de um assunto, as necessidades podem ser diversas, mas a chances de encontrar isso são altíssimas. Então por conta disso voltamos ao google.</p>
+<h2 id="conseguindo-melhores-resultados-na-busca"><a class="header" href="#conseguindo-melhores-resultados-na-busca">Conseguindo Melhores Resultados na Busca</a></h2>
+<p>Bem infelizmente quando vamos atrás de alguma informação na internet, podemos enfrentar alguns problemas, por conta da língua, ou da grande quantidade de informações e definições similares para alguns nichos diferentes. </p>
+<p>Um exemplo simples: você pode estar procurando por alguma coisa relacionada a Harry Potter no google e usar apenas Hp, e se depara com informações a cerca de impressoras e suporte.</p>
+<p>Por conta desse e alguns outros pequenos problemas (como língua e ambiguidades), é necessário conhecer algumas &quot;técnicas&quot; para conseguir resultados eficientes que  melhorem o nosso resultado de busca.</p>
+<h3 id="1-palavras-chave"><a class="header" href="#1-palavras-chave">1: Palavras chave:</a></h3>
+<p>É possível encontrar o que procura bem rápido usando várias palavras chave na sua pesquisa, ao invés de apenas uma palavra ou termo.</p>
+<p>Ao procurar por: <strong>Vídeos de crianças engraçadas</strong> procure por cada palavra separadamente ao invés da frase completa. Então o ideal nesse cenário seria usar apenas <strong>Crianças engraçadas</strong> e usar o filtro de busca dentro da ferramenta.</p>
+<blockquote>
+<p><strong>Evite</strong> algo como: <strong>quero ver vídeos de crianças engraçadas</strong> por exemplo. Isso mais atrapalha do que ajuda a busca.</p>
+</blockquote>
+<h3 id="2-use-aspas"><a class="header" href="#2-use-aspas">2: Use aspas:</a></h3>
+<p>Caso se recorde de uma frase ou termo completo que tenha interesse em achar, coloque a frase exata entre aspas, dessa forma o google irá buscar a string exata que escreveu ao invés de tentar filtrar por outros aspectos para encontrar &quot;relacionados&quot; ou &quot;conceitos&quot; que são parecidos.</p>
+<blockquote>
+<p>Eperimente por exemplo pesquisar um nome completo entre aspas, as chances de encontrar a pessoa específica é bem maior do que apenas usar o nome completo na busca. Dessa forma você evita que o google procure por pessoas com cada um dos nomes e que ele faça algumas combinações com a ordem para tentar achar o que você procura.</p>
+</blockquote>
+<h3 id="3-use-o-menos-como-operador-de-exclusão"><a class="header" href="#3-use-o-menos-como-operador-de-exclusão">3: Use o menos, como operador de exclusão</a></h3>
+<p>Caso por exemplo queira saber algo sobre Washington entretanto não quer saber de Washington DC, coloque o <code>-</code> (menos) antes, da palavra DC.</p>
+<p><code>Washington -DC</code> (o menos deve estar antes, e colado ao termo que não quer na sua busca).</p>
+<blockquote>
+<p>Uma boa é usar as aspas para excluir uma frase inteira colocando o <code>-</code> logo antes a frase (entre aspas).</p>
+</blockquote>
+<h3 id="4-use-o-ou"><a class="header" href="#4-use-o-ou">4: Use o OU</a></h3>
+<p>O google permite que você faça busca de duas coisas ao mesmo tempo com esse operador. Experimente pesquisar <code>jogos de nintendo OU jogos de playstation</code>, ele retornará parte da busca voltada para cada um.</p>
+<h3 id="5-operador--ponto-ponto"><a class="header" href="#5-operador--ponto-ponto">5: Operador .. (Ponto Ponto)</a></h3>
+<p>Funciona para casos em que queira colocar um filtro de intervalo numérico, caso queira buscar músicas de 1980 até 2000, pode pesquisar como:</p>
+<p><code>Músicas 1980..2000</code></p>
+<h3 id="6-operador-site"><a class="header" href="#6-operador-site">6: Operador Site:</a></h3>
+<p>Caso saiba que um conteúdo vai ser encontrado dentro de um site específico, pode evitar gerar mais sugestões de lugares desnecessários colocando <code>site:Fonte.com</code> ao final da busca.</p>
+<blockquote>
+<p><code>Via Lactea site:Nasa.gov</code></p>
+</blockquote>
+<h3 id="7-operador-defina"><a class="header" href="#7-operador-defina">7: Operador Defina:</a></h3>
+<p>Caso não saiba o que uma palavra ou termo significa, use o google como dicionário e coloque <strong>Defina:</strong> antes do termo que gostaria de pesquisar.</p>
+<h3 id="8-curinga-"><a class="header" href="#8-curinga-">8: Curinga <code>*</code></a></h3>
+<p>O asterisco ao final de uma frase ou termo pede para o google encontrar o termo que completaria aquela sentença como por exemplo:</p>
+<p><code>garota de *</code>, retornará Garota de Ipanema por exemplo. Dessa forma ajuda a gente a se lembrar de algumas coisas.</p>
+<h3 id="9-operador-filetype"><a class="header" href="#9-operador-filetype">9: Operador FILETYPE:</a></h3>
+<p>Depois de escrever o termo que gostaria de pesquisar, use o <strong>FILETYPE:</strong> para poder logo em seguida dizer ao google quais são os tipos de arquivos que gostaria que fossem retornados, por exemplo, ao invés de achar algum texto pode optar por retornar uma versão de áudio daquela obra adicionando o <code>FILETYPE:mp3</code>.</p>
+<h3 id="10-utiliza-os-filtros"><a class="header" href="#10-utiliza-os-filtros">10: Utiliza os filtros:</a></h3>
+<p>Dentro do Google possui algumas ferramentas de busca, pode filtrar para retornar vídeos, imagens, numa língua específica. Pense que dado momento pode pesquisar por <code>Star Wars</code>, essa busca vai retornar resultados no idioma em que pesquisou, mas se for nos filtros do google vai encontrar uma parte voltada para selecionar o idioma de preferência para retornar aquela informação.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../1_Introdução/1_Sofisticação Técnica - Como se virar/1_Resumão.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../1_Introdução/2_Linux/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../1_Introdução/1_Sofisticação Técnica - Como se virar/1_Resumão.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../1_Introdução/2_Linux/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
