@@ -26,7 +26,7 @@ Agora escreva `ls` (list contents) para poder listar pastas e arquivos dentro da
 $ ls
 ```
 
-![terminal_ls](../Imagens/terminal_ls.png)
+![terminal_ls](../../Imagens/terminal_ls.png)
 
 Nesse ponto você pode por exemplo tentar entrar em uma pasta dentro dessa pasta utilizando `cd` ali acima, junto com o nome de uma pasta presente dentro daquele diretório (que você acabou de ver usando o `ls`).
 

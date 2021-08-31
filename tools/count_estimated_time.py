@@ -17,6 +17,7 @@ def log(msg, write='a'):
 
 
 def content_with_estimated_time(content, time_text):
+    log(content)
     first_line, remaining_content = content.split('\n', 1)
     if remaining_content.isspace():
         return content

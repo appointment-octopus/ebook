@@ -3,7 +3,7 @@ authors = ["Guilherme de Lyra", "Max Henrique"]
 language = "pt-br"
 multilingual = false
 src = "src"
-title = "Conceitos de Engenharia de Software aplicados"
+title = "Guia para Devs Deslocados"
 
 [preprocessor.count_time]
 command = "python3 tools/count_estimated_time.py"
@@ -14,3 +14,7 @@ default-theme = "rust"
 copy-fonts = true
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/appointment-octopus/ebook"
+
+[output.html.fold]
+enable = true
+level = 1

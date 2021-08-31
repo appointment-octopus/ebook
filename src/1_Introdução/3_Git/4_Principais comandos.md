@@ -220,7 +220,7 @@ Como pôde perceber, há um erro ortográfico na mensagem do commit: escrevemos 
 $ git commit --amend
 ```
 
-![amend](../Imagens/amend.png)
+![amend](../../Imagens/amend.png)
 
 Este editor pode parecer estranho a primeira vista. Se chama [`nano`](https://www.nano-editor.org), e vem como editor de texto padrão no terminal do Linux.
 
@@ -375,7 +375,7 @@ Para retornamos ao estado anterior, iremos utilizar o comando `git reset`:
 
 Bom, o primeiro passo é [criar sua conta](https://github.com/join) no Github. Após isso, crie um [novo repositório](https://github.com/new):
 
-![new_repo](../Imagens/new_repo.png)
+![new_repo](../../Imagens/new_repo.png)
 
 Agora, basta adicionar esse endereço ao nosso repositório git local:
 
@@ -435,19 +435,19 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 
 Agora, basta acessar a URL do seu repositório e verificar que o arquivo `lorem_ipsum.txt` está lá:
 
-![lorem_ipsum_repo](../Imagens/lorem_ipsum_repo.png)
+![lorem_ipsum_repo](../../Imagens/lorem_ipsum_repo.png)
 
 ### README.md
 
 `README.md` se trata de um arquivo Markdown, uma linguagem de marcação de texto para criar textos formatados; este arquivo, neste contexto, é utilizado para descrever o propósito desse repositório. Vamos adiciona-lo pelo proprio Github. No site do seu repositório, clique no botão:
 
-![readme](../Imagens/readme.png)
+![readme](../../Imagens/readme.png)
 
 Descreva como preferir e insira uma mensagem de commit:
-![commit_readme](../Imagens/commit_readme.png)
+![commit_readme](../../Imagens/commit_readme.png)
 
 Resultado:
-![result_readme](../Imagens/result_readme.png)
+![result_readme](../../Imagens/result_readme.png)
 
 ### Criando mais um arquivo
 
@@ -637,11 +637,11 @@ $ git commit -m "Modificando as três palavras iniciais para serem \"Abacate\""
 
 #### No repositório remoto
 
-![selecione_arquivo](../Imagens/selecione_arquivo.png)
+![selecione_arquivo](../../Imagens/selecione_arquivo.png)
 
-![alterando_arquivo](../Imagens/alterando_arquivo.png)
+![alterando_arquivo](../../Imagens/alterando_arquivo.png)
 
-![resultado_arquivo](../Imagens/resultado_arquivo.png)
+![resultado_arquivo](../../Imagens/resultado_arquivo.png)
 
 #### Resolvendo conflitos
 
@@ -670,7 +670,7 @@ Feijão o modo pelo qual a adoção de políticas descentralizadoras talvez venh
 >>>>>>> 9f31cb2472888021c5c6e398cdd6f9ffe358e99f
 ```
 
-![vscode_conflito](../Imagens/vscode_conflito.png)
+![vscode_conflito](../../Imagens/vscode_conflito.png)
 
 ```bash
 $ git status
@@ -769,7 +769,7 @@ Abacate o modo pelo qual a adoção de políticas descentralizadoras talvez venh
 >>>>>>> Modificando as três palavras iniciais para serem "Abacate"
 ```
 
-![vscode_rebase_conflito](../Imagens/vscode_rebase_conflito.png)
+![vscode_rebase_conflito](../../Imagens/vscode_rebase_conflito.png)
 
 ```bash
 $ git status

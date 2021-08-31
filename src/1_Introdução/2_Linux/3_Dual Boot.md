@@ -22,7 +22,7 @@ Antes de começar esse passo certifique-se de que não há nenhum arquivo import
 
 Com seu pendrive pronto para ser reescrito, insira-o em seu computador e abra o Rufus.
 
-![interface_Rufus](../Imagens/Rufus_1.png)
+![interface_Rufus](../../Imagens/Rufus_1.png)
 
 Ele irá detectar automaticamente o drive USB inserido.
 
@@ -32,7 +32,7 @@ Depois disso o botão de "Ready", vai ser habilitado.
 Clique e espere alguns minutos enquanto o USB vai sendo reescrito.
 Isso pode demorar alguns minutos dependendo da velocidade do seu USB.
 
-![Copying_ISO_Rufus](../Imagens/Rufus_2.png)
+![Copying_ISO_Rufus](../../Imagens/Rufus_2.png)
 
 Quando terminar, remova seu USB de forma segura, agora dentro dele existe uma imagem de Ubuntu pronta para ser instalada em um computador.
 
@@ -46,7 +46,7 @@ Vá no menu iniciar do windows e procure por "Partições" ou por "Gerenciamento
 
 Vai se deparar com uma tela similar a esta, nela vai listar as unidades de espaço contidas dentro do seu computador.
 
-![Gerenciamento_de_disco](../Imagens/gerenciamento_de_disco.png)
+![Gerenciamento_de_disco](../../Imagens/gerenciamento_de_disco.png)
 
 Escolha algum dos espaços tendo em mente que você irá dividir uma dessas unidades, caso tenha mais de uma, opte pela maior provavelmente a sua unidade "(C:)".
 
@@ -59,7 +59,7 @@ O espaço de disco que o Ubuntu LTS costuma requisitar, gira em torno de 20 GB o
 
 Logo o espaço que irá diminuir seria de ao menos 20000 MB.
 
-![gerenciamento_de_disco_exemplo](../Imagens/gerenciamento_de_disco_1.png)
+![gerenciamento_de_disco_exemplo](../../Imagens/gerenciamento_de_disco_1.png)
 
 ### 3º passo: Instalação.
 
@@ -67,21 +67,21 @@ Coloque o Pendrive de com o Boot do Ubuntu em uma unidade USB do seu computador 
 
 Obtendo êxito, use as teclas do seu teclado para acessar o Boot Menu (menu de boot) e escolher o seu pendrive de boot, que nesse caso é o "3. USB HDD: SanDisk-(USB 2.0)".
 
-![Boot_Menu](../Imagens/boot_menu-ubuntu.png)
+![Boot_Menu](../../Imagens/boot_menu-ubuntu.png)
 
 Sempre selecionando as opções e clicando em **Continuar**
 
 Dessa forma o processo de instalação do Ubuntu será iniciado e poderá escolher qual idioma gostaria de fazer o processo de instalação.
 
-![Install_ubuntu_1](../Imagens/install_ubuntu_1.png)
+![Install_ubuntu_1](../../Imagens/install_ubuntu_1.png)
 
 Depois poderá escolher a opção do Layout do seu teclado;
 
 Irá escolher entre a instalação normal e a instalação mínima, e dependendo se já efetuou a configuração da sua internet, opte por selecionar as opções que baixa as atualizações juntamente com a instalação do Ubuntu.
 
-![Install_ubuntu_2](../Imagens/install_ubuntu_2.png)
+![Install_ubuntu_2](../../Imagens/install_ubuntu_2.png)
 
-![Install_ubuntu_3](../Imagens/install_ubuntu_3.png)
+![Install_ubuntu_3](../../Imagens/install_ubuntu_3.png)
 
 Escolha a sua localidade;
 
@@ -93,6 +93,6 @@ Espere as etapas finais da instalação e ao fim clique no botão "Reiniciar ago
 
 Quando terminar de reiniciar irá se deparar com uma tela indicando que conseguiu chegar ao enfim dual boot :) 
 
-![Menu_de_Boot](../Imagens/menu_de_boot.png)
+![Menu_de_Boot](../../Imagens/menu_de_boot.png)
 
 <!-- imagens e alguns elementos do texto desse tutorial, foram retirados de [Mundo Ubuntu](https://www.mundoubuntu.com.br/tutoriais/instalacao/396-instalacao-facil-do-ubuntu-20-04-lts-no-windows-10-dual-boot) -->

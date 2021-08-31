@@ -323,7 +323,7 @@ Url: [localhost:4100](http://localhost:4100/)
 > <details>
 >  <summary>Mongod error</summary>
 >  
->  ![mongod_error](../Imagens/mongod_error.png)
+>  ![mongod_error](../../Imagens/mongod_error.png)
 > </details>
 > <br>
 
