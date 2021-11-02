@@ -1,4 +1,4 @@
-# Começando com Linuz
+# Começando com Linux
 
 Vamos iniciar a sua experiência com o que possivelmente vai ser o seu sistema operacional mais utilizado. Assim como os demais capítulos desse ebook, existe muito a ser abordado. Nesse capítulo, discutiremos sobre:
 

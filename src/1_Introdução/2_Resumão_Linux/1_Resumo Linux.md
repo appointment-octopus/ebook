@@ -1,8 +1,8 @@
-# Linux
+# Resumão Linux
 
-Nesse capítulo você terá uma introdução a conceitos básicos e alguns comandos em um terminal Linux, além de aprender como instalar um outro sistema operacional no seu computador ou usar uma ferramenta para poder utilizar algumas ferramentas Linux.
+Nesse capítulo você terá um 'Resumão' sobre introdução e conceitos básicos e alguns comandos em um terminal Linux, além de aprender como instalar um outro sistema operacional no seu computador ou usar uma ferramenta para poder utilizar algumas outras funções Linux.
 
-- [Linux]()
+- [Resumao Linux]()
     - [Explicação](#explicação)
     - [Dual Boot](#dual-boot)
     - [Terminal](#terminal)

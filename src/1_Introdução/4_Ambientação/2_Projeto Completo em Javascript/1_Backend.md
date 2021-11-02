@@ -12,7 +12,7 @@ Exemplificando:
 
 2. Preencha as informações:
 ```
-url = https://localhost:3000/api/users/
+url = http://localhost:3000/api/users/
 tipo = POST
 body = raw, json
 ```

@@ -323,11 +323,11 @@ Url: [localhost:4100](http://localhost:4100/)
 > <details>
 >  <summary>Mongod error</summary>
 >  
->  ![mongod_error](../../Imagens/mongod_error.png)
+>  ![mongod_error](../../../Imagens/mongod_error.png)
 > </details>
 > <br>
 
 Agora, com ambos os serviços funcionando, você pode interagir com seu site localmente :D
 
 Por ora é isso :)
-Veja os próximos capítulos para compreender melhor o funcionamento do Backend & Funcionamento.
+Veja os próximos capítulos para compreender melhor o funcionamento do Backend & Frontend.

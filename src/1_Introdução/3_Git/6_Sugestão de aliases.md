@@ -1,2 +1,0 @@
-# Sugesao de Aliases
-
