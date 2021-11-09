@@ -1,2 +1,0 @@
-# Conceitos de Docker-Compose
-

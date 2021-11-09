@@ -6,5 +6,4 @@ Bem a ideia desse capítulo é passar um conjunto de técnicas ou formas de enfr
 
 Aqui iremos falar sobre:
 
-* [Resumão](./1_Resumão.md)
-* [Resumão](./2_Como%20Googlar.md)
+* [Como Googlar](./2_Como%20Googlar.md)

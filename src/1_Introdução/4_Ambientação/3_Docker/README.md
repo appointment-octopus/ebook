@@ -1,4 +1,4 @@
-# O que é conteinerização?
+# Resumão Docker
 
 > Disclaimer: esse capítulo (de introdução) é 100% baseado nesse vídeo -> <br/> <p align="center" width="100%" >
 <a href="https://www.youtube.com/watch?v=Gjnup-PuquQ">
